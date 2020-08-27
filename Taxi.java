@@ -116,6 +116,23 @@ class Taxi {
 			} else if (choice == 3) {
 				mainMenu(location, job, money, sign);
 			}
+		} else if (location.equals("faro")) {
+			System.out.println("1. Faro - Carmacks (182)");
+			System.out.println("2. Faro - Dawson (531)");
+			System.out.println("3. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				faro(location, "faro - carmacks", money, sign);
+			} else if (choice == 2) {
+				faro (location, "faro - dawson", money, sign);
+			} else {
+				mainMenu(location, job, money, sign);
+			}
 		}
 		input.close();
 	}
