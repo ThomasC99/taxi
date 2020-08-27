@@ -62,6 +62,16 @@ class Taxi {
 		} else if (location.equals("dawson")) {
 			if (job.equals("carmacks - dawson")) {
 				return true;
+			} else if (job.equals("faro - dawson")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("faro")) {
+			if (job.equals("carmakcs - faro")) {
+				return true;
+			} else if (job.equals("dawson - faro")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -74,30 +84,36 @@ class Taxi {
 		Scanner input = new Scanner (System.in);
 		if (location.equals("carmacks")) {
 			System.out.println("1. Carmacks - Dawson (355)");
-			System.out.println("2. Back");
+			System.out.println("2. Carmacks - Faro (182)");
+			System.out.println("3. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 3));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
 				carmacks(location, "carmacks - dawson", money, sign);
 			} else if (choice == 2) {
+				carmacks(location, "carmakcs - faro", money, sign);
+			} else if (choice == 3) {
 				mainMenu(location, job, money, sign);
 			}
 		} else if (location.equals("dawson")) {
 			System.out.println("1. Dawson - Carmacks (356)");
-			System.out.println("2. Back");
+			System.out.println("2. Dawson - Faro (531)");
+			System.out.println("3. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 3));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
 				dawson(location, "dawson - carmacks", money, sign);
 			} else if (choice == 2) {
+				dawson(location, "dawson - faro", money, sign);
+			} else if (choice == 3) {
 				mainMenu(location, job, money, sign);
 			}
 		}
@@ -167,9 +183,13 @@ class Taxi {
 				carmacks(location, job, money, sign);
 			} else if (location.equals("dawson")) {
 				dawson(location, job, money, sign);
+			} else if (location.equals("faro")) {
+				faro(location, job, money, sign);
 			}
 		} else if (choice == 3) {
 			upgrades(location, job, money, sign);
+		} else if (choice == 4) {
+			saveGame(location, money, sign);
 		}
 		input.close();
 	}
@@ -231,9 +251,123 @@ class Taxi {
 		input.close();
 	}
 	static void yt_2_yt_4_north (String location, String job, double money, int sign) {
+		System.out.println("1. Continue on YT-2");
+		if (sign >= 353) {
+			System.out.println("   Dawson - 353");
+		}
+		System.out.println("2. Turn right on YT-4");
+		if (sign >= 179) {
+			System.out.println("   Faro - 179");
+		}
+		int choice;
+		Scanner input = new Scanner(System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Dawson");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "dawson";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		} else if (choice == 2) {
+			System.out.println("Arriving in Faro");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "faro";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		}
+		input.close();
 	}
 	static void yt_2_yt_4_south (String location, String job, double money, int sign) {
+		System.out.println("1. Turn left on YT-4");
+		if (sign >= 179) {
+			System.out.println("   Faro - 179");
+		}
+		System.out.println("2. Continue straight on YT-2");
+		if (sign >= 3.2) {
+			System.out.println("   Carmacks - 3.2");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Faro");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "faro";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		}
+		input.close();
 	}
 	static void yt_2_yt_4_west (String location, String job, double money, int sign) {
+		System.out.println("1. Turn left on YT-2");
+		if (sign >= 3.2) {
+			System.out.println("   Carmacks - 3.2");
+		}
+		System.out.println("2. Turn right on YT-2");
+		if (sign >= 352) {
+			System.out.println("   Dawson - 352");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Carmacks");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "carmacks";
+			if(isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		} else if (choice == 2) {
+			System.out.println("Arriving in Dawson");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "dawson";
+			if(isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		}
+		input.close;
 	}
- } // 55
+}
