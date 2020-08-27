@@ -4,14 +4,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 class Taxi {
-	static void carmacks (String location, String job, double money, int sign) {
+	static void carmacks (String location, String job, double money, int sign) { // TODO
 		System.out.println("Heading east on YT-2");
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
 		yt_2_yt_4_north(location, job, money, sign);
 	}
-	static double completeJob (String job) {
+	static void carmacksEast (String location, String job, double money, int sign) { // TODO
+	}
+	static double completeJob (String job) { // TODO
 		System.out.println("Job complete !");
 		if (job.equals("carmacks - faro") || job.equals("faro - carmacks")) {
 			System.out.println("+ 182");
@@ -50,7 +52,9 @@ class Taxi {
 	static void faro (String location, String job, double money, int sign) {
 		yt_2_yt_4_west(location, job, money, sign);
 	}
-	static boolean isJobComplete (String location, String job) {
+	static void hainesJunction (String location, String job, double money, int sign) { // TODO
+	}
+	static boolean isJobComplete (String location, String job) { // TODO
 		if (location.equals("carmacks")) {
 			if (job.equals("dawson - carmacks")) {
 				return true;
@@ -79,7 +83,7 @@ class Taxi {
 			return false;
 		}
 	} 
-	static void jobMenu (String location, String job, double money, int sign) {
+	static void jobMenu (String location, String job, double money, int sign) { // TODO
 		int choice;
 		Scanner input = new Scanner (System.in);
 		if (location.equals("carmacks")) {
@@ -178,7 +182,7 @@ class Taxi {
 		}
 		input.close();
 	}
-	static void mainMenu(String location, String job, double money, int sign) {
+	static void mainMenu(String location, String job, double money, int sign) { // TODO
 		System.out.println("Location : " + location);
 		System.out.println("");
 		System.out.println("1. Job Menu");
@@ -311,7 +315,7 @@ class Taxi {
 		}
 		input.close();
 	}
-	static void yt_2_yt_4_south (String location, String job, double money, int sign) {
+	static void yt_2_yt_4_south (String location, String job, double money, int sign) { // TODO
 		System.out.println("1. Turn left on YT-4");
 		if (sign >= 179) {
 			System.out.println("   Faro - 179");
@@ -343,7 +347,7 @@ class Taxi {
 		}
 		input.close();
 	}
-	static void yt_2_yt_4_west (String location, String job, double money, int sign) {
+	static void yt_2_yt_4_west (String location, String job, double money, int sign) { // TODO
 		System.out.println("1. Turn left on YT-2");
 		if (sign >= 3.2) {
 			System.out.println("   Carmacks - 3.2");
