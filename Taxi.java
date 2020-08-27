@@ -368,6 +368,6 @@ class Taxi {
 			saveGame(location, money, sign);
 			mainMenu(location, job, money, sign);
 		}
-		input.close;
+		input.close();
 	}
 }
