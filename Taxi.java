@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 class Taxi {
-	static void carmacks (String location, String job, double money, int sign) { // TODO
+	static void carmacks (String location, String job, double money, int sign) {
 		System.out.println("1. Head east on YT-2");
 		if (sign >= 182) {
 			System.out.println("   Faro - 182");
@@ -25,8 +25,20 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			System.out.println("Arriving in Haine Junction");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "haines junction";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		} else if (choice == 2) {
+			yt_2_yt_4_north(location, job, money, sign);
 		}
-		yt_2_yt_4_north(location, job, money, sign);
 	}
 	static void carmacksEast (String location, String job, double money, int sign) { // TODO
 	}
