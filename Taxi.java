@@ -70,6 +70,7 @@ class Taxi {
 		}
 	}
 	static void carmacksWest (String location, String job, double money, int sign) { // TODO
+		System.out.println("1. Park in Carmacks");
 	}
 	static double completeJob (String job) { // TODO
 		System.out.println("Job complete !");
