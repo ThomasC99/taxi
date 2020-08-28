@@ -5,13 +5,21 @@ import java.io.IOException;
 import java.util.Scanner;
 class Taxi {
 	static void carmacks (String location, String job, double money, int sign) { // TODO
-		System.out.println("Heading east on YT-2");
+		System.out.println("1. Head east on YT-2");
+		if (sign >= 182) {
+			System.out.println("   Faro - 182");
+		}
+		if (sign >= 355) {
+			System.out.println("   Dawson - 355");
+		}
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
 		yt_2_yt_4_north(location, job, money, sign);
 	}
 	static void carmacksEast (String location, String job, double money, int sign) { // TODO
+	}
+	static void carmacksWest (String location, String job, double money, int sign) { // TODO
 	}
 	static double completeJob (String job) { // TODO
 		System.out.println("Job complete !");
