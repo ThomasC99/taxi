@@ -24,7 +24,7 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		if (choice == 1) {
+		if (choice == 2) {
 			System.out.println("Arriving in Haine Junction");
 			System.out.println("");
 			System.out.println("");
@@ -36,7 +36,7 @@ class Taxi {
 			}
 			saveGame(location, money, sign);
 			mainMenu(location, job, money, sign);
-		} else if (choice == 2) {
+		} else if (choice == 1) {
 			yt_2_yt_4_north(location, job, money, sign);
 		}
 	}
