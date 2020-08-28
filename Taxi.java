@@ -68,9 +68,16 @@ class Taxi {
 		} else if (choice == 2) {
 			yt_2_yt_4_north(location, job, money, sign);
 		}
+		input.close();
 	}
-	static void carmacksWest (String location, String job, double money, int sign) { // TODO
+	static void carmacksWest (String location, String job, double money, int sign) {
 		System.out.println("1. Park in Carmacks");
+		System.out.println("2. Continue on YT-2");
+		if (sign >= 303) {
+			System.out.println("   Haines Junction - 303");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in); // TODO
 	}
 	static double completeJob (String job) { // TODO
 		System.out.println("Job complete !");
