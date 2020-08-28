@@ -49,6 +49,25 @@ class Taxi {
 		if (sign >= 355) {
 			System.out.println("   Dawson - 355");
 		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			location = "carmacks";
+			if(isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money sign);
+		} else if (choice == 2) {
+			yt_2_yt_4_north(location, job, money, sign);
+		}
 	}
 	static void carmacksWest (String location, String job, double money, int sign) { // TODO
 	}
