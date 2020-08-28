@@ -24,7 +24,9 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		if (choice == 2) {
+		if (choice == 1) {
+			yt_2_yt_4_north(location, job, money, sign);
+		} else if (choice == 2) {
 			System.out.println("Arriving in Haine Junction");
 			System.out.println("");
 			System.out.println("");
@@ -36,11 +38,17 @@ class Taxi {
 			}
 			saveGame(location, money, sign);
 			mainMenu(location, job, money, sign);
-		} else if (choice == 1) {
-			yt_2_yt_4_north(location, job, money, sign);
 		}
 	}
-	static void carmacksEast (String location, String job, double money, int sign) { // TODO
+	static void carmacksEast (String location, String job, double money, int sign) {
+		System.out.println("1. Park in Carmacks");
+		System.out.println("2. Continue on YT-2");
+		if (sign >= 182) {
+			System.out.println("   Faro - 182");
+		}
+		if (sign >= 355) {
+			System.out.println("   Dawson - 355");
+		}
 	}
 	static void carmacksWest (String location, String job, double money, int sign) { // TODO
 	}
