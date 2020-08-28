@@ -64,7 +64,7 @@ class Taxi {
 				job = "";
 			}
 			saveGame(location, money, sign);
-			mainMenu(location, job, money sign);
+			mainMenu(location, job, money, sign);
 		} else if (choice == 2) {
 			yt_2_yt_4_north(location, job, money, sign);
 		}
