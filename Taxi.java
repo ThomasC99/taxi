@@ -12,9 +12,20 @@ class Taxi {
 		if (sign >= 355) {
 			System.out.println("   Dawson - 355");
 		}
+		System.out.println("2. Head west on YT-2");
+		if (sign >= 303) {
+			System.out.println("   Haines Junction - 303");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
+		if (choice == 1) {
+		}
 		yt_2_yt_4_north(location, job, money, sign);
 	}
 	static void carmacksEast (String location, String job, double money, int sign) { // TODO
