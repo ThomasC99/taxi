@@ -9,6 +9,9 @@ class Taxi {
 		if (sign >= 182) {
 			System.out.println("   Faro - 182");
 		}
+		if (sign >= 229) {
+			System.out.println("   Mayo - 229");
+		}
 		if (sign >= 355) {
 			System.out.println("   Dawson - 355");
 		}
@@ -45,6 +48,9 @@ class Taxi {
 		System.out.println("2. Continue on YT-2");
 		if (sign >= 182) {
 			System.out.println("   Faro - 182");
+		}
+		if (sign >= 229) {
+			System.out.println("   Mayo - 229");
 		}
 		if (sign >= 355) {
 			System.out.println("   Dawson - 355");
@@ -115,6 +121,18 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 182;
+		} else if (job.equals("carmacks - mayo") || job.equals("mayo - carmakcs")) {
+			System.out.println("+ 229");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 229;
+		} else if (job.equals("dawson - mayo") || job.equals("mayo - dawson")) {
+			System.out.println("+ 230");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 230;
 		} else if (job.equals("carmacks - haines junction") ||
 		job.equals("haines junction - carmacks")) {
 			System.out.println("+ 303");
@@ -134,6 +152,12 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 356;
+		} else if (job.equals("faro - mayo") || job.equals("mayo - faro")) {
+			System.out.println("+ 404");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 404;
 		} else if (job.equals("faro - haines junction") ||
 		job.equals("haines junction - faro")) {
 			System.out.println("+ 484");
@@ -147,6 +171,13 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 531;
+		} else if (job.equals("haines junction - mayo") ||
+		job.equals("mayo - haines junction")) {
+			System.out.println("+ 532");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 532;
 		} else if (job.equals("dawson - haines junction") ||
 		job.equals("haines junction - dawson")) {
 			System.out.println("+ 658");
@@ -162,7 +193,7 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-		yt_2_yt_4_south(location, job, money, sign);
+		yt_2_yt_11_east(location, job, money, sign);
 	}
 	static void faro (String location, String job, double money, int sign) {
 		yt_2_yt_4_west(location, job, money, sign);
@@ -178,6 +209,8 @@ class Taxi {
 				return true;
 			} else if (job.equals("haines junction - carmacks")) {
 				return true;
+			} else if (job.equals("mayo - carmacks")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -187,6 +220,8 @@ class Taxi {
 			} else if (job.equals("faro - dawson")) {
 				return true;
 			} else if (job.equals("haines junction - dawson")) {
+				return true;
+			} else if (job.equals("mayo - dawson")) {
 				return true;
 			} else {
 				return false;
@@ -198,6 +233,8 @@ class Taxi {
 				return true;
 			} else if (job.equals("haines junction - faro")) {
 				return true;
+			} else if (job.equals("mayo - faro")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -207,6 +244,20 @@ class Taxi {
 			} else if (job.equals("dawson - haines junction")) {
 				return true;
 			} else if (job.equals("faro - haines junction")) {
+				return true;
+			} else if (job.equals("mayo - haines junction")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("mayo")) {
+			if (job.equals("carmacks - mayo")) {
+				return true;
+			} else if (job.equals("dawson - mayo")) {
+				return true;
+			} else if (job.equals("faro - mayo")) {
+				return true;
+			} else if (job.equals("haines junction - mayo")) {
 				return true;
 			} else {
 				return false;
@@ -222,11 +273,12 @@ class Taxi {
 			System.out.println("1. Carmacks - Dawson (355)");
 			System.out.println("2. Carmacks - Faro (182)");
 			System.out.println("3. Carmacks - Haines Junction (303)");
-			System.out.println("4. Back");
+			System.out.println("4. Carmacks - Mayo (229)");
+			System.out.println("5. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4
-			));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) &&
+			(choice != 4) && (choice != 5));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -237,17 +289,20 @@ class Taxi {
 			} else if (choice == 3) {
 				carmacks(location, "carmacks - haines junction", money, sign);
 			} else if (choice == 4) {
+				carmacks(location, "carmacks - mayo", money, sign);
+			} else if (choice == 5) {
 				mainMenu(location, job, money, sign);
 			}
 		} else if (location.equals("dawson")) {
 			System.out.println("1. Dawson - Carmacks (356)");
 			System.out.println("2. Dawson - Faro (531)");
 			System.out.println("3. Dawson - Haines Junction (658)");
-			System.out.println("4. Back");
+			System.out.println("4. Dawson - Mayo (230)");
+			System.out.println("5. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4
-			));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) &&
+			(choice != 4) && (choice != 5));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -258,17 +313,20 @@ class Taxi {
 			} else if (choice == 3) {
 				dawson(location, "dawson - haines junction", money, sign);
 			} else if (choice == 4) {
+				dawson(location, "dawson - mayo", money, sign);
+			} else if (choice == 5) {
 				mainMenu(location, job, money, sign);
 			}
 		} else if (location.equals("faro")) {
 			System.out.println("1. Faro - Carmacks (182)");
 			System.out.println("2. Faro - Dawson (531)");
 			System.out.println("3. Faro - Haines Junction (484)");
-			System.out.println("4. Back");
+			System.out.println("4. Faro - Mayo (404)");
+			System.out.println("5. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4
-			));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) &&
+			(choice != 4) && (choice != 5));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -279,17 +337,20 @@ class Taxi {
 			} else if (choice == 3) {
 				faro(location, "faro - haines junction", money, sign);
 			} else if (choice == 4) {
+				faro(location, "faro - mayo", money, sign);
+			} else if (choice == 5) {
 				mainMenu(location, job, money, sign);
 			}
 		} else if (location.equals("haines junction")) {
 			System.out.println("1. Haines Junction - Carmacks (303)");
 			System.out.println("2. Haines Junction - Dawson (658)");
 			System.out.println("3. Haines Junction - Faro (484)");
-			System.out.println("4. Back");
+			System.out.println("4. Haines Junction - Mayo (532)");
+			System.out.println("5. Back");
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4
-			));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) &&
+			(choice != 4) && (choice != 5));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -302,6 +363,32 @@ class Taxi {
 			} else if (choice == 3) {
 				hainesJunction(location, "haines junction - faro", money, sign);
 			} else if (choice == 4) {
+				hainesJunction(location, "haines junction - mayo", money, sign);
+			} else if (choice == 5) {
+				mainMenu(location, job, money, sign);
+			}
+		} else if (location.equals("mayo")) {
+			System.out.println("1. Mayo - Carmacks (229)");
+			System.out.println("2. Mayo - Dawson (230)");
+			System.out.println("3. Mayo - Faro (404)");
+			System.out.println("4. Mayo - Haines Junction (532)");
+			System.out.println("5. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) &&
+			(choice != 4) && (choice != 5));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				mayo(location, "mayo - carmacks", money, sign);
+			} else if (choice == 2) {
+				mayo(location, "mayo - dawson", money, sign);
+			} else if (choice == 3) {
+				mayo(location, "mayo - faro", money, sign);
+			} else if (choice == 4) {
+				mayo(location, "mayo - haines junction", money, sign);
+			} else if (choice == 5) {
 				mainMenu(location, job, money, sign);
 			}
 		}
@@ -375,6 +462,8 @@ class Taxi {
 				faro(location, job, money, sign);
 			} else if (location.equals("haines junction")) {
 				hainesJunction(location, job, money, sign);
+			} else if (location.equals("mayo")) {
+				mayo(location, job, money, sign);
 			}
 		} else if (choice == 3) {
 			upgrades(location, job, money, sign);
@@ -382,6 +471,9 @@ class Taxi {
 			saveGame(location, money, sign);
 		}
 		input.close();
+	}
+	static void mayo (String location, String job, double money, int sign) {
+		yt_2_yt_11_west(location, job, money, sign);
 	}
 	static void saveGame (String location, double money, int sign) {
 		FileWriter fileWriter;
@@ -442,6 +534,9 @@ class Taxi {
 	}
 	static void yt_2_yt_4_north (String location, String job, double money, int sign) {
 		System.out.println("1. Continue on YT-2");
+		if (sign >= 226) {
+			System.out.println("   Mayo - 226");
+		}
 		if (sign >= 353) {
 			System.out.println("   Dawson - 353");
 		}
@@ -458,17 +553,7 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			System.out.println("Arriving in Dawson");
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			location = "dawson";
-			if (isJobComplete(location, job)) {
-				money += completeJob(job);
-				job = "";
-			}
-			saveGame(location, money, sign);
-			mainMenu(location, job, money, sign);
+			yt_2_yt_11_north(location, job, money, sign);
 		} else if (choice == 2) {
 			System.out.println("Arriving in Faro");
 			System.out.println("");
@@ -530,6 +615,9 @@ class Taxi {
 			System.out.println("   Haines Junction - 306");
 		}
 		System.out.println("2. Turn right on YT-2");
+		if (sign >= 226) {
+			System.out.println("   Mayo - 226");
+		}
 		if (sign >= 352) {
 			System.out.println("   Dawson - 352");
 		}
@@ -557,5 +645,126 @@ class Taxi {
 			mainMenu(location, job, money, sign);
 		}
 		input.close();
+	}
+	static void yt_2_yt_11_east(String location, String job, double money, int sign) {
+		System.out.println("1. Continue straight on YT-11");
+		if (sign >= 52) {
+			System.out.println("   Mayo - 52");
+		}
+		System.out.println("2. Turn right on YT-2");
+		if (sign >= 177) {
+			System.out.println("   Carmacks - 177");
+		}
+		if (sign >= 353) {
+			System.out.println("   Faro - 353");
+		}
+		if (sign >= 480) {
+			System.out.println("   Haines Junction - 480");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Mayo");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "mayo";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		} else if (choice == 2) {
+			yt_2_yt_4_south(location, job, money, sign);
+		}
+	}
+	static void yt_2_yt_11_north(String location, String job, double money, int sign) {
+		System.out.println("1. Turn left on YT-2");
+		if (sign >= 178) {
+			System.out.println("   Dawson - 178");
+		}
+		System.out.println("2. Turn right on YT-11");
+		if (sign >= 52) {
+			System.out.println("   Mayo = 52");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Dawson");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "dawson";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		} else if (choice == 2) {
+			System.out.println("Arriving in Mayo");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "mayo";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		}
+	}
+	static void yt_2_yt_11_west(String location, String job, double money, int sign) {
+		System.out.println("1. Turn left on YT-2");
+		if (sign >= 177) {
+			System.out.println("   Carmacks - 177");
+		}
+		if (sign >= 353) {
+			System.out.println("   Faro - 353");
+		}
+		if (sign >= 480) {
+			System.out.println("   Haines Junction - 480");
+		}
+		System.out.println("2. Continue straight on YT-2");
+		if (sign >= 178) {
+			System.out.println("   Dawson - 178");
+		}
+		int choice;
+		Scanner input = new Scanner (System.in);
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			yt_2_yt_4_south(location, job, money, sign);
+		} else if (choice == 2) {
+			System.out.println("Arriving in Dawson");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "dawson";
+			if (isJobComplete(location, job)) {
+				money += completeJob(job);
+				job = "";
+			}
+			saveGame(location, money, sign);
+			mainMenu(location, job, money, sign);
+		}
 	}
 }
