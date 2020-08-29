@@ -139,15 +139,13 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 230;
-		} else if (job.equals("carmacks - haines junction") ||
-		job.equals("haines junction - carmacks")) {
+		} else if (job.equals("carmacks - haines junction") || job.equals("haines junction - carmacks")) {
 			System.out.println("+ 303");
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			return 303;
-		} else if (job.equals("faro - teslin") || job.equals("teslin - faro") ||
-		job.equals("faro - haines junction")) {
+		} else if (job.equals("faro - teslin") || job.equals("teslin - faro") || job.equals("faro - haines junction")) {
 			System.out.println("+ 330");
 			System.out.println("");
 			System.out.println("");
@@ -215,8 +213,7 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 584;
-		} else if (job.equals("dawson - haines junction") ||
-		job.equals("haines junction - dawson")) {
+		} else if (job.equals("dawson - haines junction") || job.equals("haines junction - dawson")) {
 			System.out.println("+ 658");
 			System.out.println("");
 			System.out.println("");
@@ -276,8 +273,6 @@ class Taxi {
 				return true;
 			} else if (job.equals("teslin - dawson")) {
 				return true;
-			} else {
-				return false;
 			}
 		} else if (location.equals("faro")) {
 			if (job.equals("carmakcs - faro")) {
@@ -316,6 +311,17 @@ class Taxi {
 				return true;
 			}
 		} else if (location.equals("teslin") {
+			if (job.equals("carmacks - teslin")) {
+				return true;
+			} else if (job.equals("dawson - teslin")) {
+				return true;
+			} else if (job.equals("faro - teslin")) {
+				return true;
+			} else if (job.equals("haines junction - teslin")) {
+				return true;
+			} else if (job.equals("mayo - teslin")) {
+				return true;
+			}
 		}
 		return false;
 	} 
