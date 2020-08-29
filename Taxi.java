@@ -19,6 +19,9 @@ class Taxi {
 		if (sign >= 303) {
 			System.out.println("   Haines Junction - 303");
 		}
+		if (sign >= 353) {
+			System.out.println("   Teslin - 355");
+		}
 		int choice;
 		Scanner input = new Scanner (System.in);
 		do {
@@ -82,6 +85,9 @@ class Taxi {
 		if (sign >= 303) {
 			System.out.println("   Haines Junction - 303");
 		}
+		if (sign >= 353) {
+			System.out.println("   Teslin - 353");
+		}
 		int choice;
 		Scanner input = new Scanner (System.in);
 		do {
@@ -140,7 +146,26 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 303;
-		} else if (job.equals("carmacks - dawson")) {
+		} else if (job.equals("faro - teslin") || job.equals("teslin - faro") ||
+		job.equals("faro - haines junction")) {
+			System.out.println("+ 330");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 330;
+		} else if (job.equals("haines junction - teslin")) {
+			System.out.println("+ 332");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 332;
+		} else if (job.equals("teslin - carmacks")) {
+			System.out.println("+ 353");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 353;
+		} else if (job.equals("carmacks - dawson") || job.equals("carmacks - teslin")) {
 			System.out.println("+ 355");
 			System.out.println("");
 			System.out.println("");
@@ -178,6 +203,18 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 532;
+		} else if (job.equals("teslin - mayo")) {
+			System.out.println("+ 582");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 582;
+		} else if (job.equals("mayo - teslin")) {
+			System.out.println("+ 584");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 584;
 		} else if (job.equals("dawson - haines junction") ||
 		job.equals("haines junction - dawson")) {
 			System.out.println("+ 658");
@@ -185,6 +222,18 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			return 658;
+		} else if (job.equals("teslin - dawson")) {
+			System.out.println("+ 708");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 708;
+		} else if (job.equals("dawson - teslin")) {
+			System.out.println("+ 710");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			return 710;
 		}
 		return 0;
 	}
