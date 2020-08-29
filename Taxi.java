@@ -260,6 +260,8 @@ class Taxi {
 				return true;
 			} else if (job.equals("mayo - carmacks")) {
 				return true;
+			} else if (job.equals("teslin - carmacks")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -271,6 +273,8 @@ class Taxi {
 			} else if (job.equals("haines junction - dawson")) {
 				return true;
 			} else if (job.equals("mayo - dawson")) {
+				return true;
+			} else if (job.equals("teslin - dawson")) {
 				return true;
 			} else {
 				return false;
@@ -284,8 +288,8 @@ class Taxi {
 				return true;
 			} else if (job.equals("mayo - faro")) {
 				return true;
-			} else {
-				return false;
+			} else if (job.equals("teslin - faro")) {
+				return true;
 			}
 		} else if (location.equals("haines junction")) {
 			if (job.equals("carmacks - haines junction")) {
@@ -296,8 +300,8 @@ class Taxi {
 				return true;
 			} else if (job.equals("mayo - haines junction")) {
 				return true;
-			} else {
-				return false;
+			} else if (job.equals("teslin - haines junction")) {
+				return true;
 			}
 		} else if (location.equals("mayo")) {
 			if (job.equals("carmacks - mayo")) {
@@ -308,12 +312,12 @@ class Taxi {
 				return true;
 			} else if (job.equals("haines junction - mayo")) {
 				return true;
-			} else {
-				return false;
+			} else if (job.equals("teslin - mayo")) {
+				return true;
 			}
-		} else {
-			return false;
+		} else if (location.equals("teslin") {
 		}
+		return false;
 	} 
 	static void jobMenu (String location, String job, double money, int sign) {
 		int choice;
