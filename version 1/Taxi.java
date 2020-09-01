@@ -6,6 +6,17 @@ class Taxi {
 	static int sign;
 	static Scanner input;
 	static void chicago () {
+		System.out.println("Heading south on South Federal Street");
+		System.out.println("Turning right on West Van Buren Street");
+		System.out.println("Turning left on South Clark Street");
+		System.out.println("Turning right on West Cermak Road");
+		System.out.println("Turning left onto the ramp to I-55 west / I-90 east / I-94 east");
+		System.out.println("Taking ramp to I-90 east / I-94 east");
+		System.out.println("Taking ramp to I-90 express east / I-94 express east");
+		System.out.println("Taking exit to I-90 east / I-94 east");
+		System.out.println("Taking exit to I-90 east");
+		System.out.println("Taking exit to I-80 east");
+		System.out.println("Taking exit to I-280 east"); // TODO
 	}
 	static void completeJob () {
 		System.out.println("Job Complete");
@@ -46,6 +57,7 @@ class Taxi {
 			System.out.println("+ 4,149");
 			money += 4149;
 		}
+		job = "";
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -121,12 +133,78 @@ class Taxi {
 				mainMenu();
 			}
 		} else if (location.equals("los angeles")) {
+			System.out.println("1. Los Angeles - Chicago (3,224)");
+			System.out.println("2. Los Angeles - Mexico City (2,947)");
+			System.out.println("3. Los Angeles - New York (4,498)");
+			System.out.println("4. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "los angeles - chicago";
+				losAngeles();
+			} else if (choice == 2) {
+				job = "los angeles - mexico city";
+				losAngeles();
+			} else if (choice == 3) {
+				job = "los angeles - new york";
+				losAngeles();
+			} else if (choice == 4) {
+				mainMenu();
+			}
 		} else if (location.equals("mexico city")) {
+			System.out.println("1. Mexico City - Chicago (3,390)");
+			System.out.println("2. Mexico City - Los Angeles (3,069)");
+			System.out.println("3. Mexico City - New York (4,162)");
+			System.out.println("4. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "mexico city - chicago";
+				mexicoCity();
+			} else if (choice == 2) {
+				job = "mexico city - los angeles";
+				mexicoCity();
+			} else if (choice == 3) {
+				job = "mexico city - new york";
+				mexicoCity();
+			} else if (choice == 4) {
+				mainMenu();
+			}
 		} else if (location.equals("new york")) {
+			System.out.println("1. New York - Chicago (1,272)");
+			System.out.println("2. New York - Los Angeles (4,490)");
+			System.out.println("3. New York - Mexico City (4,149)");
+			System.out.println("4. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "new york - chicago";
+				newYork();
+			} else if (choice == 2) {
+				job = "new york - los angeles";
+				newYork();
+			} else if (choice == 3) {
+				job = "new york - mexico city";
+				newYork();
+			} else if (choice == 4) {
+				mainMenu();
+			}
 		}
 	}
 	static void losAngeles () {
-	}
+	} // TODO
 	public static void main (String [] args) {
 		location = "chicago";
 		job = "";
@@ -170,9 +248,9 @@ class Taxi {
 		}
 	}
 	static void mexicoCity () {
-	}
+	} // TODO
 	static void newYork () {
-	}
+	} // TODO
 	static void upgrades () {
 		System.out.println("Money : " + money);
 		System.out.println("");
