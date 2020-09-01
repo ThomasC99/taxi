@@ -9,6 +9,9 @@ class Taxi {
 	}
 	static void jobMenu () {
 		if (location.equals("chicago")) {
+		} else if (location.equals("los angeles")) {
+		} else if (location.equals("mexico city")) {
+		} else if (location.equals("new york")) {
 		}
 	}
 	static void losAngeles () {
@@ -60,5 +63,28 @@ class Taxi {
 	static void newYork () {
 	}
 	static void upgrades () {
+		System.out.println("Money : " + money);
+		System.out.println("");
+		System.out.println("1. Upgrade road signs");
+		System.out.println("   current - " + sign);
+		System.out.println("   cost - " + (sign + 10));
+		System.out.println("   after upgrade - " + (sign + 10));
+		System.out.println("2. Back");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			if (money >= (sign + 10)) {
+				sign += 10;
+				money -= sign;
+			}
+			upgrades();
+		} else if (choice == 2) {
+			mainMenu();
+		}
 	}
 }
