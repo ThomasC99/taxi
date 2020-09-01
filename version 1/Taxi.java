@@ -7,10 +7,28 @@ class Taxi {
 	static Scanner input;
 	static void chicago () {
 	}
+	static void completeJob () {
+	}
+	static boolean isJobComplete () {
+	}
 	static void jobMenu () {
 		int choice;
 		if (location.equals("chicago")) {
 			System.out.println("1. Chicago - Los Angeles (3,243)");
+			System.out.println("2. Chicago - Maxico City (3,392)");
+			System.out.println("3. Chicago - New York (1,270)");
+			System.out.println("4. Back");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+			} else if (choice == 2) {
+			} else if (choice == 3) {
+			} else if (choice == 4) {
+			}
 		} else if (location.equals("los angeles")) {
 		} else if (location.equals("mexico city")) {
 		} else if (location.equals("new york")) {
