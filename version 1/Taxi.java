@@ -10,6 +10,30 @@ class Taxi {
 	static void completeJob () {
 	}
 	static boolean isJobComplete () {
+		if (location.equals("chicago")) {
+			if (job.equals("los angeles - chicago")) {
+				return true;
+			} else if (job.equals("mexico city - chicago")) {
+				return true;
+			} else if (job.equals("new york - chicago")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("los angeles")) {
+			if (job.equals("chicago - los angeles")) {
+				return true;
+			} else if (job.equals("mexico city - los angeles")) {
+				return true;
+			} else if (job.equals("new york - los angeles")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("mexico city")) {
+			if (job.equals("mexico city - chicago") {
+			}
+		}
 	}
 	static void jobMenu () {
 		int choice;
