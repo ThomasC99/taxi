@@ -87,13 +87,19 @@ class Taxi {
 			} else if (job.equals("los angeles - new york")) {
 				return true;
 			} else if (job.equals("mexico city - new york")) {
-				return true; } }
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 	static void jobMenu () {
 		int choice;
 		if (location.equals("chicago")) {
 			System.out.println("1. Chicago - Los Angeles (3,243)");
-			System.out.println("2. Chicago - Maxico City (3,392)");
+			System.out.println("2. Chicago - Mexico City (3,392)");
 			System.out.println("3. Chicago - New York (1,270)");
 			System.out.println("4. Back");
 			do {
@@ -103,9 +109,16 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
+				job = "chicago - los angeles";
+				chicago();
 			} else if (choice == 2) {
+				job = "chicago - mexico city";
+				chicago();
 			} else if (choice == 3) {
+				job = "chicago - new york";
+				chicago();
 			} else if (choice == 4) {
+				mainMenu();
 			}
 		} else if (location.equals("los angeles")) {
 		} else if (location.equals("mexico city")) {
