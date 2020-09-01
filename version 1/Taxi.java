@@ -35,16 +35,35 @@ class Taxi {
 		} else if (choice == 2) {
 			System.out.println("1. Contine on I-90 Express East / I-94 Express East");
 			if (sign >= 3358) {
+				System.out.println("   Mexico City - 3,358");
 			}
-			System.out.println("Arriving in New York");
-			location = "new york";
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (isJobComplete()) {
-				completeJob();
+			System.out.println("2. Take exit to I-90 east / I-94 east");
+			if (sign >= 1268) {
+				System.out.println("   New York - 1,268");
 			}
-			mainMenu();
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				System.out.printn("Arriving in Mexico City");
+				location = "mexico city";
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+			} else if (choice == 2) {
+				System.out.println("Arriving in New York");
+				location = "new york";
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				if (isJobComplete()) {
+					completeJob();
+				}
+				mainMenu(); // 316 - 313
+			}
 		}
 	}
 	static void completeJob () {
