@@ -8,6 +8,7 @@ class Taxi {
 	static void chicago () {
 	}
 	static void jobMenu () {
+		int choice;
 		if (location.equals("chicago")) {
 		} else if (location.equals("los angeles")) {
 		} else if (location.equals("mexico city")) {
