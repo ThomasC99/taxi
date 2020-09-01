@@ -7,16 +7,45 @@ class Taxi {
 	static Scanner input;
 	static void chicago () {
 		System.out.println("Heading south on South Federal Street");
-		System.out.println("Turning right on West Van Buren Street");
-		System.out.println("Turning left on South Clark Street");
-		System.out.println("Turning right on West Cermak Road");
-		System.out.println("Turning left onto the ramp to I-55 west / I-90 east / I-94 east");
-		System.out.println("Taking ramp to I-90 east / I-94 east");
-		System.out.println("Taking ramp to I-90 express east / I-94 express east");
-		System.out.println("Taking exit to I-90 east / I-94 east");
-		System.out.println("Taking exit to I-90 east");
-		System.out.println("Taking exit to I-80 east");
-		System.out.println("Taking exit to I-280 east"); // TODO
+		System.out.println("1. Continue straight on South Federal Street");
+		if (sign >= 3242) {
+			System.out.println("   Los Angeles - 3,242");
+		}
+		System.out.println("2. Turn right on West Van Buren Street");
+		if (sign >= 1278) {
+			System.out.println("   New York - 1,278");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Los Angeles");
+			location = "los angeles";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		} else if (choice == 2) {
+			System.out.println("1. Contine on I-90 Express East / I-94 Express East");
+			if (sign >= 3358) {
+			}
+			System.out.println("Arriving in New York");
+			location = "new york";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		}
 	}
 	static void completeJob () {
 		System.out.println("Job Complete");
