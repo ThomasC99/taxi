@@ -10,6 +10,7 @@ class Taxi {
 	static void jobMenu () {
 		int choice;
 		if (location.equals("chicago")) {
+			System.out.println("1. Chicago - Los Angeles (3,243)");
 		} else if (location.equals("los angeles")) {
 		} else if (location.equals("mexico city")) {
 		} else if (location.equals("new york")) {
