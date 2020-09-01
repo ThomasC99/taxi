@@ -8,6 +8,47 @@ class Taxi {
 	static void chicago () {
 	}
 	static void completeJob () {
+		System.out.println("Job Complete");
+		if (job.equals("chicago - los angeles")) {
+			System.out.println("+ 3,243");
+			money += 3243;
+		} else if (job.equals("chicago - mexico city")) {
+			System.out.println("+ 3,392");
+			money += 3392;
+		} else if (job.equals("chicago - new york")) {
+			System.out.println("+ 1,270");
+			money += 1270;
+		} else if (job.equals("los angeles - chicago")) {
+			System.out.println("+ 3,244");
+			money += 3244;
+		} else if (job.equals("los angeles - mexico city")) {
+			System.out.println("+ 2,947");
+			money += 2947;
+		} else if (job.equals("los angeles - new york")) {
+			System.out.println("+ 4,489");
+			money += 4489;
+		} else if (job.equals("mexico city - chicago")) {
+			System.out.println("+ 3,390");
+			money += 3390;
+		} else if (job.equals("mexico city - los angeles")) {
+			System.out.println("+ 3,069");
+			money += 3069;
+		} else if (job.equals("mexico city - new york")) {
+			System.out.println("+ 4,149");
+			money += 4149;
+		} else if (job.equals("new york - chicago")) {
+			System.out.println("+ 1,272");
+			money += 1272;
+		} else if (job.equals("new york - los angeles")) {
+			System.out.println("+ 4,467");
+			money += 4467;
+		} else if (job.equals("new york - mexico city")) {
+			System.out.println("+ 4,149");
+			money += 4149;
+		}
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 	}
 	static boolean isJobComplete () {
 		if (location.equals("chicago")) {
@@ -31,9 +72,22 @@ class Taxi {
 				return false;
 			}
 		} else if (location.equals("mexico city")) {
-			if (job.equals("mexico city - chicago") {
+			if (job.equals("chicago - mexico city")) {
+				return true;
+			} else if (job.equals("los angeles - mexico city")) {
+				return true;
+			} else if (job.equals("new york - mexico city")) {
+				return true;
+			} else {
+				return false;
 			}
-		}
+		} else if (location.equals("new york")) {
+			if (job.equals("chicago - new york")) {
+				return true;
+			} else if (job.equals("los angeles - new york")) {
+				return true;
+			} else if (job.equals("mexico city - new york")) {
+				return true; } }
 	}
 	static void jobMenu () {
 		int choice;
@@ -78,7 +132,7 @@ class Taxi {
 		System.out.println("1. Job Menu");
 		System.out.println("2. Free Roam");
 		System.out.println("3. Upgrades");
-		System.out.pritnln("4. Quit");
+		System.out.println("4. Quit");
 		int choice;
 		do {
 			choice = input.nextInt();
