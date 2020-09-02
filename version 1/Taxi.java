@@ -48,7 +48,7 @@ class Taxi {
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
-				System.out.printn("Arriving in Mexico City");
+				System.out.println("Arriving in Mexico City");
 				location = "mexico city";
 				System.out.println("");
 				System.out.println("");
@@ -113,49 +113,6 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
-	}
-	static void i2_east () {
-	}
-	static void i2_east_130 () {
-	}
-	static void i280_new_jersey_east () {
-		System.out.println("1. Continue on I-280 east");
-		if (sign >= 37.7) {
-			System.out.println("   New York - 37.7");
-		}
-		System.out.println("2. Take exit to New Road / Ridgedale Avenue");
-		if (sign >= 1234) {
-			System.out.println("   Chicago - 1,234");
-		}
-		if (sign >- 4128) {
-			System.out.println("   Mexico City - 4,128");
-		}
-		if (sign >= 4452) {
-			System.out.println("   Los Angeles - 4,452");
-		}
-		int choice;
-	}
-	static void i895a_north () {
-		System.out.println("1. Continue on I-895A north");
-		if (sign >= 310) {
-			System.out.println("   New York - 310");
-		}
-		if (sign >= 1131) {
-			System.out.println("   Chicago - 1,131");
-		}
-		if (sign >= 3858) {
-			System.out.println("   Mexico City - 3,858");
-		}
-		if (sign >= 4259) {
-			System.out.println("   Los Angeles - 4,259");
-		}
-		System.out.println("2. Take exit to I-695 east");
-	} // 104
-	static void i895a_north_1 () {
-	}
-	static void i895a_north_2 () {
-	}
-	static void i895a_south () {
 	}
 	static boolean isJobComplete () {
 		if (location.equals("chicago")) {
@@ -429,7 +386,7 @@ class Taxi {
 		if (choice == 1) {
 			System.out.println("1. Continue on Mexico Federal Highway 57");
 			if (sign >= 3218) {
-				System.out.printn("   Chicago - 3,218");
+				System.out.println("   Chicago - 3,218");
 			}
 			System.out.println("2. Take exit to Mexico Autopista 47D");
 			if (sign >= 3066) {
@@ -567,38 +524,3 @@ class Taxi {
 		}
 	}
 }
-// I-280 (new jersey) - 28.73
-// I-280 (iowa - illonois) - 43.42
-// I-290 (illinois) - 48.02
-// I-278 - 57.32
-// I-635 (texas) - 59.544
-// I-69E - 82.55
-// I-495 (capital beltway) - 103
-// I-66 - 122.92
-// I-210 (california) - 137
-// I-12 - 139.454
-// I-295 (delaware - pensylannia) - 148.5
-// I-35E - 155.72
-// I-88 (illinois) - 226.27
-// I-37 - 230.14
-// I-78 - 231.04
-// I-76 (colorado - nebraska) - 301.41
-// I-24 - 509.13
-// I-30 - 509.24
-// I-57 - 621.4
-// I-59 - 716.53
-// I-69 - 1,353.9
-// I-81 - 1,375.81
-// I-55 - 1,551.81
-// I-15 - 2,307.03
-// I-20 - 2,477.39
-// I-35 - 2,525.16
-// I-94 - 2,551.13
-// I-75 - 2,875.04
-// I-95 - 3,071.4
-// I-70 - 3,462.39
-// I-10 - 3,959.53
-// I-40 - 4,118.71
-// I-80 - 4,666.44
-// I-90 - 4,860.93
-// 150
