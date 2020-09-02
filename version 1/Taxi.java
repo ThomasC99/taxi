@@ -114,6 +114,8 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 	}
+	static void i2_east () {
+	}
 	static void i280_new_jersey_east () {
 		System.out.println("1. Continue on I-280 east");
 		if (sign >= 37.7) {
