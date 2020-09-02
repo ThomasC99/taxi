@@ -114,6 +114,38 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 	}
+	static void i_895_a_north () {
+		System.out.println("1. Continue on I-895A north");
+		if (sign >= 315) {
+			System.out.println("   New York - 315");
+		}
+		if (sign >= 1131) {
+			System.out.println("   Chicago - 1,131");
+		}
+		if (sign >= 3858) {
+			System.out.println("   Mexico City - 3,858");
+		}
+		if (sign >= 4259) {
+			System.out.println("   Los Angeles - 4,259");
+		}
+		System.out.println("2. Take ramp to I-695 east");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			i_895_a_north_1();
+		} else if (choice == 2) {
+			// i_695_maryland_cw_3b(); TODO
+		}
+	}
+	static void i_895_a_north_1() {
+		System.out.println("1. Continue on I-895A north");
+		System.out.println("2. Take ramp to I-695 west");
+	} 
 	static boolean isJobComplete () {
 		if (location.equals("chicago")) {
 			if (job.equals("los angeles - chicago")) {
