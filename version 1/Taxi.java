@@ -116,6 +116,8 @@ class Taxi {
 	}
 	static void i2_east () {
 	}
+	static void i2_east_130 () {
+	}
 	static void i280_new_jersey_east () {
 		System.out.println("1. Continue on I-280 east");
 		if (sign >= 37.7) {
@@ -148,6 +150,10 @@ class Taxi {
 			System.out.println("   Los Angeles - 4,259");
 		}
 		System.out.println("2. Take exit to I-695 east");
+	} // 104
+	static void i895a_north_1 () {
+	}
+	static void i895a_north_2 () {
 	}
 	static void i895a_south () {
 	}
