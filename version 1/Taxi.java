@@ -448,7 +448,10 @@ class Taxi {
 			mainMenu();
 		}
 	}
+	static void  new_jersey_highway_139_west () {
+	} // 20
 	static void newYork () {
+		new_jersey_highway_139_west();
 		System.out.println("1. Continue on New Jersey Highway 139 west");
 		if (sign >= 4116) {
 			System.out.println("   Mexico City - 4,116");
