@@ -7,6 +7,12 @@ class Taxi {
 	static Scanner input;
 	static void chicago () {
 		System.out.println("Heading south on South Federal Street");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		chicago_south_federal_street_west_van_buren_street_south();
+	}
+	static void chicago_south_federal_street_west_van_buren_street_south () {
 		System.out.println("1. Continue straight on South Federal Street");
 		if (sign >= 3242) {
 			System.out.println("   Los Angeles - 3,242");
@@ -33,43 +39,9 @@ class Taxi {
 			}
 			mainMenu();
 		} else if (choice == 2) {
-			System.out.println("1. Contine on I-90 Express East / I-94 Express East");
-			if (sign >= 3358) {
-				System.out.println("   Mexico City - 3,358");
-			}
-			System.out.println("2. Take exit to I-90 east / I-94 east");
-			if (sign >= 1268) {
-				System.out.println("   New York - 1,268");
-			}
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				System.out.println("Arriving in Mexico City");
-				location = "mexico city";
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				if (isJobComplete()) {
-					completeJob();
-				}
-				mainMenu();
-			} else if (choice == 2) {
-				System.out.println("Arriving in New York");
-				location = "new york";
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				if (isJobComplete()) {
-					completeJob();
-				}
-				mainMenu();
-			}
+			i_90_express_east_i_94_express_east();
 		}
-	}
+	} // 0
 	static void completeJob () {
 		System.out.println("Job Complete");
 		if (job.equals("chicago - los angeles")) {
@@ -113,6 +85,115 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
+	}
+	static void i_10_east_58a () {
+		System.out.println("1. Continue on I-10 east");
+		if (sign >= 2881) {
+			System.out.println("   Mexico City - 2,881");
+		}
+		System.out.println("2. Take ramp to I-15 north");
+		if (sign >= 3177) {
+			System.out.println("   Chicago - 3,177");
+		}
+		if (sign >= 4423) {
+			System.out.println("   New York - 4,423");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Mexico City");
+			location = "mexico city";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		} else if (choice == 2) {
+			i_80_east_290();
+		}
+	}
+	static void i_80_east_290 () {
+		System.out.println("1. Continue on I-80 east");
+		if (sign >= 283) {
+			System.out.println("   Chicago - 283");
+		}
+		System.out.println("2. Take exit for I-280 east");
+		if (sign >= 1529) {
+			System.out.println("   New York - 1,529");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Chicago");
+			location = "chicago";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}	
+			mainMenu();
+		} else if (choice == 2) {
+			System.out.println("Arriving in New York");
+			location = "new york";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		}
+	}
+	static void i_90_express_east_i_94_express_east () {
+		System.out.println("1. Contine on I-90 Express East / I-94 Express East");
+		if (sign >= 3358) {
+			System.out.println("   Mexico City - 3,358");
+		}
+		System.out.println("2. Take exit to I-90 east / I-94 east");
+		if (sign >= 1268) {
+			System.out.println("   New York - 1,268");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Mexico City");
+			location = "mexico city";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		} else if (choice == 2) {
+			System.out.println("Arriving in New York");
+			location = "new york";
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (isJobComplete()) {
+				completeJob();
+			}
+			mainMenu();
+		}
 	}
 	static boolean isJobComplete () {
 		if (location.equals("chicago")) {
@@ -256,71 +337,7 @@ class Taxi {
 		}
 	}
 	static void losAngeles () {
-		System.out.println("1. Continue on I-10 east");
-		if (sign >= 2881) {
-			System.out.println("   Mexico City - 2,881");
-		}
-		System.out.println("2. Take ramp to I-15 north");
-		if (sign >= 3177) {
-			System.out.println("   Chicago - 3,177");
-		}
-		if (sign >= 4423) {
-			System.out.println("   New York - 4,423");
-		}
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			System.out.println("Arriving in Mexico City");
-			location = "mexico city";
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (isJobComplete()) {
-				completeJob();
-			}
-			mainMenu();
-		} else if (choice == 2) {
-			System.out.println("1. Continue on I-80 east");
-			if (sign >= 283) {
-				System.out.println("   Chicago - 283");
-			}
-			System.out.println("2. Take exit for I-280 east");
-			if (sign >= 1529) {
-				System.out.println("   New York - 1,529");
-			}
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				System.out.println("Arriving in Chicago");
-				location = "chicago";
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				if (isJobComplete()) {
-					completeJob();
-				}	
-				mainMenu();
-			} else if (choice == 2) {
-				System.out.println("Arriving in New York");
-				location = "new york";
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				if (isJobComplete()) {
-					completeJob();
-				}
-				mainMenu();
-			}
-		}
+		i_10_east_58a();
 	}
 	public static void main (String [] args) {
 		location = "chicago";
