@@ -86,6 +86,12 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 	}
+	static void i_2_east () {
+		i_2_east_130 ();
+	}
+	static void i_2_east_130 () {
+	}
+	// 3,135
 	static void i_10_east_58a () {
 		System.out.println("1. Continue on I-10 east");
 		if (sign >= 2881) {
