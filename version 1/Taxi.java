@@ -41,7 +41,7 @@ class Taxi {
 		} else if (choice == 2) {
 			i_90_express_east_i_94_express_east();
 		}
-	} // 0
+	}
 	static void completeJob () {
 		System.out.println("Job Complete");
 		if (job.equals("chicago - los angeles")) {
@@ -86,12 +86,6 @@ class Taxi {
 		System.out.println("");
 		System.out.println("");
 	}
-	static void i_2_east () {
-		i_2_east_130 ();
-	}
-	static void i_2_east_130 () {
-	}
-	// 3,135
 	static void i_10_east_58a () {
 		System.out.println("1. Continue on I-10 east");
 		if (sign >= 2881) {
@@ -125,7 +119,130 @@ class Taxi {
 			i_80_east_290();
 		}
 	}
-	static void i_80_east_290 () {
+	static void i_66_east () {
+		i_66_east_6();
+	}
+	static void i_66_east_6 () {
+		i_66_east_13();
+	}
+	static void i_66_east_13 () {
+		i_66_east_18();
+	}
+	static void i_66_east_18 () {
+		i_66_east_23();
+	}
+	static void i_66_east_23 () {
+		i_66_east_27();
+	}
+	static void i_66_east_27 () {
+		i_66_east_28();
+	}
+	static void i_66_east_28 () {
+		i_66_east_31();
+	}
+	static void i_66_east_31 () {
+		i_66_east_40();
+	}
+	static void i_66_east_40 () {
+		i_66_east_43();
+	}
+	static void i_66_east_43 () {
+		i_66_east_44();
+	}
+	static void i_66_east_44 () {
+		i_66_east_47();
+	}
+	static void i_66_east_47 () {
+		i_66_east_52();
+	}
+	static void i_66_east_52 () {
+		i_66_east_53a();
+	}
+	static void i_66_east_53a () {
+		i_66_east_53b();
+	}
+	static void i_66_east_53b () {
+		i_66_east_55();
+	}
+	static void i_66_east_55 () {
+		i_66_east_57a();
+	}
+	static void i_66_east_57a () {
+		i_66_east_57b();
+	}
+	static void i_66_east_57b () {
+		i_66_east_60();
+	}
+	static void i_66_east_60 () {
+		i_66_east_62();
+	}
+	static void i_66_east_62 () {
+		i_66_east_64a();
+	}
+	static void i_66_east_64a () {
+		i_66_east_64b();
+	}
+	static void i_66_east_64b () {
+		i_66_east_66();
+	}
+	static void i_66_east_66 () {
+		i_66_east_68();
+	}
+	static void i_66_east_68 () {
+		i_66_east_69();
+	}
+	static void i_66_east_69 () {
+		i_66_east_71();
+	}
+	static void i_66_east_71 () {
+		i_66_east_72();
+	}
+	static void i_66_east_72 () {
+		i_66_east_73();
+	}
+	static void i_66_east_73 () {
+		i_66_east_75();
+	}
+	static void i_66_east_75 () {
+	}
+	static void i_66_west () {
+		i_66_west_73();
+	}
+	static void i_66_west_55 () {
+	}
+	static void i_66_west_57a () {
+	}
+	static void i_66_west_57b () {
+		i_66_west_57a();
+	}
+	static void i_66_west_60 () {
+		i_66_west_57b();
+	}
+	static void i_66_west_62 () {
+		i_66_west_60();
+	}
+	static void i_66_west_64 () {
+		i_66_west_62();
+	}
+	static void i_66_west_66a () {
+		i_66_west_66a();
+	}
+	static void i_66_west_66b () {
+		i_66_west_66a();
+	}
+	static void i_66_west_67 () {
+		i_66_west_66b();
+	}
+	static void i_66_west_69 () {
+		i_66_west_67();
+	}
+	static void i_66_west_71 () {
+		i_66_west_69();
+	}
+	static void i_66_west_73 () {
+		i_66_west_71();
+	}
+	static void i_80_east_290 () { // 2,600 - 3
 		System.out.println("1. Continue on I-80 east");
 		if (sign >= 283) {
 			System.out.println("   Chicago - 283");
@@ -162,6 +279,44 @@ class Taxi {
 			}
 			mainMenu();
 		}
+	}
+	static void i_88_illinois_west() {
+		i_88_illinois_west_138();
+	}
+	static void i_88_illinois_west_119a () {
+	}
+	static void i_88_illinois_west_119b () {
+		i_88_illinois_west_119a();
+	}
+	static void i_88_illinois_west_121 () {
+		I_88_illinois_west_119b();
+	}
+	static void i_88_illinois_west_123 () {
+		i_88_illinois_west_121();
+	}
+	static void i_88_illinois_west_125 () {
+		i_88_illinois_west_123();
+	}
+	static void i_88_illinois_west_127 () {
+		i_88_illinois_west_125();
+	}
+	static void i_88_illinois_west_130 () {
+		i_88_illinois_west_127();
+	}
+	static void i_88_illinois_west_131a () {
+		i_88_illinois_west_130();
+	}
+	static void i_88_illinois_west_131b () {
+		i_88_illinois_west_131a();
+	}
+	static void i_88_illinois_west_134 () {
+		i_88_illinois_west_131b();
+	}
+	static void i_88_illinois_west_137 () {
+		i_88_illinois_west_134();
+	}
+	static void i_88_illinois_west_138 () {
+		i_88_illinois_west_137();
 	}
 	static void i_90_express_east_i_94_express_east () {
 		System.out.println("1. Contine on I-90 Express East / I-94 Express East");
