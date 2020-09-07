@@ -119,6 +119,23 @@ class Taxi {
 			i_80_east_290();
 		}
 	}
+	static void i_12_east () {
+		i_12_east_1b();
+	}
+	static void i_12_east_1b () {
+		i_12_east_2a();
+	}
+	static void i_12_east_2a () {
+		i_12_east_2b();
+	}
+	static void i_12_east_2b () {
+		i_12_easst_4();
+	}
+	static void i_12_east_4 () {
+		i_12_east_6();
+	}
+	static void i_12_east_6 () {
+	}
 	static void i_66_east () {
 		i_66_east_6();
 	}
@@ -208,9 +225,85 @@ class Taxi {
 	static void i_66_west () {
 		i_66_west_73();
 	}
+	static void i_66_west_end () {
+		System.out.println("1. Take exit to I-81 south");
+		if (sign >- 3673) {
+			System.out.println("   Mexico City - 3,673");
+		}
+		if (sign >= 4171) {
+			System.out.println("   Los Angeles - 4,171")
+		}
+		System.out.println("2. Take exit to I-81 north");
+		if (sign >- 479) {
+			System.out.println("   New York - 479");
+		}
+		if (sign >= 1058) {
+			System.out.println("   Chicago - 1,058");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	static void i_66_west_6 () {
+		i_66_west_end();
+	}
+	static void i_66_west_13 () {
+		i_66_west_6();
+	}
+	static void i_66_west_18 () {
+		i_66_west_13();
+	}
+	static void i_66_west_23 () {
+		i_66_west_18();
+	}
+	static void i_66_west_27 () {
+		i_66_west_23();
+	}
+	static void i_66_west_28 () {
+		i_66_west_27();
+	}
+	static void i_66_west_31 () {
+		i_66_west_28();
+	}
+	static void i_66_west_40 () {
+		i_66_west_31();
+	}
+	static void i_66_west_43a () {
+		i_66_west_40();
+	}
+	static void i_66_west_43b () {
+		i_66_west_43a();
+	}
+	static void i_66_west_44 () {
+		i_66_west_43b();
+	}
+	static void i_66_west_47a () {
+		i_66_west_44();
+	}
+	static void i_66_west_47b () {
+		i_66_west_47a();
+	}
+	static void i_66_west_52 () {
+		i_66_west_47b();
+	}
+	static void i_66_west_53a () {
+		i_66_west_52();
+	}
+	static void i_66_west_53b () {
+		i_66_west_53a();
+	}
 	static void i_66_west_55 () {
+		i_66_west_53b();
 	}
 	static void i_66_west_57a () {
+		i_66_west_55();
 	}
 	static void i_66_west_57b () {
 		i_66_west_57a();
