@@ -509,6 +509,67 @@ class Taxi {
 			mainMenu();
 		}
 	}
+	static void i_97_north () {
+		i_97_north_7();
+	}
+	static void i_97_north_7 () {
+		i_97_north_10();
+	}
+	static void i_97_north_10 () {
+		i_97_north_12();
+	}
+	static void i_97_north_12 () {
+		i_97_north_13();
+	}
+	static void i_97_north_13 () {
+		i_97_north_14();
+	}
+	static void i_97_north_14 () {
+		i_97_north_15a();
+	}
+	static void i_97_north_15a () {
+		i_97_north_15b();
+	}
+	static void i_97_north_15b () {
+		i_97_north_16();
+	}
+	static void i_97_north_16 () {
+		i_97_north_17();
+	}
+	static void i_97_north_17 () {
+	}
+	static void i_97_south () {
+		i_97_south_16();
+	}
+	static void i_97_south_5 () {
+		i_97_south_end();
+	}
+	static void i_97_south_7 () {
+		i_97_south_5();
+	}
+	static void i_97_south_10a () {
+		i_97_south_7();
+	}
+	static void i_97_south_10b () {
+		i_97_south_10a();
+	}
+	static void i_97_south_12 () {
+		i_97_south_10b();
+	}
+	static void i_97_south_13 () {
+		i_97_south_12();
+	}
+	static void i_97_south_14 () {
+		i_97_south_13();
+	}
+	static void i_97_south_15 () {
+		i_97_south_14();
+	}
+	static void i_97_south_16 () {
+		i_97_south_15();
+	}
+	static void i_97_south_end {
+	}
 	static boolean isJobComplete () {
 		if (location.equals("chicago")) {
 			if (job.equals("los angeles - chicago")) {
