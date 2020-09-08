@@ -96,6 +96,35 @@ class Taxi {
 	}
 	static void i_2_west_end () {
 	}
+	static void i_4_east () {
+		i_4_east_9();
+	}
+	static void i_4_east_9 () {
+		System.out.println("1. Continue on Interstate 4 east");
+		System.out.println("2. Take exit to Interstate 75 north / Interstate 75 south");
+		if (sign >= 1809) {
+			System.out.println("   New York - 1,809");
+		}
+		if (sign >= 1882) {
+			System.out.println("   Chicago - 1,882");
+		}
+		if (sign >= 3103) {
+			System.out.println("   Mexico City - 3,103");
+		}
+		if (sign >= 4058) {
+			System.out.println("   Los Angeles - 4,058");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+	}
+	static void i_4_west () {
+	}
+	static void i_5_north () {
+	}
+	static void i_5_south () {
+	}
 	static void i_10_east_58a () {
 		System.out.println("1. Continue on I-10 east");
 		if (sign >= 2881) {
@@ -203,8 +232,158 @@ class Taxi {
 		i_12_east_12();
 	}
 	static void i_12_east_12 () {
+		i_12_east_15();
 	}
 	static void i_12_east_15 () {
+		i_12_east_38a();
+	}
+	static void i_12_east_38a () {
+		System.out.println("1. Continue on Interstate 12 east");
+		if (sign >= 1405) {
+			System.out.println("   Chicago - 1,405");
+		}
+		if (sign >= 2030) {
+			System.out.println("   Mexico City - 2,030");
+		}
+		if (sign >- 2123) {
+			System.out.println("   New York - 2,123");
+		}
+		if (sign >= 2985) {
+			System.out.println("   Los Angeles - 2,985");
+		}
+		System.out.println("2. Take exit to Interstate 55 south");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			i_12_east_38b();
+		} else if (choice == 2) {
+		}
+	}
+	static void i_12_east_38b () {
+		System.out.println("1. Continue on Interstate 12 east");
+		if (sign >= 2122) {
+			System.out.println("   New York - 2,122");
+		}
+		System.out.println("2. Take exit for Interstate 55 north");
+		if (sign >= 1404) {
+			System.out.println("   Chicago - 1,404");
+		}
+		if (sign >= 2070) {
+			System.out.println("   Mexico City - 2,070");
+		}
+		if (sign >= 3024) {
+			System.out.println("   Los Angeles - 3,024");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (chocie == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	static void i_12_east_85 () {
+		System.out.println("1. Take exit to Interstate 10 east / Interstate 59 north");
+		if (sign >= 1458) {
+			System.out.println("   Chicago - 1,458");
+		}
+		if (sign >= 2047) {
+			System.out.println("   New York - 2,047");
+		}
+		System.out.println("2. Take exit to Interstate 10 west");
+		if (sign >= 2111) {
+			System.out.println("   Mexico City - 2,111");
+		}
+		if (sign >= 3066) {
+			System.out.println("   Los Angeles - 3,066");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("1. Take exit to Interstate 10 east");
+			System.out.println("2. Take exit to Interstate 59 north");
+			if (sign >= 1457) {
+				System.out.println("   Chicago - 1,457");
+			}
+			if (sign >= 2046) {
+				System.out.println("   New York - 2,046");
+			}
+			if (sign >= 2116) {
+				System.out.println("   Mexico City - 2,116");
+			}
+			if (sign >= 3179) {
+				System.out.println("   Los Angeles - 3,179");
+			}
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+			} else if (choice == 2) {
+			}
+		} else if (choice == 2) {
+		}
+	}
+	static void i_12_west () {
+		i_12_west_38b();
+	}
+	static void i_12_west_38a () {
+		System.out.println("1. Continue on Interstate 12 west");
+		if (sign >- 2029) {
+			System.out.println("   Mexico City - 2,029");
+		}
+		if (sign >= 2984) {
+			System.out.println("   Los Angeles - 2,984");
+		}
+		System.out.println("2. Take exit to Interstate 55 south");
+		if (sign >= 1405) {
+			System.out.println("   Chicago - 1,405");
+		}
+		if (sign >= 2123) {
+			System.out.println("   New York - 2,123");
+		}
+	}
+	static void i_12_west_38b () {
+		System.out.println("1. Continue on Interstate 12 west");
+		if (sign >= 2029) {
+			System.out.println("   Mexico City - 2,029");
+		}
+		if (sign >= 2123) {
+			System.out.println("   New York - 2,123");
+		}
+		if (sign >= 3059) {
+			System.out.println("   Los Angeles - 3,059");
+		}
+		System.out.println("2. Take exit to Interstate 59 north");
+		if (sign >= 1404) {
+			System.out.println("   Chicago - 1,404");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			i_12_west_38a();
+		} else if (choice == 2) {
+		}
 	}
 	static void i_14_east () {
 		i_14_east_277();
