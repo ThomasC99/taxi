@@ -119,10 +119,48 @@ class Taxi {
 			i_80_east_290();
 		}
 	}
+	static void i_11_north () {
+		i_11_north_2();
+	}
+	static void i_11_north_2 () {
+		i_11_north_14();
+	}
+	static void i_11_north_14 () {
+		i_11_north_15a();
+	}
+	static void i_11_north_15a () {
+		i_11_north_17a();
+	}
+	static void i_11_north_17a () {
+		i_11_north_17b();
+	}
+	static void i_11_north_17b () {
+		i_11_north_19();
+	}
+	static void i_11_north_19 () {
+		i_11_north_20();
+	}
+	static void i_11_north_20 () {
+		i_11_north_23();
+	}
+	static void i_11_north_23 () {
+	}
 	static void i_11_south () {
 		i_11_south_20();
 	}
+	static void i_11_south_2 () {
+	}
+	static void i_11_south_14 () {
+		i_11_south_2();
+	}
+	static void i_11_south_15a () {
+		i_11_south_14();
+	}
+	static void i_11_south_15b () {
+		i_11_south_15a();
+	}
 	static void i_11_south_17 () {
+		i_11_south_15b();
 	}
 	static void i_11_south_19 () {
 		i_11_south_17();
@@ -140,7 +178,7 @@ class Taxi {
 		i_12_east_2b();
 	}
 	static void i_12_east_2b () {
-		i_12_easst_4();
+		i_12_east_4();
 	}
 	static void i_12_east_4 () {
 		i_12_east_6();
@@ -253,7 +291,7 @@ class Taxi {
 			System.out.println("   Mexico City - 3,673");
 		}
 		if (sign >= 4171) {
-			System.out.println("   Los Angeles - 4,171")
+			System.out.println("   Los Angeles - 4,171");
 		}
 		System.out.println("2. Take exit to I-81 north");
 		if (sign >- 479) {
@@ -404,7 +442,7 @@ class Taxi {
 		i_88_illinois_west_119a();
 	}
 	static void i_88_illinois_west_121 () {
-		I_88_illinois_west_119b();
+		i_88_illinois_west_119b();
 	}
 	static void i_88_illinois_west_123 () {
 		i_88_illinois_west_121();
