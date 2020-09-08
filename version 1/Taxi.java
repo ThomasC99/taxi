@@ -196,6 +196,52 @@ class Taxi {
 	}
 	static void i_12_east_15 () {
 	}
+	static void i_14_east () {
+		i_14_east_277();
+	}
+	static void i_14_east_277 () {
+		i_14_east_278();
+	}
+	static void i_14_east_278 () {
+		i_14_east_280a();
+	}
+	static void i_14_east_280a () {
+		i_14_east_280b();
+	}
+	static void i_14_east_280b () {
+		i_14_east_281();
+	}
+	static void i_14_east_281 () {
+		i_14_east_282();
+	}
+	static void i_14_east_282 () {
+		i_14_east_283();
+	}
+	static void i_14_east_283 () {
+		i_14_east_284();
+	}
+	static void i_14_east_284 () {
+		i_14_east_285();
+	}
+	static void i_14_east_285 () {
+		i_14_east_286();
+	}
+	static void i_14_east_286 () {
+		i_14_east_287();
+	}
+	static void i_14_east_287 () {
+		i_14_east_288();
+	}
+	static void i_14_east_288 () {
+		i_14_east_289();
+	}
+	static void i_14_east_289 () {
+		i_14_east_end();
+	}
+	static void i_14_east_end () {
+	}
+	static void i_14_west () {
+	}
 	static void i_66_east () {
 		i_66_east_6();
 	}
