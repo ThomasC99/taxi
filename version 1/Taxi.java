@@ -118,6 +118,58 @@ class Taxi {
 		do {
 			choice = input.nextInt();
 		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			i_4_east_end();
+		} else if (choice == 2) {
+			System.out.println("1. Take exit to Interstate 75 north");
+			if (sign >= 1808) {
+				System.out.println("   New York - 1,808");
+			}
+			if (sign >= 1881) {
+				System.out.println("   Chicago - 1,881");
+			}
+			if (sign >= 3102) {
+				System.out.println("   Mexico City - 3,102");
+			}
+			if (sign >= 4057) {
+				System.out.println("   Los Angeles - 4,057");
+			}
+			System.out.println("2. Take exit to Interstate 75 south");
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				i_75_north_435();
+			} else if (choice == 2) {
+				i_75_south_end();
+			}
+		}
+	}
+	static void i_4_east_end () {
+		System.out.println("1. Take exit to Interstate 95 north / Interstate 95 south");
+		if (sign >= 1645) {
+			System.out.println("   New York - 1,645");
+		}
+		if (sign >= 1853) {
+			System.out.println("   Chicago - 1,853");
+		}
+		if (sign >= 3074) {
+			System.out.println("   Mexico City - 3,074");
+		}
+		if (sign >= 4046) {
+			System.out.println("   Los Angeles - 4,046");
+		}
+		System.out.println("2. Continue on Interstate 4 east");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
 	}
 	static void i_4_west () {
 	}
