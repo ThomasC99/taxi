@@ -10,8 +10,15 @@ class Main {
 	static int gps;
 	static void load () {
 		try {
+			File file = new File ("save.txt");
+			Scanner fileScanner = new Scanner (file);
+			location = fileScanner.nextLine();
+			money = fileScanner.nextDouble();
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
 		}
 	}
 	public static void main (String [] args) {
@@ -39,7 +46,7 @@ class Main {
 	}
 	static void main_menu () {
 	}
-} // 49
+} // 56
 // boise
 // Cheyenne
 // Chicago
