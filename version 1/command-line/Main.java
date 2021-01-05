@@ -14,6 +14,8 @@ class Main {
 			Scanner fileScanner = new Scanner (file);
 			location = fileScanner.nextLine();
 			money = fileScanner.nextDouble();
+			sign = fileScanner.nextInt();
+			gps = fileScanner.nextInt();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("");
@@ -45,8 +47,19 @@ class Main {
 		main_menu();
 	}
 	static void main_menu () {
+		System.out.println("1. Job Menu");
+		System.out.println("2. Free Roam");
+		System.out.println("3. Upgrades");
+		System.out.println("4. Save");
+		System.out.println("5. Quit");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4) && (choice != 5));
+		System.out.println("");
+		System.out.println("");
 	}
-} // 56
+} // 67
 // boise
 // Cheyenne
 // Chicago
