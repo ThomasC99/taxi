@@ -8,6 +8,10 @@ class Main {
 	static double money;
 	static int sign;
 	static int gps;
+	static void free_roam () {
+	}
+	static void job_menu () {
+	}
 	static void load () {
 		try {
 			File file = new File ("save.txt");
@@ -58,6 +62,31 @@ class Main {
 		} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4) && (choice != 5));
 		System.out.println("");
 		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			job_menu();
+		} else if (choice == 2) {
+			free_roam();
+		} else if (choice == 3) {
+			upgrades();
+		} else if (choice == 4) {
+			save();
+			main_menu();
+		}
+	}
+	static void save () {
+		try {
+			File file = new File ("save.txt");
+			FileWriter fileWriter = new FileWriter(file);
+			fileWriter.write(location + "\n" + money + "\n" + sign + "\n" + gps + "\n")
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+		}
+	}
+	static void upgrades () {
 	}
 } // 67
 // boise
