@@ -19,7 +19,7 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("1. New Game");
-		System.out.pritnln("2. Load Game");
+		System.out.println("2. Load Game");
 		int choice;
 		input = new Scanner (System.in);
 		location = "boise";
