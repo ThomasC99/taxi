@@ -8,6 +8,8 @@ class Main {
 	static double money;
 	static int sign;
 	static int gps;
+	static void load () {
+	}
 	public static void main (String [] args) {
 		System.out.println("");
 		System.out.println("");
@@ -23,8 +25,11 @@ class Main {
 		do {
 			choice = input.nextInt();
 		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 	}
-} // 10
+} // 34
 // boise
 // Cheyenne
 // Chicago
