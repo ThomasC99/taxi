@@ -9,6 +9,10 @@ class Main {
 	static int sign;
 	static int gps;
 	static void load () {
+		try {
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	public static void main (String [] args) {
 		System.out.println("");
@@ -28,8 +32,14 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
+		if (choice == 2) {
+			load();
+		}
+		main_menu();
 	}
-} // 34
+	static void main_menu () {
+	}
+} // 49
 // boise
 // Cheyenne
 // Chicago
