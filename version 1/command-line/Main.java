@@ -8,7 +8,46 @@ class Main {
 	static double money;
 	static int sign;
 	static int gps;
+	static void boise () {
+	}
+	static void cheyenne () {
+	}
+	static void complete_job () {
+		System.out.println("Job Complete");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (job.equals("boise - cheyenne")) {
+			System.out.println("+ 1,184");
+		} else if (job.equals("cheyenne - boise")) {
+		}
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
+	static boolean is_job_complete () {
+		if (location.equals("boise")) {
+			if (job.equals("cheyenne - boise")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("cheyenne")) {
+			if (job.equals("boise - cheyenne")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
 	static void free_roam () {
+		if (location.equals("boise")) {
+			boise();
+		} else if (location.equals("cheyenne")) {
+			cheyenne();
+		}
 	}
 	static void job_menu () {
 	}
@@ -87,8 +126,9 @@ class Main {
 		}
 	}
 	static void upgrades () {
+		System.out.println("Money : " + money);
 	}
-} // 67
+} // 139
 // boise
 // Cheyenne
 // Chicago
