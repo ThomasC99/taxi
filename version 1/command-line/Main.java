@@ -9,6 +9,10 @@ class Main {
 	static int sign;
 	static int gps;
 	static void boise () {
+		System.out.println("Arriving in Cheyenne");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 	}
 	static void cheyenne () {
 	}
@@ -19,11 +23,15 @@ class Main {
 		System.out.println("");
 		if (job.equals("boise - cheyenne")) {
 			System.out.println("+ 1,184");
+			money += 1184;
 		} else if (job.equals("cheyenne - boise")) {
+			System.out.pritnln("+ 1,184");
+			money += 1184;
 		}
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
+		job = "";
 	}
 	static boolean is_job_complete () {
 		if (location.equals("boise")) {
@@ -50,6 +58,38 @@ class Main {
 		}
 	}
 	static void job_menu () {
+		if (location.equals("boise")) {
+			System.out.println("1. Boise - Cheyenne (1,184)");
+			System.out.println("2. Back");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "boise - cheyenne";
+			} else if (choice == 2) {
+				main_menu();
+			}
+		} else if (location.equals("cheyenne")) {
+			System.out.println("1. Cheyenne - Boise (1,184)");
+			System.out.println("2. Back");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "cheyenne - boise";
+				cheyenne();
+			} else if (choice == 2) {
+				main_menu();
+			}
+		}
 	}
 	static void load () {
 		try {
@@ -127,8 +167,40 @@ class Main {
 	}
 	static void upgrades () {
 		System.out.println("Money : " + money);
+		System.out.println("");
+		System.out.println("1. Upgrade signs");
+		System.out.println("   Current range : " + sign + " km");
+		System.out.println("   After upgrade : " + (sign + 10) + " km");
+		System.out.println("   Cost : " + sign);
+		System.out.println("2. Upgrade GPS");
+		System.out.println("   Current range : " + gps + " km");
+		System.out.println("   After upgrade : " + (gps + 1) + " km");
+		System.out.println("   Cost : " + (gps * 10));
+		System.out.println("3. Back");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			if (money >= sign) {
+				money -= sign;
+				sign += 10;
+			}
+			upgrades();
+		} else if (choice == 2) {
+			if (money >= (gps * 10)) {
+				money -= (gps * 10);
+				gps++;
+			}
+			upgrades();
+		} else if (choice == 3) {
+			main_menu();
+		}
 	}
-} // 139
+} // 210
 // boise
 // Cheyenne
 // Chicago
