@@ -5,5 +5,6 @@ class Player {
 	private int sign;
 	private int gps;
 	public Player () {
+		this.location = "boise";
 	}
 }
