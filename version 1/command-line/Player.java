@@ -6,5 +6,6 @@ class Player {
 	private int gps;
 	public Player () {
 		this.location = "boise";
+		this.job = "";
 	}
 }
