@@ -7,5 +7,7 @@ class Player {
 	public Player () {
 		this.location = "boise";
 		this.job = "";
+		this.money = 0;
+		this.sign = 10;
 	}
 }
