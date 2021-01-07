@@ -84,6 +84,15 @@ class Main {
 			}
 			main_menu();
 		} else if (choice == 2) {
+			System.out.println("Arriving in Boise");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "boise";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
 		}
 	}
 	static void i_80_east_wyoming_359c () {
@@ -397,8 +406,8 @@ class Main {
 } // 
 // boise
 // Cheyenne
-//
 // Chicago
+//
 // Cincinnati
 // Denver
 // Detroit
