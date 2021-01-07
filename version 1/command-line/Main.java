@@ -18,6 +18,8 @@ class Main {
 	static void chicago () {
 		i_80_west_wyoming_359c();
 	}
+	static void cincinnati () {
+	}
 	static void complete_job () {
 		System.out.println("Job Complete");
 		System.out.println("");
@@ -29,6 +31,8 @@ class Main {
 		} else if (job.equals("boise - chicago")) {
 			System.out.println("+ 2,727");
 			money += 2727;
+		} else if (job.equals("boise - cincinnati")) {
+			System.out.println("+ 3,135");
 		} else if (job.equals("cheyenne - boise")) {
 			System.out.println("+ 1,184");
 			money += 1184;
@@ -61,6 +65,7 @@ class Main {
 		}
 		System.out.println("1. Continue on I-25 south");
 		if (sign >= 1549) {
+			System.out.println("   Chicago - 1,549");
 		}
 		System.out.println("2. Take exit 8b for I-80 west");
 		if (sign >= 1178) {
@@ -123,21 +128,21 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			System.out.println("Arriving in Cheyenne");
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			location = "cheyenne";
-			if (is_job_complete()) {
-				complete_job();
-			}
-			main_menu();
-		} else if (choice == 2) {
 			System.out.println("Arriving in Chicago");
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			location = "chicago";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+			System.out.println("Arriving in Cheyenne");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "cheyenne";
 			if (is_job_complete()) {
 				complete_job();
 			}
@@ -199,6 +204,8 @@ class Main {
 				return true;
 			} else if (job.equals("chicago - boise")) {
 				return true;
+			} else if (job.equals("cincinnati - boise")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -207,6 +214,8 @@ class Main {
 				return true;
 			} else if (job.equals("chicago - cheyenne")) {
 				return true;
+			} else if (job.equals("cincinnati - cheyenne")) {
+				return true;
 			} else {
 				return false;
 			}
@@ -214,6 +223,18 @@ class Main {
 			if (job.equals("boise - chicago")) {
 				return true;
 			} else if (job.equals("cheyenne - chicago")) {
+				return true;
+			} else if (job.equals("cincinnati - chicago")) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (location.equals("cincinnati")) {
+			if (job.equals("boise - cincinnati")) {
+				return true;
+			} else if (location.equals("cheyenne - cincinnati")) {
+				return true;
+			} else if (location.equals("chicago - cincinnati")) {
 				return true;
 			} else {
 				return false;
@@ -229,6 +250,8 @@ class Main {
 			cheyenne();
 		} else if (location.equals("chicago")) {
 			chicago();
+		} else if (location.equals("cincinnati")) {
+			cincinnati();
 		}
 	}
 	static void job_menu () {
@@ -403,7 +426,7 @@ class Main {
 			main_menu();
 		}
 	}
-} // 
+} // 2,409 - 40
 // boise
 // Cheyenne
 // Chicago
