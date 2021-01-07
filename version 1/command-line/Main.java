@@ -5,32 +5,18 @@ import java.util.Scanner;
 class Main {
 	static Scanner input;
 	static String location;
+	static String job;
 	static double money;
 	static int sign;
 	static int gps;
 	static void boise () {
-		System.out.println("Arriving in Cheyenne");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		location = "cheyenne";
-		if (is_job_complete()) {
-			complete_job();
-		}
-		main_menu();
+		i_80_east_wyoming_359c();
 	}
 	static void cheyenne () {
-		System.out.println("Arriving in Boise");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		locatioon = "boise";
-		if (is_job_complete()) {
-			complete_job();
-		}
-		main_menu();
+		i_25_south_wyoming_8b();
 	}
 	static void chicago () {
+		i_80_west_wyoming_359c();
 	}
 	static void complete_job () {
 		System.out.println("Job Complete");
@@ -44,7 +30,7 @@ class Main {
 			System.out.println("+ 2,727");
 			money += 2727;
 		} else if (job.equals("cheyenne - boise")) {
-			System.out.pritnln("+ 1,184");
+			System.out.println("+ 1,184");
 			money += 1184;
 		} else if (job.equals("cheyenne - chicago")) {
 			System.out.println("+ 1,547");
@@ -60,6 +46,143 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		job = "";
+	}
+	static void i_25_south_wyoming_8b () {
+		if (job.equals("cheyenne - boise") || job.equals("chicago - boise")) {
+			if (gps >= 1178) {
+				System.out.println("GPS : Take exit 8b for I-80 west");
+				System.out.println("");
+			}
+		} else if (job.equals("cheyenne - chicago") || job.equals("boise - chicago")) {
+			if (gps >= 1549) {
+				System.out.println("GPS : continue on I-25 south");
+				System.out.println("");
+			}
+		}
+		System.out.println("1. Continue on I-25 south");
+		if (sign >= 1549) {
+		}
+		System.out.println("2. Take exit 8b for I-80 west");
+		if (sign >= 1178) {
+			System.out.println("   Boise - 1,178");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Chicago");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "chicago";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+		}
+	}
+	static void i_80_east_wyoming_359c () {
+		if (job.equals("boise - cheyenne") || job.equals("chicago - cheyenne")) {
+			if (gps >= 5) {
+				System.out.println("GPS : Take exit 359c for I-25 North");
+				System.out.println("");
+			}
+		} else if (job.equals("boise - chicago") || job.equals("cheyenne - chicago")) {
+			if (gps >= 1548) {
+				System.out.println("GPS : Continue on I-80 East");
+				System.out.println("");
+			}
+		}
+		System.out.println("1. Continue on I-80 East");
+		if (sign >= 1548) {
+			System.out.println("   Chicago - 1548");
+		}
+		System.out.println("2. Take exit 359c for I-25 North");
+		if (sign >= 5) {
+			System.out.println("   Cheyenne - 5");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Cheyenne");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "cheyenne";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+			System.out.println("Arriving in Chicago");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "chicago";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		}
+	}
+	static void i_80_west_wyoming_359c () {
+		if (job.equals("cheyenne - boise") || job.equals("chicago - boise")) {
+			if (gps >= 1179) {
+				System.out.println("GPS : Continue on I-80 west");
+				System.out.println("");
+			}
+		} else if (job.equals("boise - cheyenne") || job.equals("chicago - cheyenne")) {
+			if (gps >= 4.8) {
+				System.out.println("GPS : Take exit 359c for I-25 north");
+				System.out.println("");
+			}
+		}
+		System.out.println("1. Continue on I-80 Wast");
+		if (sign >= 1179) {
+			System.out.println("Boise - 1,179");
+		}
+		System.out.println("2. Take exit 359c for I-25 north");
+		if (sign >= 4.8) {
+			System.out.println("Cheyenne - 5");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Boise");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "boise";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+			System.out.println("Arriving in Cheyenne");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			location = "cheyenne";
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		}
 	}
 	static boolean is_job_complete () {
 		if (location.equals("boise")) {
@@ -114,16 +237,20 @@ class Main {
 			if (choice == 1) {
 				job = "boise - cheyenne";
 				boise();
+			} else if (choice == 2) {
+				job = "boise - chicago";
+				boise();
 			} else if (choice == 3) {
 				main_menu();
 			}
 		} else if (location.equals("cheyenne")) {
 			System.out.println("1. Cheyenne - Boise (1,184)");
-			System.out.println("2. Back");
+			System.out.println("2. Cheyenne - Chicago (1,547)");
+			System.out.println("3. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 2));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -131,6 +258,29 @@ class Main {
 				job = "cheyenne - boise";
 				cheyenne();
 			} else if (choice == 2) {
+				job = "cheyenne - chicago";
+				cheyenne();
+			} else if (choice == 3) {
+				main_menu();
+			}
+		} else if (location.equals("chicago")) {
+			System.out.println("1. Chicago - Boise (2,724)");
+			System.out.println("2. Chicago - Cheyenne (1,545)");
+			System.out.println("3. Back");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "chicago - boise";
+				chicago();
+			} else if (choice == 2) {
+				job = "chicago - cheyenne";
+				chicago();
+			} else if (choice == 3) {
 				main_menu();
 			}
 		}
@@ -201,7 +351,7 @@ class Main {
 		try {
 			File file = new File ("save.txt");
 			FileWriter fileWriter = new FileWriter(file);
-			fileWriter.write(location + "\n" + money + "\n" + sign + "\n" + gps + "\n")
+			fileWriter.write(location + "\n" + money + "\n" + sign + "\n" + gps + "\n");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("");
@@ -224,7 +374,7 @@ class Main {
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
+		} while ((choice != 1) && (choice != 2) && (choice !=3));
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -244,7 +394,7 @@ class Main {
 			main_menu();
 		}
 	}
-} // 259
+} // 
 // boise
 // Cheyenne
 //
