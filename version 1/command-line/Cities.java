@@ -5,4 +5,6 @@ class Cities {
 	}
 	public static void chicago () {
 	}
+	public static void cincinnati () {
+	}
 }
