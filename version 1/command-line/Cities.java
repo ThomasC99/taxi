@@ -3,4 +3,6 @@ class Cities {
 	}
 	public static void cheyenne () {
 	}
+	public static void chicago () {
+	}
 }
