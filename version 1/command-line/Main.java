@@ -33,18 +33,34 @@ class Main {
 			money += 2727;
 		} else if (job.equals("boise - cincinnati")) {
 			System.out.println("+ 3,135");
+			money += 3135;
 		} else if (job.equals("cheyenne - boise")) {
 			System.out.println("+ 1,184");
 			money += 1184;
 		} else if (job.equals("cheyenne - chicago")) {
 			System.out.println("+ 1,547");
 			money += 1547;
+		} else if (job.equals("cheyenne - cincinnati")) {
+			System.out.println("+ 1,955");
+			money += 1955;
 		} else if (job.equals("chicago - boise")) {
 			System.out.println("+ 2,724");
 			money += 2724;
 		} else if (job.equals("chicago - cheyenne")) {
 			System.out.println("+ 1,545");
 			money += 1545;
+		} else if (job.equals("chicago - cincinnati")) {
+			System.out.println("+ 479");
+			money += 479;
+		} else if (job.equals("cincinnati - boise")) {
+			System.out.println("+ 3,135");
+			money += 3135;
+		} else if (job.equals("cincinnati - cheyenne")) {
+			System.out.println("+ 1,956");
+			money += 1956;
+		} else if (job.equals("cincinnati - chicago")) {
+			System.out.println("+ 473");
+			money += 473;
 		}
 		System.out.println("");
 		System.out.println("");
@@ -99,6 +115,8 @@ class Main {
 			}
 			main_menu();
 		}
+	}
+	static void i_80_east_nebraska_4b () {
 	}
 	static void i_80_east_wyoming_359c () {
 		if (job.equals("boise - cheyenne") || job.equals("chicago - cheyenne")) {
@@ -258,11 +276,12 @@ class Main {
 		if (location.equals("boise")) {
 			System.out.println("1. Boise - Cheyenne (1,184)");
 			System.out.println("2. Boise - Chicago (2,727)");
-			System.out.println("3. Back");
+			System.out.println("3. Boise - Cincinnati (3,135)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -273,16 +292,20 @@ class Main {
 				job = "boise - chicago";
 				boise();
 			} else if (choice == 3) {
+				job = "boise - cincinnati";
+				boise();
+			} else if (choice == 4) {
 				main_menu();
 			}
 		} else if (location.equals("cheyenne")) {
 			System.out.println("1. Cheyenne - Boise (1,184)");
 			System.out.println("2. Cheyenne - Chicago (1,547)");
-			System.out.println("3. Back");
+			System.out.println("3. Cheyenne - Cincinnati (1,955)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -293,16 +316,20 @@ class Main {
 				job = "cheyenne - chicago";
 				cheyenne();
 			} else if (choice == 3) {
+				job = "cheyenne - cincinnati";
+				cheyenne();
+			} else if (choice == 4) {
 				main_menu();
 			}
 		} else if (location.equals("chicago")) {
 			System.out.println("1. Chicago - Boise (2,724)");
 			System.out.println("2. Chicago - Cheyenne (1,545)");
-			System.out.println("3. Back");
+			System.out.println("3. Chicago - Cincinnati (479)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -313,6 +340,33 @@ class Main {
 				job = "chicago - cheyenne";
 				chicago();
 			} else if (choice == 3) {
+				job = "chicago - cincinnati";
+				chicago();
+			} else if (choice == 4) {
+				main_menu();
+			}
+		} else if (location.equals("cincinnati")) {
+			System.out.println("1. Cincinnati - Boise (3,135)");
+			System.out.println("2. Cincinnati - Cheyenne (1,956)");
+			System.out.println("3. Cincinnati - Chicago (473)");
+			System.out.println("4. Back");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				job = "cincinnati - boise";
+				cincinnati();
+			} else if (choice == 2) {
+				job = "cincinnati - cheyenne";
+				cincinnati();
+			} else if (choice == 3) {
+				job = "cincinnati - chicago";
+				cincinnati();
+			} else if (choice == 4) {
 				main_menu();
 			}
 		}
@@ -426,7 +480,7 @@ class Main {
 			main_menu();
 		}
 	}
-} // 2,409 - 40
+} //
 // boise
 // Cheyenne
 // Chicago
