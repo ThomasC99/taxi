@@ -7,4 +7,6 @@ class Cities {
 	}
 	public static void cincinnati () {
 	}
+	public static void denver () {
+	}
 }
