@@ -11,4 +11,6 @@ class Cities {
 	}
 	public static void detroit () {
 	}
+	public static void helena () {
+	}
 }
