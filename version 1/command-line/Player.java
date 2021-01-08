@@ -1,4 +1,6 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
 class Player {
 	private String location;
 	private String job;
@@ -15,6 +17,12 @@ class Player {
 	public void load () {
 		try {
 			File file = new File ("save.txt");
+			Scanner fileScanner = new Scanner (file);
+			setLocation(fileScanner.nextLine());
+			setMoney(fileScanner.nextDouble());
+			setSign(fileScanner.nextInt());
+			setGps(fileScanner.nextInt());
+			fileScanner.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("");
@@ -24,8 +32,13 @@ class Player {
 	}
 	public void save () {
 		try {
+			File file = new File ("save.txt");
+			FileWriter fileWriter = new FileWriter (file);
+			fileWriter.write(getLocation() + "\n" + getMoney() + "\n" + getSign() + "\n" + getGps() + "\n");
+			fileWriter.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 		}
