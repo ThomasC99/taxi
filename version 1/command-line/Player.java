@@ -12,5 +12,6 @@ class Player {
 		this.gps = 1;
 	}
 	public String getLocation () {
+		return location;
 	}
 }
