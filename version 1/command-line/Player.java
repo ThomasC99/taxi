@@ -9,5 +9,6 @@ class Player {
 		this.job = "";
 		this.money = 0;
 		this.sign = 10;
+		this.gps = 1;
 	}
 }
