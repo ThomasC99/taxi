@@ -11,4 +11,6 @@ class Player {
 		this.sign = 10;
 		this.gps = 1;
 	}
+	public String getLocation () {
+	}
 }
