@@ -946,7 +946,7 @@ class Main {
 		}
 	}
 	static void ontario_417_west_58 () { // TODO
-		System.out.println("1. Continue on ON-417");
+		System.out.println("1. Continue on ON-417 west");
 		if (player.sign() >= 63) {
 			System.out.println("   Ottawa - 63");
 		}
@@ -1094,8 +1094,104 @@ class Main {
 		if (player.sign() >= 8.6) {
 			System.out.println("   Ottawa - 9");
 		}
-		Node node = new EndNode("ottawa");
-		node.go(player);
+		System.out.println("2. Take exit 112 for Ottawa regional road 30 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_west_113a();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_west_113a () { // TODO
+		System.out.println("1. Continue on ON-417 west");
+		if (player.sign() >= 7.4) {
+			System.out.println("   Ottawa - 7");
+		}
+		System.out.println("2. Take exit 113A for Ottawa regioanl road 174 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_west_113b();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_west_113b () { // TODO
+		System.out.println("1. Continue on ON-417 west");
+		if (player.sign() >= 6.9) {
+			System.out.println("   Ottawa - 7");
+		}
+		System.out.println("2. Take exit 113B for Aviation Parkway (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_west_117();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_west_117 () { // TODO
+		System.out.println("1. Continue on ON-417 west");
+		if (player.sign() >= 4.2) {
+			System.out.println("   Ottawa - 4");
+		}
+		System.out.println("2. Take exit 117 for Ottawa regional road 19 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_west_118();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_west_118 () { // TODO
+		System.out.println("1. Continue on ON-417 west (under construction)");
+		System.out.println("2. Take exit 118 for Ottawa regioanl road 95 / Lees avenue / Mann Avenue");
+		if (player.sign() >= 2.8) {
+			System.out.println("   Ottawa - 3");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			System.out.println("1. Take exit for Ottawa regioanl road 95");
+			if (player.sign() >= 2.8) {
+				System.out.println("   Ottawa - 3");
+			}
+			System.out.println("2. Take exit for Lees avenue / Mann avenue (under construction)");
+			do {
+				choice = input.nextInt();
+			} while (choice != 1);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				ottawa_95_waller_street_north_west();
+			} else if (choice == 2) {
+			}
+		}
 	}
 	
 	// Ontario - Ottawa Regional roads
@@ -1133,6 +1229,52 @@ class Main {
 		if (choice == 1) {
 			ottawa_40_ottawa_87_south_east();
 		} else if (choice == 2) {
+		}
+	}
+	static void ottawa_42_ottawa_89_south_west () { // TODO
+		System.out.println("1. Continue on Ottawa regional road 42");
+		if (player.sign() >= 0.039) {
+			System.out.println("   Ottawa - 1");
+		}
+		System.out.println("2. Turn right on Ottawa regional road 89 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("Arriving in Ottawa");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			player.location("ottawa");
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+		}
+	}
+	static void ottawa_42_ottawa_91_south_west () { // TODO
+		System.out.println("1. Turn left on Ottawa regional road 91 (under construction)");
+		System.out.println("2. Continue on Ottawa regioanl road 42");
+		if (player.sign() >= 0.27) {
+			System.out.println("   Ottawa - 1");
+		}
+		System.out.println("3. Turn right on Ottawa regional road 91 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			ottawa_42_ottawa_89_south_west();
+		} else if (choice == 3) {
 		}
 	}
 	static void ottawa_48_ottawa_87_south_east () { // TODO
@@ -1180,23 +1322,92 @@ class Main {
 		}
 		main_menu();
 	}
-	
+	static void ottawa_48_ottawa_95_north () { // TODO
+		System.out.println("1. Turn left on Ottawa regional road 48 (under construction)");
+		System.out.println("2. Continue on Ottawa regional roadd 95");
+		if (player.sign() >= 1) {
+			System.out.println("   Ottawa - 1");
+		}
+		System.out.println("3. Turn right on Ottawa regioanl road 48 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			System.out.println("1. Make a u-turn on Ottawa regional road 95 (under construction)");
+			System.out.println("2. Continue on Ottawa regional road 97");
+			if (player.sign() >= 0.95) {
+				System.out.println("   Ottawa - 1");
+			}
+			do {
+				choice = input.nextInt();
+			} while (choice != 2);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+			} else if (choice == 2) {
+				ottawa_97_mackenzie_king_bridge_north();
+			}
+		} else if (choice == 3) {
+		}
+	}
+	static void ottawa_95_waller_street_north_west () { // TODO
+		System.out.println("1. Continue on Ottawa regioanl road 95");
+		if (player.sign() >= 1.2) {
+			System.out.println("   Ottawa - 1");
+		}
+		System.out.println("2. Turn right on Waller street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ottawa_48_ottawa_95_north();
+		} else if (choice == 2) {
+		}
+	}
+	static void ottawa_97_mackenzie_king_bridge_north () { // TODO
+		System.out.println("1. Turn left on Mackenzie King bridge");
+		if (player.sign() >= 0.85) {
+			System.out.println("   Ottawa - 1");
+		}
+		System.out.println("2. Continue on Ottawa regional road 97 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ottawa_42_ottawa_91_south_west();
+		} else if (choice == 2) {
+		}
+	}
 	// Local Roads
 	static void boulevard_robert_bourassa_rue_belmont_south_east () { // TODO
-		System.out.println("1. Turn left on Rue Belmont");
+		System.out.println("1. Turn left on Rue Belmont (under construction)");
 		System.out.println("2. Continue straight on Boulevard Robert-Bourassa");
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
 		}
-		System.out.println("3. Turn right on Rue Belmont");
-		System.out.println("4. Make a u-turn on Boulevard Robert-Bourassa");
+		System.out.println("3. Turn right on Rue Belmont (under construction)");
+		System.out.println("4. Make a u-turn on Boulevard Robert-Bourassa (under construction)");
 		if (player.sign() >= 254) {
 			System.out.println("   Quebec City - 254");
 		}
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
+		} while (choice != 2);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
