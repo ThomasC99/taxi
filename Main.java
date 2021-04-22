@@ -1094,13 +1094,8 @@ class Main {
 		if (player.sign() >= 8.6) {
 			System.out.println("   Ottawa - 9");
 		}
-		System.out.println("Arriving in Ottawa");
-		System.out.println("\n\n");
-		player.location("ottawa");
-		if (is_job_complete()) {
-			complete_job();
-		}
-		main_menu();
+		Node node = new EndNode("ottawa");
+		node.go(player);
 	}
 	
 	// Ontario - Ottawa Regional roads
@@ -1237,7 +1232,6 @@ class Main {
 	static void boulevard_robert_bourassa_saint_antoine_street_west_south_east () { // TODO
 		System.out.println("1. Turn left on Saint-Antoine street west (under construction)");
 		System.out.println("2. Continue on Boulevard robert-bourassa (under construction)");
-
 		System.out.println("3. Turn right on Saint-antoine street west");
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
