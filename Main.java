@@ -112,8 +112,9 @@ class Main {
 		}
 	}
 	public static void main (String [] args) throws Exception {
-		File testing = new File ("testing.txt");
-		input = new Scanner (testing);
+		// File testing =dd new File ("testing.txt");
+		// input = new Scanner (testing);
+		input = new Scanner (System.in);
 		player = new Player();
 		System.out.println("");
 		System.out.println("");
