@@ -10,6 +10,18 @@ class Main {
 	static Player player;
 	static Scanner input;
 	
+	// Nodes - Quebec Main autoroutes
+	static Node a_15_north_66 = new HighwayNode ("Continue on A-15 north", "Take exit 66 for Decaire Boulevard",
+	new Node () {
+		@Override
+		public void go (Player player) {
+			a_15_north_69();
+		}
+	},
+	null, new int [] {192}, new int [] {}, new String [] {"ottawa"}, new String [] {}); // TODO
+	
+	// Nodes - Ontario 400 series
+	
 	// Helper methods
 	static void complete_job () { // TODO
 		System.out.println("Job complete");
@@ -270,25 +282,6 @@ class Main {
 	}
 	
 	// Quebec - Main Autoroutes
-	static void a_15_north_66 () { // TODO
-		System.out.println("1. Continue on A-15 north");
-		if (player.sign() >= 192) {
-			System.out.println("   Ottawa - 192");
-		}
-		System.out.println("2. Take exit 66 for Decarie Boulevard");
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			a_15_north_69();
-		} else if (choice == 2) {
-			main_menu();
-		}
-	}
 	static void a_15_north_69 () { // TODO
 		System.out.println("1. Continue on A-15 North");
 		if (player.sign() >= 189) {
@@ -355,6 +348,498 @@ class Main {
 			} else if (choice == 2) {
 				main_menu();
 			}
+		}
+	}
+	static void a_15_south_64 () { // TODO
+		System.out.println("1. Continue on A-15 south");
+		if (player.sign() >= 6) {
+			System.out.println("   Montreal - 6");
+		}
+		System.out.println("2. Take exit 64 for QC-138 / Addington Street / Chemin de la cote-saint-antoine / Rue bortel (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("1. Continue on A-15 south");
+			if (player.sign() >= 6) {
+				System.out.println("   Montreal - 6");
+			}
+			System.out.println("2. Take exit for Boulevard de Maisonneuve ouest (under construction)");
+			do {
+				choice = input.nextInt();
+			} while (choice != 1);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				System.out.println("1. Continue on A-15 south");
+				if (player.sign() >= 5) {
+					System.out.println("   Montreal - 5");
+				}
+				System.out.println("2. Take exit for A-15 south / A-72 east (under construction)");
+				do {
+					choice = input.nextInt();
+				} while (choice != 1);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				if (choice == 1) {
+					System.out.println("1. Continue on A-15 south (under construction)");
+					System.out.println("2. Take exit for A-720 east");
+					if (player.sign() >= 5) {
+						System.out.println("   Montreal - 5");
+					}
+					do {
+						choice = input.nextInt();
+					} while (choice != 1);
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					if (choice == 1) {
+					} else if (choice == 2) {
+						a_720_east_2();
+					}
+				} else if (choice == 2) {
+				}
+			} else if (choice == 2) {
+			}
+		} else if (choice == 2) {
+		}
+	}
+	static void a_15_south_66 () { // TODO
+		System.out.println("1. Continue on A-15 south");
+		if (player.sign() >= 8) {
+			System.out.println("   Montreal - 8");
+		}
+		System.out.println("2. Take exit 66 for Decarie boulevard (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_15_south_64();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_15_south_69 () { // TODO
+		System.out.println("1. Continue on A-15 south");
+		if (player.sign() >= 10) {
+			System.out.println("   Montreal - 10");
+		}
+		System.out.println("2. Take exit 69 for Decarie boulevard (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_15_south_66();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_1 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 77.6) {
+			System.out.println("   Montreal - 78");
+		}
+		System.out.println("2. Take exit 1 for Montee Janssen (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_2();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_2 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 75.6) {
+			System.out.println("   Montreal - 76");
+		}
+		System.out.println("2. Take exit 2 for Montee Jenssen / Voie de service (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_6();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_6 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 72.2) {
+			System.out.println("   Montreal - 72");
+		}
+		System.out.println("2. Take exit 6 for Montee de la baie-saint-thomas (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_9();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_9 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 68.8) {
+			System.out.println("   Montreal - 69");
+		}
+		System.out.println("2. Take exit 9 for Rue jean-marc-seguin (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_12();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_12 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 65.6) {
+			System.out.println("   Montreal - 66");
+		}
+		System.out.println("2. Take exit 12 for Chemin Jean-rene-gauthier (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_17();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_17 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 61.3) {
+			System.out.println("   Montral - 61");
+		}
+		System.out.println("2. Take exit 17 for QC-201 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_22();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_22 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 56.1) {
+			System.out.println("   Montreal - 56");
+		}
+		System.out.println("2. Take exit 22 for Chemin saint-louis / Cote saint-charles (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_26();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_26 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 51.9) {
+			System.out.println("   Montreal - 52");
+		}
+		System.out.println("2. Take exit 56 for Chemin Daoust (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_32();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_32 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 45.8) {
+			System.out.println("   Montreal - 46");
+		}
+		System.out.println("2. Take exit 32 for A-30 east (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_35();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_35 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 42.8) {
+			System.out.println("   Montreal - 43");
+		}
+		System.out.println("2. Take exit 35 for boulevard de la cite-des-jeunes / Rue broivert (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_41();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_41 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 36) {
+			System.out.println("   Montreal - 36");
+		}
+		System.out.println("2. Take exit 41 for Boulevard des ancien-combattants (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_44();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_44 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 33) {
+			System.out.println("   Montreal - 33");
+		}
+		System.out.println("2. Take exit 44 for Voie de service sud (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_49();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_49 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 31) {
+			System.out.println("   Montreal - 31");
+		}
+		System.out.println("2. Take exit 49 for Voie de service nord (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_50();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_50 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 28) {
+			System.out.println("   Montreal - 29");
+		}
+		System.out.println("2. Take exit 50 for Voie de service sud (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_52();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_52 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 26) {
+			System.out.println("   Montreal - 26");
+		}
+		System.out.println("2. Take exit 52 for Voie de service sud (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_55();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_55 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 23) {
+			System.out.println("   Montreal - 23");
+		}
+		System.out.println("2. Take exit 55 for South service road (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_58();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_58 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 20) {
+			System.out.println("   Montreal - 20");
+		}
+		System.out.println("2. Take exit 58 for South service road (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_60();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_60 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 18) {
+			System.out.println("   Montreal - 18");
+		}
+		System.out.println("2. Take exit 60 for South service road (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_62();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_62 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 16) {
+			System.out.println("   Montreal - 16");
+		}
+		System.out.println("2. Take exit 62 for Trans canada route (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_64();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_64 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 15) {
+			System.out.println("   Montreal - 15");
+		}
+		System.out.println("2. Take exit 64 for Trans canada route (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_65();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_65 () { // TODO
+		System.out.println("1. Continue on A-40 east");
+		if (player.sign() >= 13) {
+			System.out.println("   Montreal - 13");
+		}
+		System.out.println("2. Take exit 65 for Trans canada route (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_70();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_40_east_70 () { // TODO
+		System.out.println("1. Continue on A-40 (under construction)");
+		System.out.println("2. Take exit 70 for A-15 south");
+		if (player.sign() >= 11) {
+			System.out.println("   Montreal - 11");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			a_15_south_69();
 		}
 	}
 	static void a_40_west_1 () { // TODO
@@ -773,6 +1258,42 @@ class Main {
 	}
 	
 	// Quebec - Spur Autoroutes  NODES START HERE
+	static void a_720_east_2 () { // TODO
+		System.out.println("1. Continue on A-720 east");
+		if (player.sign() >= 3) {
+			System.out.println("   Montreal - 3");
+		}
+		System.out.println("2. Take exit 2 for Rose of lima street / Saint-antoine street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_720_east_3();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_720_east_3 () { // TODO
+		System.out.println("1. Continue on A-720 east (under construction)");
+		System.out.println("2. Take exit 3 for Rene-levesque boulevard west / Rue saint-marc");
+		if (player.sign() >= 2) {
+			System.out.println("   Montreal - 2");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			rene_levesque_bouleward_west_rue_saint_marc_north_west();
+		}
+	}
 	static void a_720_west_2 () { // TODO
 		Node node = new HighwayNode ("Continue on A-720 west",
 			"Take exit 22 ffor A-15 south, Rue pullman, Rue saint-jacuqes (under construction)",
@@ -782,7 +1303,7 @@ class Main {
 				new Node () { // TODO
 					@Override
 					public void go (Player player) {
-						a_15_north_66();
+						a_15_north_66.go(player);
 					}
 				},
 				new int [] {},
@@ -798,6 +1319,26 @@ class Main {
 	}
 	
 	// Quebec - Primary Highways
+	static void qc_112_rene_levesque_boulevard_west_north_east () { // TODO
+		System.out.println("1. Turn left o QC-112 (under construction)");
+		System.out.println("2. Continue straght on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("3. Turn right on QC-112 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			rene_levesque_boulevard_west_rue_de_la_cathedrale_north_east();
+		} else if (choice == 3) {
+		}
+	}
 	static void qc_112_saint_antoine_street_west_south_west () { // TODO
 		System.out.println("1. Turn left on QC-112");
 		System.out.println("2. Continue on Saint antoine street west");
@@ -822,6 +1363,24 @@ class Main {
 	}
 	
 	// Ontario - 400 Series
+	static void ontario_417_east_5 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 83.6) {
+			System.out.println("   Montreal - 84");
+		}
+		System.out.println("2. Take exit 5 for Prescott and russel county road 14 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_40_east_1();
+		} else if (choice == 2) {
+		}
+	}
 	static void ontario_417_east_17 () { // TODO
 		System.out.println("1. Continue on ON-417 east");
 		if (player.sign() >= 95.3 ) {
@@ -836,6 +1395,7 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			ontario_417_east_5();
 		} else if (choice == 2) {
 		}
 	}
@@ -931,7 +1491,7 @@ class Main {
 	}
 	static void ontario_417_east_79 () { // TODO
 		System.out.println("1. Continue on ON-417 east");
-		if (sign >= 158) {
+		if (player.sign() >= 158) {
 			System.out.println("   Montreal - 158");
 		}
 		System.out.println("2. Take exit 79 for Stormount, dundas and glengarry county road 5 (under construction)");
@@ -1720,6 +2280,50 @@ class Main {
 	}
 
 	// Local Roads
+	static void boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east () { // TODO
+		System.out.println("1. Turn left on Boulevard robert-bourassa (under construction)");
+		System.out.println("2. Continue straight on Rene-levesque boulevard west (under construction)");
+		System.out.println("3. Turn right on Boulevard robert-bourassa");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 3);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		} else if (choice == 3) {
+			System.out.println("1. Stop in Montreal");
+			System.out.println("2. Continue straight on Boulevard robert-bourassa");
+			if (player.sign() >= 198) {
+				System.out.println("   Ottawa - 198");
+			}
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				System.out.println("Arriving in Montreal");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				player.location("montreal");
+				if (is_job_complete()) {
+					complete_job();
+				}
+				main_menu();
+			} else if (choice == 2) {
+				boulevard_robert_bourassa_rue_belmont_south_east();
+			}
+		}
+	}
 	static void boulevard_robert_bourassa_rue_belmont_south_east () { // TODO
 		System.out.println("1. Turn left on Rue Belmont (under construction)");
 		System.out.println("2. Continue straight on Boulevard Robert-Bourassa");
@@ -1728,8 +2332,8 @@ class Main {
 		}
 		System.out.println("3. Turn right on Rue Belmont (under construction)");
 		System.out.println("4. Make a u-turn on Boulevard Robert-Bourassa (under construction)");
-		if (player.sign() >= 254) {
-			System.out.println("   Quebec City - 254");
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
 		}
 		int choice;
 		do {
@@ -1789,6 +2393,24 @@ class Main {
 			mansfield_street_saint_antoine_street_west_south_west();
 		}
 	}
+	static void mansfield_street_rene_levesque_boulevard_west_north_east () { // TODO
+		System.out.println("1. Turn left on Mansfield street (under construction)");
+		System.out.println("2. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east();
+		}
+	}
 	static void mansfield_street_saint_antoine_street_west_south_west () { // TODO
 		System.out.println("1. Continue on Saint-antoine street west");
 		if (player.sign() >= 198) {
@@ -1806,6 +2428,207 @@ class Main {
 			rue_sainte_cecile_saint_antoine_street_west_south_west();
 		} else if (choice == 2) {
 			main_menu();
+		}
+	}
+	static void rene_levesque_boulevard_west_avenue_amesbury_north_east () { // TODO
+		System.out.println("1. Continue on Rene levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Avenue amesbury (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		system.out.println("");
+		if (choice == 1) {
+			rene_levesque_boulevard_west_guy_street_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_boulevard_west_drummond_street_north_east () { // TODO
+		System.out.println("1. Turn left on Drummond street (under construction)");
+		System.out.println("2. Continue straight on Rene-levesque boulevard west");
+		System.out.println("3. Turn right on Drummon street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			rene_levesque_boulevard_north_east();
+		} else if (choice == 3) {
+		}
+	}
+	static void rene_levesque_boulevard_west_guy_street_north_east () { // TODO
+		System.out.println("1. Turn left on Guy street (under construction)");
+		System.out.println("2. Continue straight on Reve-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("3. Turn right on Guy street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			rene_levesque_boulevard_west_mckay_street_north_east();
+		} else if (choice == 3) {
+		}
+	}
+	static void rene_levesque_boulevard_west_mckay_street_north_east() { // TODO
+		System.out.println("1. Continue straight on Rene levesque boulevard west");
+		if (player.sign() >= 1) {
+			Systsem.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on McKay street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			rene_levesque_boulevard_west_rue_lucien_lallier_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_boulevard_west_rue_de_la_cathedrale north_east () { // TODO
+		System.out.println("1. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Rue de la cathedrale (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			mansfield_street_rene_levesque_boulevard_west_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_boulevard_west_rue_de_la_montange_north_east () { // TODO
+		System.out.println("1. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Rue de la montange (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			reve_levesque_boulevard_west_drummond_street_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_boulevard_west_rue_joseph_monseau_north_east () { // TODO
+		System.out.println("1. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Rue joseph monseau (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			rene_levesque_boulevard_west_saint_mathieu_street_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_boulevard_west_rue_lucien_lallier_north_east () { // TODO
+		System.out.println("1. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Rue lucien l'allier (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			rene_levesque_boulevard_west_rue_de_la_montange_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_bouleward_west_rue_saint_marc_north_west () { // TODO
+		System.out.println("1. Turn left on Rene-levesque boulevard west (under construction)");
+		System.out.println("2. Continue straight on Rue saint-marc (under construction)");
+		System.out.println("3. Turn right on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 3);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		} else if (choice == 3) {
+			rene_levesque_boulevard_west_rue_joseph_monseau_north_east();
+		}
+	}
+	static void rene_levesque_boulevard_west_saint_mathieu_street_north_east () { // TODO
+		System.out.println("1. Continue straight on Rene levesque bouleavrd west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Saint mathieu street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			rene_levesque_boulevard_west_avenue_amesbury_north_east();
+		} else if (choice == 2) {
+		}
+	}
+	static void rene_levesque_bouleavrd_west_stanley_street_north_east () { // TODO
+		System.out.println("1. Continue straight on Rene-levesque boulevard west");
+		if (player.sign() >= 1) {
+			System.out.println("   Montreal - 1");
+		}
+		System.out.println("2. Turn right on Stanley street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			qc_112_ene_levesque_boulevard_north_east();
+		} else if (choice == 2) {
 		}
 	}
 	static void rue_de_la_cathedrale_saint_antoine_street_west () { // TODO
