@@ -282,6 +282,79 @@ class Main {
 	}
 	
 	// Quebec - Main Autoroutes
+	static void a_10_boulevard_robert_bourassa_wellington_street_south_east () { // TODO
+		System.out.println("1. Turn left on Wellington street (under construction)");
+		System.out.println("2. Continue straight on A-10 east");
+		if (player.sign() >= 261) {
+			System.out.println("   Quebec City - 261");
+		}
+		System.out.println("3. Turn right on Wellington street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			a_10_east_2();
+		} else if (choice == 3) {
+		}
+	}
+	static void a_10_east_2 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 261) {
+			System.out.println("   Quebec City - 261");
+		}
+		System.out.println("2. Take exit 2 for Chemin des moulins (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.prnitln("");
+		System.out.println("");
+		if (choice == 1) {
+			a_10_east_3();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_10_east_3 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 260) {
+			System.out.println("   Quebec City - 260");
+		}
+		System.out.println("2. Take exit 3 for Carrie derick street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_10_east_4();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_10_east_4 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 259) {
+			System.out.println("   Quebec City - 259");
+		}
+		System.out.println("2. Take exit 4 for Boulevard Geaten laberge (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
 	static void a_15_north_69 () { // TODO
 		System.out.println("1. Continue on A-15 North");
 		if (player.sign() >= 189) {
@@ -2295,6 +2368,25 @@ class Main {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
+			boulevard_robert_bourassa_william_street_south_east();
+		}
+	}
+	static void boulevard_robert_bourassa_ottawa_street_south_east () { // TODO
+		System.out.println("1. Turn left on Ottawa street (under construction)");
+		System.out.println("2. Continue straight on Boulevard robert-bourassa");
+		if (player.sign() >= 261) {
+			System.out.println("   Quebec City - 261");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.prontln("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			a_10_boulevard_robert_bourassa_wellington_street_south_east();
 		}
 	}
 	static void boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east () { // TODO
@@ -2434,6 +2526,24 @@ class Main {
 			boulevard_robert_bourassa_rue_saint_jaques_south_east();
 		} else if (choice == 3) {
 			mansfield_street_saint_antoine_street_west_south_west();
+		}
+	}
+	static void boulevard_robert_bourassa_william_street_south_east () { // TODO
+		System.out.println("1. Continue straight on Boulevard robert-bourassa");
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
+		}
+		System.out.println("2. Turn right on William street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			boulevard_robert_bourassa_ottawa_street_south_east();
+		} else if (choice == 2) {
 		}
 	}
 	static void mansfield_street_rene_levesque_boulevard_west_north_east () { // TODO
@@ -2790,16 +2900,26 @@ class Main {
 }
 
 /*
+Montreal - Quebec City : 263 km - 218
+Ottawa - Toronto : 403 km
+Ottawa - Quebec City : 444 km
+Montreal - Toronto : 542 km
+Quebec City - Toronto : 803 km
+Thunder Bay - Toronto : 1,393 km
+Thunder Bay - Winnipeg : 702 km
+Saskatoon - Winnipeg : 784 km
+Edmonton - Saskatoon : 519 km
 Calgary - Edmonton : 299 km
+Calgary - Saskatoon : 603 km
+Calgary - Vancouver : 1,076 km
+
 Calgary - Goose Bay : 5,162 km
 Calgary - Inuvik : 3,473 km
 Calgary - Montreal : 3,525 km
 Calgary - Ottawa : 3,329 km
 Calgary - Quebec City : 3,780 km
-Calgary - Saskatoon : 603 km
 Calgary - Thunder Bay : 2,021 km
 Calgary - Toronto : 3,295 km
-Calgary - Vancouver : 1,076 km
 Calgary - Whitehorse : 2,248 km
 Calgary - Winnipeg : 1,327 km
 Calgary - Yellowknife : 1,748 km
@@ -2808,24 +2928,19 @@ Edmonton - Inuvik : 3,215 km
 Edmonton - Montreal : 3,583 km
 Edmonton - Ottawa : 3,392 km
 Edmonton - Quebec City : 3,819 km
-Edmonton - Saskatoon : 519 km
 Edmonton - Thunder Bay : 2,016 km
 Edmonton - Toronto : 3,357 km
 Edmonton - Vancouver : 1,159 km
 Edmonton - Whitehorse : 1,990 km
 Edmonton - Winnipeg : 1,302 km
 Edmonton - Yellowknife : 1,451 km
-Goose Bay - Inuvik : 8,335 km
-Goose Bay - Montral : 1,771 km
 Goose Bay - Ottawa : 1,960 km
 Goose Bay - Quebec City : 1,514 km
 Goose Bay - Saskatoon : 4,609 km
 Goose Bay - Thunder Bay : 3,148 km
 Goose Bay - Toronto : 2,319 km
 Goose Bay - Vancouver : 6,327 km
-Goose Bay - Whitehorse : 7,111 km
 Goose Bay - Winnipeg : 3,825 km
-Goose Bay - Yellowknife : 6,550 km
 Inuvik - Montreal : 6,794 km
 Inuvik - Ottawa : 6,602 km
 Inuvik - Quebec City : 7,029 km
@@ -2833,28 +2948,21 @@ Inuvik - Saskatoon : 3,732 km
 Inuvik - Thunder Bay : 5,226 km
 Inuvik - Toronto : 6,568 km
 Inuvik - Vancouver : 3,578 km
-Inuvik - Whitehorse : 1,227 km
 Inuvik - Winnipeg : 4,515 km
-Inuvik - Yellowknife : 3,105 km
-Montreal - Quebec City : 263 km
 Montreal - Saskatoon : 3,059 km
 Montreal - Thunder Bay : 1,598 km
-Montreal - Toronto : 542 km
 Montreal - Vancouver : 4,556 km
 Montreal - Whitehorse : 5,570 km
 Montreal - Winnipeg : 2,262 km
 Montreal - Yellowknife : 5,000 km
-Ottawa - Quebec City : 444 km
 Ottawa - Saskatoon : 2,872 km
 Ottawa - Thunder Bay : 1,463 km
-Ottawa - Toronto : 403 km
 Ottawa - Vencouver : 4,360 km
 Ottawa - Whitehorse : 5,374 km
 Ottawa - Winnipeg : 2,066 km
 Ottawa - Yellowknife : 4,813 km
 Quebec City - Saskatoon : 3,289 km
 Quebec City - Thunder Bay : 1,828 km
-Quebec City - Toronto : 803 km
 Quebec City - Vancouver : 4,805 km
 Quebec City - Whitehorse : 5,790 km
 Quebec City - Winnipeg : 2,504 km
@@ -2863,12 +2971,9 @@ Saskatoon - Thunder Bay : 1,494 km
 Saskatoon - Toronto : 2,777 km
 Saskatoon - Vancouver : 1,665 km
 Saskatoon - Whitehorse : 2,506 km
-Saskatoon - Winnipeg : 784 km
 Saskatoon - Yellowknife : 1,945 km
-Thunder Bay - Toronto : 1,393 km
 Thunder Bay - Vancouver : 3,110 km
 Thunder Bay - Whitehorse : 3,988 km
-Thunder Bay - Winnipeg : 702 km
 Thunder Bay - Yellowknife : 3,428 km
 Toronto - Vancouver : 4,326 km
 Toronto - Whitehorse : 5,340 km
@@ -2878,6 +2983,13 @@ Vancouver - Whitehorse : 2,274 km
 Vancouver - Winnipeg : 2,338 km
 Vancouver - Yellowknife : 2,274 km
 Whitehorse - Winnipeg : 3,290 km
-Whitehorse - Yelloknife : 1,881 km
 Winnipeg - Yellowknife : 2,727 km
+
+Goose Bay - Inuvik : 8,335 km
+Goose Bay - Montral : 1,771 km
+Goose Bay - Whitehorse : 7,111 km
+Goose Bay - Yellowknife : 6,550 km
+Inuvik - Whitehorse : 1,227 km
+Inuvik - Yellowknife : 3,105 km
+Whitehorse - Yelloknife : 1,881 km
 */
