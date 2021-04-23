@@ -112,7 +112,7 @@ class Main {
 		}
 	}
 	public static void main (String [] args) throws Exception {
-		// File testing =dd new File ("testing.txt");
+		// File testing = new File ("testing.txt");
 		// input = new Scanner (testing);
 		input = new Scanner (System.in);
 		player = new Player();
@@ -772,44 +772,29 @@ class Main {
 		}
 	}
 	
-	// Quebec - Spur Autoroutes
-	static void a_720_west_1n () { // TODO
-		System.out.println("1. Continue on A-720 west");
-		System.out.println("2. Take exit 1N for A-15 north");
-		if (player.sign() >= 194) {
-			System.out.println("   Ottawa - 194");
-		}
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			main_menu();
-		} else if (choice == 2) {
-			a_15_north_66();
-		}
-	}
+	// Quebec - Spur Autoroutes  NODES START HERE
 	static void a_720_west_2 () { // TODO
-		System.out.println("1. Continue on A-720 west");
-		if (player.sign() >= 195) {
-			System.out.println("   Ottawa - 195");
-		}
-		System.out.println("2. Take exit 2 for A-15 south, Rue pullman, Rue siant-jacques");
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			a_720_west_1n();
-		} else if (choice == 2) {
-			main_menu();
-		}
+		Node node = new HighwayNode ("Continue on A-720 west",
+			"Take exit 22 ffor A-15 south, Rue pullman, Rue saint-jacuqes (under construction)",
+			new HighwayNode ("Continue on A-720 west (under construction)",
+				"Take eixt 1N for A-15 north",
+				null, // TODO
+				new Node () { // TODO
+					@Override
+					public void go (Player player) {
+						a_15_north_66();
+					}
+				},
+				new int [] {},
+				new int [] {194},
+				new String [] {},
+				new String [] {"ottawa"}),
+			null, // TODO
+			new int [] {195},
+			new int [] {},
+			new String [] {"ottawa"},
+			new String [] {});
+		node.go(player);
 	}
 	
 	// Quebec - Primary Highways
@@ -837,6 +822,293 @@ class Main {
 	}
 	
 	// Ontario - 400 Series
+	static void ontario_417_east_17 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 95.3 ) {
+			System.out.println("   Montreal - 95");
+		}
+		System.out.println("2. Take exit 17 for Prescott and Russell county road 10 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_27 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 107) {
+			System.out.println("   Ottawa - 107");
+		}
+		System.out.println("2. Take exit 27 for ON-34 / Stormount, dundas and glengarry county road 34 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_17();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_35 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 113) {
+			System.out.println("   Montreal - 113");
+		}
+		System.out.println("2. Take exit 35 for Stormount, dunsdas and glengarry county road 23 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_27();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_51 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 130) {
+			System.out.println("   Montreal - 130");
+		}
+		System.out.println("2. Take exit 51 for Stormount, dundas and glengarry country road 9 / 20 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_35();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_58 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 137) {
+			System.out.println("   Montreal - 137");
+		}
+		System.out.println("2. Take exit 58 for ON-138 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_51();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_66 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 145) {
+			System.out.println("   Montreal - 145");
+		}
+		System.out.println("2. Take exit 66 for Stormount, dundas and glengarry county road 7 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_58();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_79 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (sign >= 158) {
+			System.out.println("   Montreal - 158");
+		}
+		System.out.println("2. Take exit 79 for Stormount, dundas and glengarry county road 5 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_66();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_88 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 167) {
+			System.out.println("   Montreal - 167");
+		}
+		System.out.println("2. Take exit 88 for Ottawa regional road 33 / 28 (under cconstruction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_79();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_96 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 175) {
+			System.out.println("   Montreal - 175");
+		}
+		System.out.println("2. Take exit 96 for Ottawa regional road 41 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_88();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_104 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 182) {
+			System.out.println("   Montreal - 182");
+		}
+		System.out.println("2. Take exit 104 for Ottawa regional road 27 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_96();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_109 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 186) {
+			System.out.println("   Montreal - 186");
+		}
+		System.out.println("2. Take exit 109 for Ottawa regional road 32 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_104();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_110 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 188) {
+			System.out.println("   Montreal - 188");
+		}
+		System.out.println("2. Take exit 110 for Ottawa regional road 74 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_109();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_112 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 191) {
+			System.out.println("   Monreal - 191");
+		}
+		System.out.println("2. Take exit 112 for Ottawa regional road 30 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_110();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_113 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 192) {
+			System.out.println("   Monteal - 192");
+		}
+		System.out.println("2. Take exit 113 for Ottawa regional road 174 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_112();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_115 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 193) {
+			System.out.println("   Montreal - 193");
+		}
+		System.out.println("2. Take exit 115 for Ottawa regional road 26 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_113();
+		} else if (choice == 2) {
+		}
+	}
+	static void ontario_417_east_117 () { // TODO
+		System.out.println("1. Continue on ON-417 east");
+		if (player.sign() >= 195) {
+			System.out.println("   Montreal - 195");
+		}
+		System.out.println("2. Take exit 117 for Ottawa regional road 19 / Tremblay road (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			ontario_417_east_115();
+		} else if (choice == 2) {
+		}
+	}
 	static void ontario_417_west_5 () { // TODO
 		System.out.println("1. Continue on ON-417");
 		if (player.sign() >= 116) {
@@ -1245,15 +1517,8 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			System.out.println("Arriving in Ottawa");
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			player.location("ottawa");
-			if (is_job_complete()) {
-				complete_job();
-			}
-			main_menu();
+			Node node = new EndNode ("ottawa");
+			node.go(player);
 		} else if (choice == 2) {
 		}
 	}
@@ -1311,16 +1576,77 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+		} else if (choice == 2) {
+			ottawa_48_ottawa_91_north_east();
 		}
-		System.out.println("Arriving in Montreal");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		player.location("montreal");
-		if (is_job_complete()) {
-			complete_job();
+	}
+	static void ottawa_48_ottawa_91_north_east () { // TODO
+		System.out.println("1. Turn left on Ottawa regional road 91 (under construction)");
+		System.out.println("2. Continue on Ottawa regional road 48");
+		if (player.sign() >= 198) {
+			System.out.println("   Ottawa - 198");
 		}
-		main_menu();
+		System.out.println("3. Turn right on Ottawa regional road 91 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			System.out.println("1. Continue on Ottawa regional road 48");
+			if (player.sign() >= 198) {
+				System.out.println("   Montreal - 198");
+			}
+			System.out.println("2. Take ramp to Queen elizabeth driveway (under construction)");
+			do {
+				choice = input.nextInt();
+			} while (choice != 1);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				ottawa_48_ottawa_95_east();
+			} else if (choice == 2) {
+			}
+		} else if (choice == 3) {
+		}
+	}
+	static void ottawa_48_ottawa_95_east () { // TODO
+		System.out.println("1. Turn left on Ottawa regional road 95 (under construction)");
+		System.out.println("2. Continue straigt on Ottawa regional road 48 (under construction)");
+		System.out.println("3. Turn right on Ottawa regoinal road 95");
+		if (player.sign() >= 198) {
+			System.out.println("   Ottawa - 198");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 3);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		} else if (choice == 3) {
+			System.out.println("1. Take exit for ON-417 east");
+			if (player.sign() >= 197) {
+				System.out.println("   Montreal - 197");
+			}
+			System.out.println("2. Take exit for ON-417 west (under construction)");
+			do {
+				choice = input.nextInt();
+			} while (choice != 1);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				ontario_417_east_117();
+			} else if (choice == 2) {
+			}
+		}
 	}
 	static void ottawa_48_ottawa_95_north () { // TODO
 		System.out.println("1. Turn left on Ottawa regional road 48 (under construction)");
@@ -1392,6 +1718,7 @@ class Main {
 		} else if (choice == 2) {
 		}
 	}
+
 	// Local Roads
 	static void boulevard_robert_bourassa_rue_belmont_south_east () { // TODO
 		System.out.println("1. Turn left on Rue Belmont (under construction)");
