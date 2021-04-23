@@ -2280,6 +2280,23 @@ class Main {
 	}
 
 	// Local Roads
+	static void boulevard_robert_bourassa_notre_dame_street_west_south_east () { // TODO
+		System.out.println("1. Turn left on Notre-dame street west (under construction)");
+		System.out.println("2. Continue on Boulevard robert-bourassa");
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.pritnln("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
 	static void boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east () { // TODO
 		System.out.println("1. Turn left on Boulevard robert-bourassa (under construction)");
 		System.out.println("2. Continue straight on Rene-levesque boulevard west (under construction)");
@@ -2357,6 +2374,9 @@ class Main {
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
 		}
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
+		}
 		System.out.println("2. Turn right on Rue de la gauchetiere ouest");
 		int choice;
 		do {
@@ -2371,12 +2391,35 @@ class Main {
 			main_menu();
 		}
 	}
+	static void boulevard_robert_bourassa_rue_saint_jaques_south_east () { // TODO
+		System.out.println("1. Turn left on Rue saint-jaques (under construction)");
+		System.out.println("2. Continue on Boulevard robert bourassa");
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
+		}
+		System.out.println("3. Turn right on Rue saint-jaques (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			boulevard_robert_bourassa_notre_dame_street_west_south_east();
+		} else if (choice == 3) {
+		}
+	}
 	static void boulevard_robert_bourassa_saint_antoine_street_west_south_east () { // TODO
 		System.out.println("1. Turn left on Saint-Antoine street west (under construction)");
-		System.out.println("2. Continue on Boulevard robert-bourassa (under construction)");
+		System.out.println("2. Continue straight on Boulevard robert-bourassa");
 		System.out.println("3. Turn right on Saint-antoine street west");
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
+		}
+		if (player.sign() >= 262) {
+			System.out.println("   Quebec City - 262");
 		}
 		int choice;
 		do {
@@ -2388,7 +2431,7 @@ class Main {
 		if (choice == 1) {
 			main_menu();
 		} else if (choice == 2) {
-			main_menu();
+			boulevard_robert_bourassa_rue_saint_jaques_south_east();
 		} else if (choice == 3) {
 			mansfield_street_saint_antoine_street_west_south_west();
 		}
