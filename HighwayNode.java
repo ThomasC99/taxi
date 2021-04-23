@@ -15,6 +15,12 @@ class HighwayNode extends Node {
 		this.continueTowns = continueTowns;
 		this.exitTowns = exitTowns;
 	}
+	public void continueNode (Node node) {
+		this.continueNode = node;
+	}
+	public void exitNode (Node node) {
+		this.exitNode = node;
+	}
 	@Override
 	public void go (Player player) {
 		System.out.println("1. " + continueMessage);
