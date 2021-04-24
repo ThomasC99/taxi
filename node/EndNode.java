@@ -1,3 +1,5 @@
+package node;
+
 class EndNode extends Node {
 	private String town;
 	public EndNode (String town) {

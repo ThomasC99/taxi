@@ -1,3 +1,9 @@
+package main; // 1,453 - 90
+
+import node.EndNode;
+import node.HighwayNode;
+import node.Node;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStream;
@@ -11,16 +17,56 @@ class Main {
 	static Scanner input;
 	
 	// Nodes - Quebec Main autoroutes
-	static Node a_15_north_66 = new HighwayNode ("Continue on A-15 north", "Take exit 66 for Decaire Boulevard",
+	
+	static HighwayNode a_15_north_66 = new HighwayNode ("Continue on A-15 north", "Take exit 66 for Decaire Boulevard (under construction)", null, null,
+	new int [] {192}, new int [] {}, new String [] {"ottawa"}, new String [] {}); // TODO
+	
+	static HighwayNode a_15_north_69 = new HighwayNode ("Continue on A-15 north", "Take exit 69 for Decaire Boulevard (under construction)", null, null,
+	new int [] {189}, new int [] {}, new String [] {"ottawa"}, new String [] {}); // TODO
+	
+	static HighwayNode a_15_north_70o = new HighwayNode ("Continue on A-15 north / A-40 east (under construction)", "Take exit 70O for A-40 west",
 	new Node () {
 		@Override
 		public void go (Player player) {
-			a_15_north_69();
+			System.out.println("1. Take exit for A-40 West / Chemin de la Cote-de-Liesse");
+			if (player.sign() >= 187) {
+				System.out.println("   Ottawa - 187");
+			}
+			System.out.println("2. Take exit for QC-117");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				System.out.println("1. Take exit for A-40 West");
+				if (player.sign() >= 187) {
+					System.out.println("   Ottawa - 187");
+				}
+				System.out.println("2. Take exit for Chemin de la Cote-de-Liesse");
+				do {
+					choice = input.nextInt();
+				} while ((choice != 1) && (choice != 2));
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				if (choice == 1) {
+					a_40_west_65();
+				} else if (choice == 2) {
+					main_menu();
+				}
+			} else if (choice == 2) {
+				main_menu();
+			}
 		}
-	},
-	null, new int [] {192}, new int [] {}, new String [] {"ottawa"}, new String [] {}); // TODO
+	}, null, new int [] {}, new int [] {187}, new String [] {}, new String [] {"ottawa"});
 	
-	// Nodes - Ontario 400 series
+	static {
+		a_15_north_66.continueNode(a_15_north_69);
+		a_15_north_69.continueNode(a_15_north_70o);
+	}
 	
 	// Helper methods
 	static void complete_job () { // TODO
@@ -313,7 +359,7 @@ class Main {
 			choice = input.nextInt();
 		} while (choice != 2);
 		System.out.println("");
-		System.out.prnitln("");
+		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
 			a_10_east_3();
@@ -352,26 +398,155 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			a_10_east_5();
 		} else if (choice == 2) {
 		}
 	}
-	static void a_15_north_69 () { // TODO
-		System.out.println("1. Continue on A-15 North");
-		if (player.sign() >= 189) {
-			System.out.println("   Ottawa - 189");
+	static void a_10_east_5 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 258) {
+			System.out.println("   Quebec City - 258");
 		}
-		System.out.println("2. Take exit 69 for Decaire Boulevard");
+		System.out.println("2. Take exit 5 for Boulevard de l'ile des soeurs (under construction)");
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
+		} while (choice != 1);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			a_15_north_70o();
+			a_10_east_6();
 		} else if (choice == 2) {
-			main_menu();
+		}
+	}
+	static void a_10_east_6 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 253) {
+			System.out.println("   Quebec City - 253");
+		}
+		System.out.println("2. Take exit 6 for A-20 east");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_10_east_8();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_10_east_8 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 252) {
+			System.out.println("   Quebec City - 252");
+		}
+		System.out.println("2. Take exit 8 for QC-134 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_10_east_9();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_10_east_9 () { // TODO
+		System.out.println("1. Continue on A-10 east");
+		if (player.sign() >= 251) {
+			System.out.println("   Quebec city - 251");
+		}
+		System.out.println("2. Take exit 9 for Avenue Malo (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_10_east_11();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_10_east_11 () { // TODO
+		System.out.println("1. Continue straight on A-10 (under construction)");
+		System.out.println("2. Take exit 11 for A-30 / Boulevard de quartier / Boulevard Leduc / Chemin des praries");
+		if (player.sign() >= 249) {
+			System.out.println("   Quebec city - 249");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("1. Take exit for A-30 / Boulevard de quartier / Chemin de praries");
+			if (player.sign() >= 249) {
+				System.out.println("   Quebec city - 249");
+			}
+			System.out.println("2. Take exit for Boulevard Leduc (under construction)");
+			do {
+				choice = input.nextInt();
+			} while (choice != 1);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				System.out.println("1. Take exit for A-30 east / Chemin des praries");
+				if (player.sign() >= 248) {
+					System.out.println("   Quebec city - 248");
+				}
+				System.out.println("2. Take exit for A-30 west / Boulevard de quartier (under construction)");
+				do {
+					choice = input.nextInt();
+				} while (choice != 1);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				if (choice == 1) {
+					System.out.println("1. Take exit for Chemin des praries (under construction)");
+					System.out.println("2. Take exit for A-30 east");
+					if (player.sign() >= 247) {
+						System.out.println("   Quebec City - 247");
+					}
+					int choice;
+					do {
+						choice = input.nextInt();
+					} while (choice != 2);
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					if (choice == 1) {
+						System.out.println("1. Take exit for A-30 east");
+						if (player.sign() >= 247) {
+							System.out.println("   Quebec city - 247");
+						}
+						System.out.println("2. Take exit for A-10 west (under construction)");
+						do {
+							choice = input.nextInt();
+						} while (choice != 1);
+						System.out.println("");
+						System.out.println("");
+						System.out.println("");
+						if (choice == 1) {
+							a_30_east_69();
+						} else if (choice == 2) {
+						}
+					} else if (choice == 2) {
+					}
+				} else if (choice == 2) {
+				}
+			} else if (choice == 2) {
+			}
+		} else if (choice == 2) {
 		}
 	}
 	static void a_15_north_70o () { // TODO
@@ -390,37 +565,6 @@ class Main {
 		if (choice == 1) {
 			main_menu();
 		} else if (choice == 2) {
-			System.out.println("1. Take exit for A-40 West / Chemin de la Cote-de-Liesse");
-			if (player.sign() >= 187) {
-				System.out.println("   Ottawa - 187");
-			}
-			System.out.println("2. Take exit for QC-117");
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				System.out.println("1. Take exit for A-40 West");
-				if (player.sign() >= 187) {
-					System.out.println("   Ottawa - 187");
-				}
-				System.out.println("2. Take exit for Chemin de la Cote-de-Liesse");
-				do {
-					choice = input.nextInt();
-				} while ((choice != 1) && (choice != 2));
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				if (choice == 1) {
-					a_40_west_65();
-				} else if (choice == 2) {
-					main_menu();
-				}
-			} else if (choice == 2) {
-				main_menu();
-			}
 		}
 	}
 	static void a_15_south_64 () { // TODO
@@ -516,6 +660,163 @@ class Main {
 		System.out.println("");
 		if (choice == 1) {
 			a_15_south_66();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_20_east_102 () { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 228) {
+			System.out.println("   Quebec city - 228");
+		}
+		System.out.println("2. Take exit 102 for Rue nobel (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_20_east_105();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_20_east_105 () { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 224) {
+			System.out.println("   Quebec city - 224");
+		}
+		System.out.println("2. Take exit 105 for QC-229 / Chemin Nobel (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_69 () { // TODO
+		System.out.println("1. Continue on A-30 east");
+		if (player.sign() >= 246) {
+			System.out.println("   Quebec city - 246");
+		}
+		System.out.println("2. Take exit 69 for Grande Allee (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_30_east_73();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_73 () { // TODO
+		System.out.println("1. Continue on A-30 east");
+		if (player.sign() >= 242) {
+			System.out.println("   Quebec city - 242");
+		}
+		System.out.println("2. Take exit 73 for QC-112 / Chambly road (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_30_east_76();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_76 () { // TODO
+		System.out.println("1. Continue on A-30 east");
+		if (player.sign() >= 239) {
+			System.out.println("   Quebec city - 239");
+		}
+		System.out.println("2. Take exit 76 for QC-116 / Montee des promenades (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_30_east_78();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_78 () { // TODO
+		System.out.println("1. Continue on A-30 east");
+		if (player.sign() >= 237) {
+			System.out.println("   Quebec city");
+		}
+		System.out.println("2. Take exit 78 for Rue marie-victorin (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_30_east_80();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_80 () { // TODO
+		System.out.println("1. Continue on A-30 east");
+		if (player.sign() >= 235) {
+			System.out.println("   Quebec city - 235");
+		}
+		System.out.println("2. Take exit 80 for Montee montarville (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			a_30_east_83();
+		} else if (choice == 2) {
+		}
+	}
+	static void a_30_east_83 () { // TODO
+		System.out.println("1. Continue on A-30 east (under construction)");
+		System.out.println("2. Take exit 83 for A-20");
+		if (player.sign() >= 232) {
+			System.out.println("   Quebec city - 232");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			System.out.println("1. Take exit for A-20 west (under construction)");
+			System.out.println("2. Take exit for A-20 east (under construction)");
+			if (player.sign() >= 231) {
+				System.out.println("   Quebec city - 231");
+			}
+			do {
+				choice = input.nextInt();
+			} while (choice != 2);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+			} else if (choice == 2) {
+				a_20_east_102();
+			}
 		} else if (choice == 2) {
 		}
 	}
@@ -1330,67 +1631,6 @@ class Main {
 		}
 	}
 	
-	// Quebec - Spur Autoroutes  NODES START HERE
-	static void a_720_east_2 () { // TODO
-		System.out.println("1. Continue on A-720 east");
-		if (player.sign() >= 3) {
-			System.out.println("   Montreal - 3");
-		}
-		System.out.println("2. Take exit 2 for Rose of lima street / Saint-antoine street (under construction)");
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while (choice != 1);
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			a_720_east_3();
-		} else if (choice == 2) {
-		}
-	}
-	static void a_720_east_3 () { // TODO
-		System.out.println("1. Continue on A-720 east (under construction)");
-		System.out.println("2. Take exit 3 for Rene-levesque boulevard west / Rue saint-marc");
-		if (player.sign() >= 2) {
-			System.out.println("   Montreal - 2");
-		}
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while (choice != 1);
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-		} else if (choice == 2) {
-			rene_levesque_bouleward_west_rue_saint_marc_north_west();
-		}
-	}
-	static void a_720_west_2 () { // TODO
-		Node node = new HighwayNode ("Continue on A-720 west",
-			"Take exit 22 ffor A-15 south, Rue pullman, Rue saint-jacuqes (under construction)",
-			new HighwayNode ("Continue on A-720 west (under construction)",
-				"Take eixt 1N for A-15 north",
-				null, // TODO
-				new Node () { // TODO
-					@Override
-					public void go (Player player) {
-						a_15_north_66.go(player);
-					}
-				},
-				new int [] {},
-				new int [] {194},
-				new String [] {},
-				new String [] {"ottawa"}),
-			null, // TODO
-			new int [] {195},
-			new int [] {},
-			new String [] {"ottawa"},
-			new String [] {});
-		node.go(player);
-	}
-	
 	// Quebec - Primary Highways
 	static void qc_112_rene_levesque_boulevard_west_north_east () { // TODO
 		System.out.println("1. Turn left o QC-112 (under construction)");
@@ -2124,6 +2364,9 @@ class Main {
 			System.out.println("   Montreal - 198");
 		}
 		System.out.println("2. Continue on Ottawa regional road 42 (under construction)");
+		if (player.sign() >= 444) {
+			System.out.println("   Quebec City - 444");
+		}
 		int choice;
 		do {
 			choice = input.nextInt();
@@ -2364,7 +2607,7 @@ class Main {
 			choice = input.nextInt();
 		} while (choice != 2);
 		System.out.println("");
-		System.out.pritnln("");
+		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
@@ -2382,7 +2625,7 @@ class Main {
 			choice = input.nextInt();
 		} while (choice != 2);
 		System.out.println("");
-		System.out.prontln("");
+		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
@@ -2411,7 +2654,6 @@ class Main {
 			if (player.sign() >= 198) {
 				System.out.println("   Ottawa - 198");
 			}
-			int choice;
 			do {
 				choice = input.nextInt();
 			} while ((choice != 1) && (choice != 2));
@@ -2595,7 +2837,7 @@ class Main {
 		} while (choice != 1);
 		System.out.println("");
 		System.out.println("");
-		system.out.println("");
+		System.out.println("");
 		if (choice == 1) {
 			rene_levesque_boulevard_west_guy_street_north_east();
 		} else if (choice == 2) {
@@ -2614,7 +2856,7 @@ class Main {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			rene_levesque_boulevard_north_east();
+			rene_levesque_boulevard_west_stanley_street_north_east();
 		} else if (choice == 3) {
 		}
 	}
@@ -2641,7 +2883,7 @@ class Main {
 	static void rene_levesque_boulevard_west_mckay_street_north_east() { // TODO
 		System.out.println("1. Continue straight on Rene levesque boulevard west");
 		if (player.sign() >= 1) {
-			Systsem.out.println("   Montreal - 1");
+			System.out.println("   Montreal - 1");
 		}
 		System.out.println("2. Turn right on McKay street (under construction)");
 		int choice;
@@ -2656,7 +2898,7 @@ class Main {
 		} else if (choice == 2) {
 		}
 	}
-	static void rene_levesque_boulevard_west_rue_de_la_cathedrale north_east () { // TODO
+	static void rene_levesque_boulevard_west_rue_de_la_cathedrale_north_east () { // TODO
 		System.out.println("1. Continue straight on Rene-levesque boulevard west");
 		if (player.sign() >= 1) {
 			System.out.println("   Montreal - 1");
@@ -2688,7 +2930,7 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			reve_levesque_boulevard_west_drummond_street_north_east();
+			rene_levesque_boulevard_west_drummond_street_north_east();
 		} else if (choice == 2) {
 		}
 	}
@@ -2766,7 +3008,7 @@ class Main {
 		} else if (choice == 2) {
 		}
 	}
-	static void rene_levesque_bouleavrd_west_stanley_street_north_east () { // TODO
+	static void rene_levesque_boulevard_west_stanley_street_north_east () { // TODO
 		System.out.println("1. Continue straight on Rene-levesque boulevard west");
 		if (player.sign() >= 1) {
 			System.out.println("   Montreal - 1");
@@ -2780,7 +3022,7 @@ class Main {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
-			qc_112_ene_levesque_boulevard_north_east();
+			qc_112_rene_levesque_boulevard_west_north_east();
 		} else if (choice == 2) {
 		}
 	}

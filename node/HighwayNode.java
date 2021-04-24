@@ -1,3 +1,4 @@
+package node;
 import java.util.Scanner;
 class HighwayNode extends Node {
 	private String continueMessage, exitMessage;
@@ -16,6 +17,9 @@ class HighwayNode extends Node {
 		this.exitTowns = exitTowns;
 	}
 	public void continueNode (Node node) {
+		this.continueNode = node;
+	}
+	public void continueNode (HighwayNode node) {
 		this.continueNode = node;
 	}
 	public void exitNode (Node node) {

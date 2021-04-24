@@ -1,0 +1,1 @@
+javac -cp . main/*.java node/*.java roads.north_america.canada.quebec.spur_autoroutes/*.java
