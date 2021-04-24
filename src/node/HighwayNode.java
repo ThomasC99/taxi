@@ -1,6 +1,10 @@
 package node;
+
+import main.Player;
+
 import java.util.Scanner;
-class HighwayNode extends Node {
+
+public class HighwayNode extends Node {
 	private String continueMessage, exitMessage;
 	private Node continueNode, exitNode;
 	private int [] exitSigns, continueSigns;

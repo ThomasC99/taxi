@@ -5,13 +5,13 @@ import main.Player;
 
 import java.util.Scanner;
 
-class A720 {
+public class A720 {
 	private static Scanner input;
 	static {
 		input = new Scanner (System.in);
 	}
 	
-	static void east_2 (Player player) { // TODO
+	public static void east_2 (Player player) { // TODO
 		System.out.println("1. Continue on A-720 east");
 		if (player.sign() >= 3) {
 			System.out.println("   Montreal - 3");
@@ -44,7 +44,7 @@ class A720 {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			rene_levesque_bouleward_west_rue_saint_marc_north_west();
+			Main.rene_levesque_bouleward_west_rue_saint_marc_north_west();
 		}
 	}
 	static void west_1n (Player player) { // TODO
@@ -62,10 +62,10 @@ class A720 {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			main.a_15_north_66.go(player);
+			Main.a_15_north_66.go(player);
 		}
 	}
-	static void west_2 (Player player) { // TODO
+	public static void west_2 (Player player) { // TODO
 		System.out.println("1. Cotninue on A-720 west");
 		if (player.sign() >= 194) {
 			System.out.println("   Ottawa - 194");

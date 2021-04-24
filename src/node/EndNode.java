@@ -1,6 +1,9 @@
 package node;
 
-class EndNode extends Node {
+import main.Main;
+import main.Player;
+
+public class EndNode extends Node {
 	private String town;
 	public EndNode (String town) {
 		this.town = town;
