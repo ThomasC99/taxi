@@ -63,7 +63,352 @@ public class A20 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			east_112(player);
 		} else if (choice == 2) {
 		}
+	}
+	public static void east_112 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 218) {
+			System.out.println("   Quebec City - 218");
+		}
+		System.out.println("2. Take exit 112 for Rue serge pepin (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_113(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_113 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 216) {
+			System.out.println("   Quebec City - 216");
+		}
+		System.out.println("2. Take exit 113 for Rue brunet (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_115(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_115 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 214) {
+			System.out.println("   Quebec City - 214");
+		}
+		System.out.println("2. Take exit 115 for Grande Allee (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_120(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_120 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 209) {
+			System.out.println("   Quebec City - 209");
+		}
+		System.out.println("2. Take exit 120 for QC-227 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_123(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_123 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 206) {
+			System.out.println("   Quebec city - 206");
+		}
+		System.out.println("2. Take exit 123 for Chemin du grand rang / Grand rang (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_128(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_128 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 202) {
+			System.out.println("   Quebec city - 202");
+		}
+		System.out.println("2. Take exit 128 for Boulevard choquette (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_130(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_130 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 199) {
+			System.out.println("   Quebec City - 199");
+		}
+		System.out.println("2. Take exit 130 for QC-137 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_133(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_133 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 197) {
+			System.out.println("   Quebec City - 197");
+		}
+		System.out.println("2. Take exit 113 for Boulevard Casavant Est (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_134(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_134 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 195) {
+			System.out.println("   Quebec city - 195");
+		}
+		System.out.println("2. Take exit 134 for Rue lesage (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_138(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_138 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 192) {
+			System.out.println("   Quebec City - 192");
+		}
+		System.out.println("2. Take exit 138 for QC-224 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_141(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_141 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 188) {
+			System.out.println("   Quebec City - 188");
+		}
+		System.out.println("2. Take exit 141 for QC-116 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_145(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_145 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 185) {
+			System.out.println("   Quebec City - 185");
+		}
+		System.out.println("2. Take exit 145 for Rang saint-edouard (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_147(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_147 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 182) {
+			System.out.println("   Quebec City - 182");
+		}
+		System.out.println("2. Take exit 147 for QC-116 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_150(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_150 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 180) {
+			System.out.println("   Quebec City - 180");
+		}
+		System.out.println("2. Take exit 150 for 2e Rang (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_152(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_152 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 178) {
+			System.out.println("   Quebec City - 178");
+		}
+		System.out.println("2. Take exit 152 for Rue Principale (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_157(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_157 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 173) {
+			System.out.println("   Quebec city - 173");
+		}
+		System.out.println("2. Take exit 157 for Rang brodeur (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_160(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_160 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 170) {
+			System.out.println("   Quebec City - 170");
+		}
+		System.out.println("2. Take exit 160 for QC-239");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_166(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_166 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 164) {
+			System.out.println("   Quebec City - 164");
+		}
+		System.out.println("2. Take exit 166 for 10 rang (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_170(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_170 (Player player) {
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 160) {
+			System.out.println("   Quebec City - 160");
+		}
+		System.out.println("2. Take exit 170 for Rue des menuisiers (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_173(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_173 (Player player) { // TODO
 	}
 }

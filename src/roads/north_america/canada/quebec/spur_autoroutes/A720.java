@@ -2,6 +2,7 @@ package roads.north_america.canada.quebec.spur_autoroutes;
 
 import main.Main;
 import main.Player;
+import roads.north_america.canada.quebec.main_autoroutes.A15;
 import roads.north_america.canada.quebect.Montreal;
 
 import java.util.Scanner;
@@ -30,7 +31,7 @@ public class A720 {
 		} else if (choice == 2) {
 		}
 	}
-	static void east_3 (Player player) { // TODO
+	static void east_3 (Player player) {
 		System.out.println("1. Continue on A-720 east (under construction)");
 		System.out.println("2. Take exit 3 for Rene-levesque boulevard west / Rue saint-marc");
 		if (player.sign() >= 2) {
@@ -44,9 +45,33 @@ public class A720 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			east_4(player);
 		} else if (choice == 2) {
 			Montreal.rene_levesque_bouleward_west_rue_saint_marc_north_west(player);
 		}
+	}
+	static void east_4 (Player player) { // TODO
+		System.out.println("1. Continue on A-720 east");
+		System.out.println("2. Take exit 4 for Jean d'estrees street / Rue de la montange (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) { 
+			east_6(player);
+		} else if (choice == 2) {
+		}
+	}
+	static void east_6 (Player player) { // TODO
+		System.out.println("1. Continue on A-720 east (under construction)");
+		System.out.println("2. Take exit 6 for Rue saint-antoine est (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
 	}
 	static void west_1n (Player player) { // TODO
 		System.out.println("1. Continue on A-720 west (under construction)");
@@ -63,7 +88,7 @@ public class A720 {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			Main.a_15_north_66.go(player);
+			A15.a_15_north_66.go(player);
 		}
 	}
 	public static void west_2 (Player player) { // TODO
