@@ -2,6 +2,7 @@ package roads.north_america.canada.quebec.spur_autoroutes;
 
 import main.Main;
 import main.Player;
+import roads.north_america.canada.quebect.Montreal;
 
 import java.util.Scanner;
 
@@ -44,7 +45,7 @@ public class A720 {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			Main.rene_levesque_bouleward_west_rue_saint_marc_north_west();
+			Montreal.rene_levesque_bouleward_west_rue_saint_marc_north_west(player);
 		}
 	}
 	static void west_1n (Player player) { // TODO

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import main.Main;
 import main.Player;
+import roads.north_america.canada.quebect.Montreal;
 
 public class QC112 {
 	static Scanner input = new Scanner (System.in);
@@ -23,7 +24,7 @@ public class QC112 {
 		System.out.println("");
 		if (choice == 1) {
 		} else if (choice == 2) {
-			Main.rene_levesque_boulevard_west_rue_de_la_cathedrale_north_east();
+			Montreal.rene_levesque_boulevard_west_rue_de_la_cathedrale_north_east(player);
 		} else if (choice == 3) {
 		}
 	}
@@ -44,7 +45,7 @@ public class QC112 {
 		if (choice == 1) {
 			Main.main_menu();
 		} else if (choice == 2) {
-			Main.rue_saint_felix_saint_antoine_street_west_south_west();
+			Montreal.rue_saint_felix_saint_antoine_street_west_south_west(player);
 		} else if (choice == 3) {
 			Main.main_menu();
 		}
