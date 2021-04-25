@@ -13,6 +13,27 @@ public class A10 {
 		input = new Scanner (System.in);
 	}
 	
+	public static void a_10_boulevard_robert_bourassa_wellington_street_south_east (Player player) { // TODO
+		System.out.println("1. Turn left on Wellington street (under construction)");
+		System.out.println("2. Continue straight on A-10 east");
+		if (player.sign() >= 261) {
+			System.out.println("   Quebec City - 261");
+		}
+		System.out.println("3. Turn right on Wellington street (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 2);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+		} else if (choice == 2) {
+			east_2(player);
+		} else if (choice == 3) {
+		}
+	}
+	
 	public static void east_2 (Player player) { // TODO
 		System.out.println("1. Continue on A-10 east");
 		if (player.sign() >= 261) {
