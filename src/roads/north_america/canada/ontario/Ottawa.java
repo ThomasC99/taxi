@@ -33,20 +33,46 @@ public class Ottawa {
 		if (player.sign() >= 199) {
 			System.out.println("   Montreal - 198");
 		}
-		System.out.println("2. Continue on Ottawa regional road 42 (under construction)");
+		System.out.println("2. Continue on Ottawa regional road 42");
 		if (player.sign() >= 444) {
 			System.out.println("   Quebec City - 444");
 		}
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while (choice != 1);
+		} while ((choice != 1) && (choice != 2));
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
 			rr_40_rr_87_south_east(player);
 		} else if (choice == 2) {
+			// straight on RR 42
+			// left on RR 83
+			// left on RR 34
+			// right on portage bridge
+			// straight on boulevard maisonneuve
+			// straight on boulevard fournier
+			// left on ramp to A-50 east
+			// exit 292E for A-15 south
+			// exit 20 for A-640 east
+			// exit 52E for A-40 east
+			// exit 192S for A-40 east / A-55 south
+			// exit 182 for A-40 east
+			// straight on A-440 east
+			// straight on boulevard charest ouest
+			// straight on boulevard charest est
+			// straight on rue saint-paul
+			// straight on QC-136
+			System.out.println("Arriving in Quebec City");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			player.location("quebec city");
+			if (Main.is_job_complete()) {
+				Main.complete_job();
+			}
+			Main.main_menu();
 		}
 	}
 	static void rr_42_rr_89_south_west (Player player) { // TODO
@@ -93,7 +119,7 @@ public class Ottawa {
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
 		}
-		System.out.println("2. Cotninue on Ottawa regional road 87 (under construction)");
+		System.out.println("2. Continue on Ottawa regional road 87 (under construction)");
 		System.out.println("3. Turn right on Ottawa regional road 48 (under construction)");
 		int choice;
 		do {

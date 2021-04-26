@@ -30,6 +30,9 @@ public class Main {
 		} else if (player.job().equals("ottawa - montreal")) {
 			System.out.println("+ 198");
 			player.money(198 + player.money());
+		} else if (player.job().equals("ottawa - quebec city")) {
+			System.out.println("+ 444");
+			player.money(444 + player.money());
 		} else if (player.job().equals("quebec city - montreal")) {
 			System.out.println("+ 263");
 			player.money(263 + player.money());
@@ -98,11 +101,12 @@ public class Main {
 			}
 		} else if (player.location().equals("ottawa")) {
 			System.out.println("1. Ottawa - Montreal (198)");
-			System.out.println("2. Back");
+			System.out.println("2. Ottawa - Quebec City (444)");
+			System.out.println("3. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 3));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -110,6 +114,9 @@ public class Main {
 				player.job("ottawa - montreal");
 				ottawa();
 			} else if (choice == 2) {
+				player.job("ottawa - quebec city");
+				ottawa();
+			} else if (choice == 3) {
 				main_menu();
 			}
 		} else if (player.location().equals("quebec city")) {
