@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import main.Main;
 import main.Player;
-import roads.north_america.canada.quebect.Montreal;
+import roads.north_america.canada.quebec.Montreal;
 
 public class QC112 {
 	static Scanner input = new Scanner (System.in);

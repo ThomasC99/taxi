@@ -410,5 +410,113 @@ public class A20 {
 		}
 	}
 	public static void east_173 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east");
+		if (player.sign() >= 156) {
+			System.out.println("   Quebec city - 156");
+		}
+		System.out.println("2. Take exit 173 for A-55 south (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_175(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_175 (Player player) { // TODO
+		System.out.println("1. Continue on A-20 east / A-55 north");
+		if (player.sign() >= 155) {
+			System.out.println("   Quebec city - 155");
+		}
+		System.out.println("2. Take exit 175 for QC-143 / Rue jean-berchmans-michaud");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_177(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_177 (Player player) { // TODO
+		System.out.println("1. Continue on A-15 north / A-20 east");
+		if (player.sign() >= 153) {
+			System.out.println("   Quebec city - 153");
+		}
+		System.out.println("2. Take exit 177 for QC-143 (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_179(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_179 (Player player) { // TODO
+		System.out.println("1. Continue on A-15 north / A-20 east");
+		if (player.sign() >= 150) {
+			System.out.println("   Quebec City - 150");
+		}
+		System.out.println("2. Take exit 179 for Rene-levesque boulevard / rue robert-bernard (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_181(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_181 (Player player) { // TODO
+		System.out.println("1. Continue on A-15 north / A-20 east");
+		if (player.sign() >= 149) {
+			System.out.println("   Quebec City - 149");
+		}
+		System.out.println("2. Take exit 181 for Boulevard Foucalt / Rue Montplasir (under construction)");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (choice != 1);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			east_185(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void east_185 (Player player) { // TODO
+		east_191(player);
+	}
+	public static void east_191 (Player player) { // TODO
+		// exit 312N of A-20 east for A-73 north
+		// exit 139E of A-73 north for A-440 east
+		// end of A-440 for Boulevard Charest ouest
+		// straight on Boulevard charest est
+		// straight on Rue saint-paul
+		// straight on QC-136
+		System.out.println("Arriving in Quebec City");
+		player.location("quebec city");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (Main.is_job_complete()) {
+			Main.complete_job();
+		}
+		Main.main_menu();
 	}
 }

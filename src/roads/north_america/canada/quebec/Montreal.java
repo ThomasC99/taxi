@@ -1,4 +1,4 @@
-package roads.north_america.canada.quebect;
+package roads.north_america.canada.quebec;
 
 import java.util.Scanner;
 
@@ -46,7 +46,7 @@ public class Montreal {
 			A10.a_10_boulevard_robert_bourassa_wellington_street_south_east(player);
 		}
 	}
-	static void boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east (Player player) { // TODO
+	public static void boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east (Player player) { // TODO
 		System.out.println("1. Turn left on Boulevard robert-bourassa (under construction)");
 		System.out.println("2. Continue straight on Rene-levesque boulevard west (under construction)");
 		System.out.println("3. Turn right on Boulevard robert-bourassa");
