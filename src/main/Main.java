@@ -20,7 +20,7 @@ public class Main {
 	static HashMap <String, Integer> job_values = new HashMap <String, Integer> ();
 	
 	static {
-		job_values.put("goose bay - quebec city", 1515);
+		job_values.put("goose bay - quebec city", 1514);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
 		job_values.put("ottawa - montreal", 198);
@@ -92,6 +92,21 @@ public class Main {
 			}
 		} else if (player.location().equals("edmonton")) {
 		} else if (player.location().equals("goose bay")) {
+			System.out.println("1. Goose Bay - Quebec City (1,514)");
+			System.out.println("2. Back");
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				player.job("goose bay - quebec city");
+				goose_bay();
+			} else if (choice == 2) {
+				main_menu();
+			}
 		} else if (player.location().equals("inuvik")) {
 		} else if (player.location().equals("montreal")) {
 			System.out.println("1. Montreal - Ottawa (198)");
