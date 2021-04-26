@@ -2,6 +2,7 @@ package main; // 1,835 1,764 1,724 1,092 760 487 333 220 118 95 - 45
 
 import node.HighwayNode;
 import node.Node;
+import north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
 import roads.north_america.canada.ontario.Ottawa;
 import roads.north_america.canada.quebec.Montreal;
 import roads.north_america.canada.quebec.main_autoroutes.A10;
@@ -36,6 +37,9 @@ public class Main {
 		} else if (player.job().equals("quebec city - montreal")) {
 			System.out.println("+ 263");
 			player.money(263 + player.money());
+		} else if (player.job().equals("quebec city - ottawa")) {
+			System.out.println("+ 444");
+			player.money(444 + player.money());
 		}
 		player.job("");
 		System.out.println("");
@@ -121,7 +125,8 @@ public class Main {
 			}
 		} else if (player.location().equals("quebec city")) {
 			System.out.println("1. Quebec City - Monteal (263)");
-			System.out.println("2. Back");
+			System.out.println("2. Quebec City - Ottawa (444)");
+			System.out.println("3. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
@@ -133,6 +138,9 @@ public class Main {
 				player.job("quebec city - montreal");
 				quebec_city();
 			} else if (choice == 2) {
+				player.job("quebec city - ottawa");
+				quebec_city();
+			} else if (choice == 3) {
 				main_menu();
 			}
 		} else if (player.location().equals("saskatoon")) {
@@ -291,15 +299,7 @@ public class Main {
 		// straight on boulevard charest est
 		// straight on boulevard charest ouest
 		// straight on A-440 west
-		// exit 12N for A-73 south
-		// exit 131O for A-20 west
-		// exit 82 for Taschereau boulevard
-		// ramp to QC-134
-		// exit doe Avenue de lormier
-		// right on A-720
-		// exit 5 for mansfield street
-		// right on rene-levesque boulevard west
-		Montreal.boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east(player);
+		QuebecCity.west_12n(player);
 	}
 	static void saskatoon () { // TODO
 	}

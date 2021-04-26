@@ -75,7 +75,7 @@ public class Ottawa {
 			Main.main_menu();
 		}
 	}
-	static void rr_42_rr_89_south_west (Player player) { // TODO
+	public static void rr_42_rr_89_south_west (Player player) { // TODO
 		System.out.println("1. Continue on Ottawa regional road 42");
 		if (player.sign() >= 0.039) {
 			System.out.println("   Ottawa - 1");
