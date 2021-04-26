@@ -32,7 +32,7 @@ public class A720 {
 		}
 	}
 	static void east_3 (Player player) {
-		System.out.println("1. Continue on A-720 east (under construction)");
+		System.out.println("1. Continue on A-720 east");
 		System.out.println("2. Take exit 3 for Rene-levesque boulevard west / Rue saint-marc");
 		if (player.sign() >= 2) {
 			System.out.println("   Montreal - 2");
@@ -40,7 +40,7 @@ public class A720 {
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while (choice != 1);
+		} while ((choice != 1) && (choice != 2));
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");

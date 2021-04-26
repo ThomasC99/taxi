@@ -172,7 +172,7 @@ public class Montreal {
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while (choice != 3);
+		} while ((choice != 2) && (choice != 3));
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -260,11 +260,11 @@ public class Montreal {
 	static void rene_levesque_boulevard_west_drummond_street_north_east (Player player) { // TODO
 		System.out.println("1. Turn left on Drummond street (under construction)");
 		System.out.println("2. Continue straight on Rene-levesque boulevard west");
-		System.out.println("3. Turn right on Drummon street (under construction)");
+		System.out.println("3. Turn right on Drummond street (under construction)");
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while (choice != 1);
+		} while (choice != 2);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");

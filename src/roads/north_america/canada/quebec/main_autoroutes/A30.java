@@ -113,8 +113,9 @@ public class A30 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+		} else if (choice == 2) {
 			System.out.println("1. Take exit for A-20 west (under construction)");
-			System.out.println("2. Take exit for A-20 east (under construction)");
+			System.out.println("2. Take exit for A-20 east");
 			if (player.sign() >= 231) {
 				System.out.println("   Quebec city - 231");
 			}
@@ -128,7 +129,6 @@ public class A30 {
 			} else if (choice == 2) {
 				A20.east_102(player);
 			}
-		} else if (choice == 2) {
 		}
 	}
 }

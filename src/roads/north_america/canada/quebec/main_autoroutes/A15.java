@@ -91,7 +91,7 @@ public class A15 {
 				if (player.sign() >= 5) {
 					System.out.println("   Montreal - 5");
 				}
-				System.out.println("2. Take exit for A-15 south / A-72 east (under construction)");
+				System.out.println("2. Take exit for A-15 south / A-720 east (under construction)");
 				do {
 					choice = input.nextInt();
 				} while (choice != 1);
@@ -106,7 +106,7 @@ public class A15 {
 					}
 					do {
 						choice = input.nextInt();
-					} while (choice != 1);
+					} while (choice != 2);
 					System.out.println("");
 					System.out.println("");
 					System.out.println("");

@@ -43,7 +43,7 @@ public class A10 {
 		int choice;
 		do {
 			choice = input.nextInt();
-		} while (choice != 2);
+		} while (choice != 1);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -174,6 +174,7 @@ public class A10 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+		} else if (choice == 2) {
 			System.out.println("1. Take exit for A-30 / Boulevard de quartier / Chemin de praries");
 			if (player.sign() >= 249) {
 				System.out.println("   Quebec city - 249");
@@ -210,6 +211,7 @@ public class A10 {
 					System.out.println("");
 					System.out.println("");
 					if (choice == 1) {
+					} else if (choice == 2) {
 						System.out.println("1. Take exit for A-30 east");
 						if (player.sign() >= 247) {
 							System.out.println("   Quebec city - 247");
@@ -225,13 +227,11 @@ public class A10 {
 							A30.east_69(player);
 						} else if (choice == 2) {
 						}
-					} else if (choice == 2) {
 					}
 				} else if (choice == 2) {
 				}
 			} else if (choice == 2) {
 			}
-		} else if (choice == 2) {
 		}
 	}
 }
