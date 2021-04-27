@@ -5,6 +5,7 @@ import java.util.Scanner;
 import main.Main;
 import main.Player;
 import roads.north_america.canada.quebec.main_autoroutes.A10;
+import roads.north_america.canada.quebec.main_autoroutes.A20;
 import roads.north_america.canada.quebec.primary_highways.QC112;
 import roads.north_america.canada.quebec.spur_autoroutes.A720;
 
@@ -95,7 +96,10 @@ public class Montreal {
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
 		}
-		System.out.println("3. Turn right on Rue Belmont (under construction)");
+		System.out.println("3. Turn right on Rue Belmont");
+		if (player.sign() >= 1770) {
+			System.out.println("   Goose Bay - 1,770");
+		}
 		System.out.println("4. Make a u-turn on Boulevard Robert-Bourassa (under construction)");
 		if (player.sign() >= 262) {
 			System.out.println("   Quebec City - 262");
@@ -114,7 +118,7 @@ public class Montreal {
 		} else if (choice == 3) {
 			Main.main_menu();
 		} else if (choice == 4) {
-			Main.main_menu();
+			A20.east_102(player);
 		}
 	}
 	static void boulevard_robert_bourassa_rue_de_la_gauchetiere_ouest_south_east (Player player) { // TODO

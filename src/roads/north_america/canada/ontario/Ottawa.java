@@ -7,6 +7,7 @@ import main.Player;
 import node.EndNode;
 import node.Node;
 import roads.north_america.canada.ontario.series400.ON417;
+import roads.north_america.canada.quebec.main_autoroutes.A40;
 
 public class Ottawa {
 	static Scanner input = new Scanner (System.in);
@@ -37,6 +38,9 @@ public class Ottawa {
 		if (player.sign() >= 444) {
 			System.out.println("   Quebec City - 444");
 		}
+		if (player.sign() >= 1960) {
+			System.out.println("   Goose Bay - 1,960");
+		}
 		int choice;
 		do {
 			choice = input.nextInt();
@@ -59,11 +63,7 @@ public class Ottawa {
 			// exit 52E for A-40 east
 			// exit 192S for A-40 east / A-55 south
 			// exit 182 for A-40 east
-			// straight on A-440 east
-			// straight on boulevard charest ouest
-			// straight on boulevard charest est
-			// straight on rue saint-paul
-			// straight on QC-136
+			A40.east_307n(player);
 			System.out.println("Arriving in Quebec City");
 			System.out.println("");
 			System.out.println("");

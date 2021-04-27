@@ -18,6 +18,9 @@ public class A20 {
 		if (player.sign() >= 228) {
 			System.out.println("   Quebec city - 228");
 		}
+		if (player.sign() >= 1744) {
+			System.out.println("   Goose Bay - 1,744");
+		}
 		System.out.println("2. Take exit 102 for Rue nobel (under construction)");
 		int choice;
 		do {
@@ -35,6 +38,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 224) {
 			System.out.println("   Quebec city - 224");
+		}
+		if (player.sign() >= 1740) {
+			System.out.println("   Goose Bay - 1,740");
 		}
 		System.out.println("2. Take exit 105 for QC-229 / Chemin Nobel (under construction)");
 		int choice;
@@ -54,6 +60,9 @@ public class A20 {
 		if (player.sign() >= 220) {
 			System.out.println("   Quebec city - 220");
 		}
+		if (player.sign() >= 1736) {
+			System.out.println("   Goose Bay - 1,736");
+		}
 		System.out.println("2. Take exit 109 for Chemin trudeau / Montee saint-jean-baptise (under construction)");
 		int choice;
 		do {
@@ -71,6 +80,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 218) {
 			System.out.println("   Quebec City - 218");
+		}
+		if (player.sign() >= 1734) {
+			System.out.println("   Goose Bay - 1,734");
 		}
 		System.out.println("2. Take exit 112 for Rue serge pepin (under construction)");
 		int choice;
@@ -90,6 +102,9 @@ public class A20 {
 		if (player.sign() >= 216) {
 			System.out.println("   Quebec City - 216");
 		}
+		if (player.sign() >= 1732) {
+			System.out.println("   Goose Bay - 1,732");
+		}
 		System.out.println("2. Take exit 113 for Rue brunet (under construction)");
 		int choice;
 		do {
@@ -107,6 +122,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 214) {
 			System.out.println("   Quebec City - 214");
+		}
+		if (player.sign() >= 1730) {
+			System.out.println("   Goose Bay - 1,730");
 		}
 		System.out.println("2. Take exit 115 for Grande Allee (under construction)");
 		int choice;
@@ -126,6 +144,9 @@ public class A20 {
 		if (player.sign() >= 209) {
 			System.out.println("   Quebec City - 209");
 		}
+		if (player.sign() >= 1725) {
+			System.out.println("   Goose Bay - 1,725");
+		}
 		System.out.println("2. Take exit 120 for QC-227 (under construction)");
 		int choice;
 		do {
@@ -143,6 +164,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 206) {
 			System.out.println("   Quebec city - 206");
+		}
+		if (player.sign() >= 1722) {
+			System.out.println("   Goose Bay - 1,722");
 		}
 		System.out.println("2. Take exit 123 for Chemin du grand rang / Grand rang (under construction)");
 		int choice;
@@ -162,6 +186,9 @@ public class A20 {
 		if (player.sign() >= 202) {
 			System.out.println("   Quebec city - 202");
 		}
+		if (player.sign() >= 1718) {
+			System.out.println("   Goose Bay - 1,718");
+		}
 		System.out.println("2. Take exit 128 for Boulevard choquette (under construction)");
 		int choice;
 		do {
@@ -180,6 +207,9 @@ public class A20 {
 		if (player.sign() >= 199) {
 			System.out.println("   Quebec City - 199");
 		}
+		if (player.sign() >= 1715) {
+			System.out.println("   Goose Bay - 1,715");
+		}
 		System.out.println("2. Take exit 130 for QC-137 (under construction)");
 		int choice;
 		do {
@@ -197,6 +227,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 197) {
 			System.out.println("   Quebec City - 197");
+		}
+		if (player.sign() >= 1713) {
+			System.out.println("   Goose Bay - 1,713");
 		}
 		System.out.println("2. Take exit 113 for Boulevard Casavant Est (under construction)");
 		int choice;

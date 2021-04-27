@@ -18,14 +18,16 @@ public class Main {
 	// variables
 	static Player player;
 	static Scanner input;
-	static HashMap <String, Integer> job_values = new HashMap <String, Integer> ();
+	static HashMap <String, Integer> job_values = new HashMap <String, Integer> (); // 200 
 	
 	static {
 		job_values.put("goose bay - montreal", 1771);
 		job_values.put("goose bay - ottawa", 1959);
 		job_values.put("goose bay - quebec city", 1514);
+		job_values.put("montreal - goose bay", 1770);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
+		job_values.put("ottawa - goose bay", 1960);
 		job_values.put("ottawa - montreal", 198);
 		job_values.put("ottawa - quebec city", 444);
 		job_values.put("quebec city - goose bay", 1515);
@@ -122,41 +124,51 @@ public class Main {
 			}
 		} else if (player.location().equals("inuvik")) {
 		} else if (player.location().equals("montreal")) {
-			System.out.println("1. Montreal - Ottawa (198)");
-			System.out.println("2. Montreal - Quebec City (255)");
-			System.out.println("3. Back");
+			System.out.println("1. Montreal - Goose Bay (1,770)");
+			System.out.println("2. Montreal - Ottawa (198)");
+			System.out.println("3. Montreal - Quebec City (255)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
+				player.job("montreal - goose bay");
+				montreal();
+			} else if (choice == 2) {
 				player.job("montreal - ottawa");
 				montreal();
-			} else if (choice == 2) {
+			} else if (choice == 3) {
 				player.job("montreal - quebec city");
 				montreal();
+			} else if (choice == 4) {
+				main_menu();
 			}
 		} else if (player.location().equals("ottawa")) {
-			System.out.println("1. Ottawa - Montreal (198)");
-			System.out.println("2. Ottawa - Quebec City (444)");
-			System.out.println("3. Back");
+			System.out.println("1. Ottawa - Goose Bay (1.960)");
+			System.out.println("2. Ottawa - Montreal (198)");
+			System.out.println("3. Ottawa - Quebec City (444)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
 			if (choice == 1) {
-				player.job("ottawa - montreal");
+				player.job("ottawa - goose bay");
 				ottawa();
 			} else if (choice == 2) {
-				player.job("ottawa - quebec city");
+				player.job("ottawa - montreal");
 				ottawa();
 			} else if (choice == 3) {
+				player.job("ottawa - quebec city");
+				ottawa();
+			} else if (choice == 4) {
 				main_menu();
 			}
 		} else if (player.location().equals("quebec city")) {
@@ -398,6 +410,9 @@ public class Main {
 		}
 		if (player.sign() >= 255) {
 			System.out.println("   Quebec City - 255");
+		}
+		if (player.sign() >= 1770) {
+			System.out.println("   Goose Bay - 1,770");
 		}
 		int choice;
 		do {

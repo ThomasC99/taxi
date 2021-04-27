@@ -407,6 +407,58 @@ public class A40 {
 			A15.south_69(player);
 		}
 	}
+	public static void east_307n (Player player) { // TODO
+		System.out.println("1. Continue on A-440 east");
+		if (player.sign() >= 9) {
+			System.out.println("   Quebec City - 9");
+		}
+		System.out.println("2. Take exit 307N for A-40 east / A-73 north");
+		if (player.sign() >= 1525) {
+			System.out.println("   Goose Bay - 1,525");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			// straight on boulevard charest ouest
+			// straight on boulevard charest est
+			// straight on rue saint-paul
+			// straight on QC-136
+			System.out.println("Arriving in Quebec City");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			player.location("quebec city");
+			if (Main.is_job_complete()) {
+				Main.complete_job();
+			}
+			Main.main_menu();
+		} else if (choice == 2) {
+			// exit 142E for A-40 east
+			// straight on QC-138
+			// 3rd exit on the roundabout for Chemin Rex Fort
+			// straight on Chemin de la scierie
+			// right
+			// right
+			// left on QC-389
+			// straight on NL-500
+			// right on hamilton river road
+			// left on 10th street
+			System.out.println("Arriving in Goose Bay");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			player.location("goose bay");
+			if (Main.is_job_complete()) {
+				Main.complete_job();
+			}
+			Main.main_menu();
+		}
+	}
 	static void west_1 (Player player) { // TODO
 		System.out.println("1. Continue on A-40 west");
 		if (player.sign() >= 121) {
