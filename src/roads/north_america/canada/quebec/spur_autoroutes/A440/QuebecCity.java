@@ -1,4 +1,4 @@
-package north_america.canada.quebec.spur_autoroutes.A440;
+package roads.north_america.canada.quebec.spur_autoroutes.A440;
 
 import java.util.Scanner;
 

@@ -7,10 +7,11 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
-import north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
+
 import roads.north_america.canada.ontario.Ottawa;
 import roads.north_america.canada.quebec.Montreal;
 import roads.north_america.canada.quebec.primary_highways.QC136;
+import roads.north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
 
 public class Main {
 	
@@ -20,6 +21,7 @@ public class Main {
 	static HashMap <String, Integer> job_values = new HashMap <String, Integer> ();
 	
 	static {
+		job_values.put("goose bay - montreal", 1771);
 		job_values.put("goose bay - quebec city", 1514);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
@@ -28,6 +30,9 @@ public class Main {
 		job_values.put("quebec city - goose bay", 1515);
 		job_values.put("quebec city - montreal", 263);
 		job_values.put("quebec city - ottawa", 444);
+		// goose bay - ottawa
+		// montreal - goose bay
+		// ottawa - goose bay
 	}
 	
 	// Helper methods
@@ -92,8 +97,9 @@ public class Main {
 			}
 		} else if (player.location().equals("edmonton")) {
 		} else if (player.location().equals("goose bay")) {
-			System.out.println("1. Goose Bay - Quebec City (1,514)");
-			System.out.println("2. Back");
+			System.out.println("1. Goose Bay - Montreal (1,771)");
+			System.out.println("2. Goose Bay - Quebec City (1,514)");
+			System.out.println("3. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
@@ -101,10 +107,10 @@ public class Main {
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
-			if (choice == 1) {
+			if (choice == 2) {
 				player.job("goose bay - quebec city");
 				goose_bay();
-			} else if (choice == 2) {
+			} else if (choice == 3) {
 				main_menu();
 			}
 		} else if (player.location().equals("inuvik")) {
@@ -288,6 +294,58 @@ public class Main {
 	static void edmonton () { // TODO
 	}
 	static void goose_bay () { // TODO
+		// south on 10th street
+		// right on hamilton river road
+		// left on NL-500
+		// straight on QC-389
+		// right
+		// left
+		// straight on Chemin de la scierie
+		// straight on Chemin rex fort
+		// 1st roundabout exit for QC-138
+		// straight on A-40 east / A-440 east
+		System.out.println("1. Continue on A-440 east");
+		if (player.sign() >= 10) {
+			System.out.println("   Quebec City - 10");
+		}
+		System.out.println("2. Take exit for A-40 east");
+		if (player.sign() >= 267) {
+			System.out.println("   Montreal - 267");
+		}
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			// exit 23 for 1re rue / 8e avenue
+			// right on 1re rue
+			// right on QC-136
+			// ramp to Pont-Tunnel joseph-samson
+			// straight on cote dinan
+			// left on QC-136
+			System.out.println("Arriving in Quebec City");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			player.location("quebec city");
+			if (is_job_complete()) {
+				complete_job();
+			}
+			main_menu();
+		} else if (choice == 2) {
+			// exit for A-40 east / A-73 south
+			// exit 131O for A-20 west
+			// exit 82 for Taschereau boulevard
+			// ramp to QC-134
+			// exit doe Avenue de lormier
+			// right on A-720
+			// exit 5 for mansfield street
+			// right on rene-levesque boulevard west
+			Montreal.boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east(player);
+		}
 	}
 	static void inuvik () { // TODO
 	}
@@ -339,3 +397,80 @@ public class Main {
 	static void yellowknife () { // TODO
 	}
 }
+
+// Finished Cities : 4
+
+// Goose Bay
+// Montreal
+// Ottawa
+// Quebec City
+
+
+
+// Finisehd Jobs : 7
+
+// Goose Bay - Quebec City
+// Montreal - Ottawa
+// Montreal - Quebec City
+// Ottawa - Montreal
+// Ottawa - Quebec City
+// Quebec City - Ottawa
+// Quebec City - Montreal
+
+
+
+// Cities to do : 14
+
+// Anchorage
+// Calgary
+// Edmonton
+// Fairbanks
+// Inuvik
+// Junean
+// Ketchikan
+// Saskatoon
+// Thunder Bay
+// Toronto
+// Vancouver
+// Whitehorse
+// Winnipeg
+// Yellowknife
+
+
+
+// Jobs to do : 33
+
+// Calgary - Edmonton
+// Calgary - Goose Bay
+// Calgary - Inuvik
+// Calgary - Montreal
+// Calgary - Ottawa
+// Calgary - Quebec City
+// Calgary - Saskatoon
+// Calgary - Thunder Bay
+// Calgary - Toronto
+// Calgary - Vancouver
+// Calgary - Whitehorse
+// Calgary - Winnipeg
+// Clgary - Yellowknife
+// Edmonton - Calgary
+// Edmonton - Goose Bay
+// Edmonton - Inuvik
+// Edmonton - Montreal
+// Edmonton - Ottawa
+// Edmonton - Quebec City
+// Edmonton - Saskatoon
+// Edmonton - Thunder Bay
+// Edmonton - Toronto
+// Edmonton - Vancouver
+// Edmonton - Whitehorse
+// Edmonton - Winnipeg
+// Edmonton - Yellowknife
+// Goose Bay - Calgary
+// Goose Bay - Edmonton
+// Goose Bay - Inuvik
+// Goose Bay - Montreal
+// Goose Bay - Ottawa
+// Goose Bay - Saskatoon
+// Goose Bay - Thunder bay
+// Goose Bay - Toronto

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import main.Main;
 import main.Player;
-import north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
+import roads.north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
 
 public class QC136 {
 	static Scanner input = new Scanner (System.in);
