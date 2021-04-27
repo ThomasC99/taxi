@@ -22,6 +22,7 @@ public class Main {
 	
 	static {
 		job_values.put("goose bay - montreal", 1771);
+		job_values.put("goose bay - ottawa", 1959);
 		job_values.put("goose bay - quebec city", 1514);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
@@ -30,7 +31,6 @@ public class Main {
 		job_values.put("quebec city - goose bay", 1515);
 		job_values.put("quebec city - montreal", 263);
 		job_values.put("quebec city - ottawa", 444);
-		// goose bay - ottawa
 		// montreal - goose bay
 		// ottawa - goose bay
 	}
@@ -98,19 +98,26 @@ public class Main {
 		} else if (player.location().equals("edmonton")) {
 		} else if (player.location().equals("goose bay")) {
 			System.out.println("1. Goose Bay - Montreal (1,771)");
-			System.out.println("2. Goose Bay - Quebec City (1,514)");
-			System.out.println("3. Back");
+			System.out.println("2. Goose Bay - Ottawa (1,959)");
+			System.out.println("3. Goose Bay - Quebec City (1,514)");
+			System.out.println("4. Back");
 			int choice;
 			do {
 				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2));
+			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
-			if (choice == 2) {
-				player.job("goose bay - quebec city");
+			if (choice == 1) {
+				player.job("goose bay - montreal");
+				goose_bay();
+			} else if (choice == 2) {
+				player.job("goose bay - ottawa");
 				goose_bay();
 			} else if (choice == 3) {
+				player.job("goose bay - quebec city");
+				goose_bay();
+			} else if (choice == 4) {
 				main_menu();
 			}
 		} else if (player.location().equals("inuvik")) {
@@ -312,6 +319,9 @@ public class Main {
 		if (player.sign() >= 267) {
 			System.out.println("   Montreal - 267");
 		}
+		if (player.sign() >= 455) {
+			System.out.println("   Ottawa - 455");
+		}
 		int choice;
 		do {
 			choice = input.nextInt();
@@ -337,14 +347,45 @@ public class Main {
 			main_menu();
 		} else if (choice == 2) {
 			// exit for A-40 east / A-73 south
-			// exit 131O for A-20 west
-			// exit 82 for Taschereau boulevard
-			// ramp to QC-134
-			// exit doe Avenue de lormier
-			// right on A-720
-			// exit 5 for mansfield street
-			// right on rene-levesque boulevard west
-			Montreal.boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east(player);
+			System.out.println("1. Continue on A-73 south");
+			if (player.sign() >= 254) {
+				System.out.println("   Montreal - 254");
+			}
+			System.out.println("2. Take exit for A-40 east");
+			if (player.sign() >= 436) {
+				System.out.println("   Ottawa - 436");
+			}
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			if (choice == 1) {
+				// exit 131O for A-20 west
+				// exit 82 for Taschereau boulevard
+				// ramp to QC-134
+				// exit doe Avenue de lormier
+				// right on A-720
+				// exit 5 for mansfield street
+				// right on rene-levesque boulevard west
+				Montreal.boulevard_robert_bourassa_rene_levesque_boulevard_west_north_east(player);
+			} else if (choice == 2) {
+				// exit for A-40 east / A-55 north
+				// exit 186 for A-40 east
+				// exit 96o for A-640 east
+				// exit 20 for A-15 north
+				// exit 35 for A-50 west
+				// exit 135 for A-5 south
+				// exit for boteler street
+				// right on boteler street
+				// left on rr 93
+				// straight on rr 44
+				// right on rr 34
+				// left on rr 91
+				// right on rr 42
+				Ottawa.rr_42_rr_89_south_west(player);
+			}
 		}
 	}
 	static void inuvik () { // TODO
