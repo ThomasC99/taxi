@@ -249,6 +249,9 @@ public class A20 {
 		if (player.sign() >= 195) {
 			System.out.println("   Quebec city - 195");
 		}
+		if (player.sign() >= 1711) {
+			System.out.println("   Goose Bay - 1,711");
+		}
 		System.out.println("2. Take exit 134 for Rue lesage (under construction)");
 		int choice;
 		do {
@@ -266,6 +269,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 192) {
 			System.out.println("   Quebec City - 192");
+		}
+		if (player.sign() >= 1708) {
+			System.out.println("   Goose Bay - 1,708");
 		}
 		System.out.println("2. Take exit 138 for QC-224 (under construction)");
 		int choice;
@@ -285,6 +291,9 @@ public class A20 {
 		if (player.sign() >= 188) {
 			System.out.println("   Quebec City - 188");
 		}
+		if (player.sign() >= 1704) {
+			System.out.println("   Goose Bay - 1,704");
+		}
 		System.out.println("2. Take exit 141 for QC-116 (under construction)");
 		int choice;
 		do {
@@ -302,6 +311,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 185) {
 			System.out.println("   Quebec City - 185");
+		}
+		if (player.sign() >= 1701) {
+			System.out.println("   Goose Bay - 1,701");
 		}
 		System.out.println("2. Take exit 145 for Rang saint-edouard (under construction)");
 		int choice;
@@ -321,6 +333,9 @@ public class A20 {
 		if (player.sign() >= 182) {
 			System.out.println("   Quebec City - 182");
 		}
+		if (player.sign() >= 1698) {
+			System.out.println("   Goose Bay - 1,698");
+		}
 		System.out.println("2. Take exit 147 for QC-116 (under construction)");
 		int choice;
 		do {
@@ -338,6 +353,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 180) {
 			System.out.println("   Quebec City - 180");
+		}
+		if (player.sign() >= 1696) {
+			System.out.println("   Goose Bay - 1,696");
 		}
 		System.out.println("2. Take exit 150 for 2e Rang (under construction)");
 		int choice;
@@ -357,6 +375,9 @@ public class A20 {
 		if (player.sign() >= 178) {
 			System.out.println("   Quebec City - 178");
 		}
+		if (player.sign() >= 1694) {
+			System.out.println("   Goose Bay - 1,694");
+		}
 		System.out.println("2. Take exit 152 for Rue Principale (under construction)");
 		int choice;
 		do {
@@ -374,6 +395,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 173) {
 			System.out.println("   Quebec city - 173");
+		}
+		if (player.sign() >= 1689) {
+			System.out.println("   Goose bay - 1,689");
 		}
 		System.out.println("2. Take exit 157 for Rang brodeur (under construction)");
 		int choice;
@@ -393,6 +417,9 @@ public class A20 {
 		if (player.sign() >= 170) {
 			System.out.println("   Quebec City - 170");
 		}
+		if (player.sign() >= 1686) {
+			System.out.println("   Goose Bay - 1,686");
+		}
 		System.out.println("2. Take exit 160 for QC-239");
 		int choice;
 		do {
@@ -410,6 +437,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 164) {
 			System.out.println("   Quebec City - 164");
+		}
+		if (player.sign() >= 1680) {
+			System.out.println("   Goose Bay - 1,680");
 		}
 		System.out.println("2. Take exit 166 for 10 rang (under construction)");
 		int choice;
@@ -429,6 +459,9 @@ public class A20 {
 		if (player.sign() >= 160) {
 			System.out.println("   Quebec City - 160");
 		}
+		if (player.sign() >= 1676) {
+			System.out.println("   Goose Bay - 1,676");
+		}
 		System.out.println("2. Take exit 170 for Rue des menuisiers (under construction)");
 		int choice;
 		do {
@@ -446,6 +479,9 @@ public class A20 {
 		System.out.println("1. Continue on A-20 east");
 		if (player.sign() >= 156) {
 			System.out.println("   Quebec city - 156");
+		}
+		if (player.sign() >= 1672) {
+			System.out.println("   Goose Bay - 1,672");
 		}
 		System.out.println("2. Take exit 173 for A-55 south (under construction)");
 		int choice;
@@ -465,6 +501,9 @@ public class A20 {
 		if (player.sign() >= 155) {
 			System.out.println("   Quebec city - 155");
 		}
+		if (player.sign() >= 167) {
+			System.out.println("   Goose Bay - 1,671");
+		}
 		System.out.println("2. Take exit 175 for QC-143 / Rue jean-berchmans-michaud");
 		int choice;
 		do {
@@ -479,9 +518,12 @@ public class A20 {
 		}
 	}
 	public static void east_177 (Player player) { // TODO
-		System.out.println("1. Continue on A-15 north / A-20 east");
+		System.out.println("1. Continue on A-20 east / A-55 north");
 		if (player.sign() >= 153) {
 			System.out.println("   Quebec city - 153");
+		}
+		if (player.sign() >= 1669) {
+			System.out.println("   Goose Bay - 1,669");
 		}
 		System.out.println("2. Take exit 177 for QC-143 (under construction)");
 		int choice;
@@ -497,9 +539,12 @@ public class A20 {
 		}
 	}
 	public static void east_179 (Player player) { // TODO
-		System.out.println("1. Continue on A-15 north / A-20 east");
+		System.out.println("1. Continue on A-20 east / A-55 north");
 		if (player.sign() >= 150) {
 			System.out.println("   Quebec City - 150");
+		}
+		if (player.sign() >= 1666) {
+			System.out.println("   Goose Bay - 1,666");
 		}
 		System.out.println("2. Take exit 179 for Rene-levesque boulevard / rue robert-bernard (under construction)");
 		int choice;
@@ -515,9 +560,12 @@ public class A20 {
 		}
 	}
 	public static void east_181 (Player player) { // TODO
-		System.out.println("1. Continue on A-15 north / A-20 east");
+		System.out.println("1. Continue on A-20 east / A-55 north");
 		if (player.sign() >= 149) {
 			System.out.println("   Quebec City - 149");
+		}
+		if (player.sign() >= 1665) {
+			System.out.println("   Goose Bay - 1,665");
 		}
 		System.out.println("2. Take exit 181 for Boulevard Foucalt / Rue Montplasir (under construction)");
 		int choice;
@@ -537,19 +585,6 @@ public class A20 {
 	}
 	public static void east_191 (Player player) { // TODO
 		// exit 312N of A-20 east for A-73 north
-		// exit 139E of A-73 north for A-440 east
-		// end of A-440 for Boulevard Charest ouest
-		// straight on Boulevard charest est
-		// straight on Rue saint-paul
-		// straight on QC-136
-		System.out.println("Arriving in Quebec City");
-		player.location("quebec city");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (Main.is_job_complete()) {
-			Main.complete_job();
-		}
-		Main.main_menu();
+		A73.north_139e(player);
 	}
 }
