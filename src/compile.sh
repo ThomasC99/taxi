@@ -1,4 +1,6 @@
-javac Main.java
-javac Node.java
-javac Player.java
-javac Testing.java
+ find -name "*.java" > sources
+javac @sources
+rm sources
+find -name "*.class" > sources
+jar -cfmv Main.jar Manifest.txt @sources
+rm sources
