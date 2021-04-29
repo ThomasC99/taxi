@@ -3,7 +3,7 @@ import java.util.Scanner;
 import main.Player;
 class A5 {
 	static Scanner input = new Scanner (System.in);
-	public static void north_1 (Player player) {
+	public static void north_1 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 1 for Bouleavard Fournier / Boulevard Maisonneuve / " +
 		"Boulevard Sacre-Coeur / Rue Dussault");
@@ -61,7 +61,7 @@ class A5 {
 			}
 		}
 	}
-	public static void north_2 (Player player) {
+	public static void north_2 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 2 for A-50 east");
 		int choice;
@@ -75,7 +75,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_3 (Player player) {
+	public static void north_3 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 3 for Boulevard du casino");
 		int choice;
@@ -90,7 +90,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_5n (Player player) {
+	public static void north_5n (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 5N for QC-105");
 		int choice;
@@ -105,7 +105,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_5s (Player player) {
+	public static void north_5s (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 5S for QC-105");
 		int choice;
@@ -120,7 +120,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_8 (Player player) {
+	public static void north_8 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 8 for Boulevard de la technologie / Boulevard des hautes-plaines");
 		int choice;
@@ -135,7 +135,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_12 (Player player) {
+	public static void north_12 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 12 for Chemin old chelsea");
 		int choice;
@@ -150,7 +150,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_13 (Player player) {
+	public static void north_13 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 13 for Chemin scott");
 		int choice;
@@ -165,7 +165,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_21 (Player player) {
+	public static void north_21 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 13 for Chemin de la riviere");
 		int choice;
@@ -180,7 +180,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_24 (Player player) {
+	public static void north_24 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 24 for Chemin Cross Loop");
 		int choice;
@@ -195,7 +195,7 @@ class A5 {
 		} else if (choice == 2) {
 		}
 	}
-	public static void north_28 (Player player) {
+	public static void north_28 (Player player) { // TODO
 		System.out.println("1. Continue on A-5 north");
 		System.out.println("2. Take exit 28 for QC-105 / QC-66 / Chemin de la vallee de wakefield");
 		int choice;
@@ -206,6 +206,119 @@ class A5 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_2 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 2 for a-50 east / Boulevard maisonneuve / Boulevard sacre-coeur");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("\n\n");
+		if (choice == 1) {
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_3 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 5 for boulevard du casino");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("\n\n");
+		if (choice == 1) {
+			south_2(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_5 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 5 for Boulevard de mont-bleu");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("\n\n\n");
+		if (choice == 1) {
+			south_3(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_8 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 8 for Boulevard des hautes-plaines");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			south_5(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_13 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 13 for Chemin scott");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			south_8(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_21 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 21 for Chemin de la riviere");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			south_13(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_24 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 24 for Chemin cross loop");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			south_21(player);
+		} else if (choice == 2) {
+		}
+	}
+	public static void south_28 (Player player) { // TODO
+		System.out.println("1. Continue on A-5 south");
+		System.out.println("2. Take exit 28 for QC-366");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		if (choice == 1) {
+			south_24(player);
 		} else if (choice == 2) {
 		}
 	}
