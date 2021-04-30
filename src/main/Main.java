@@ -82,6 +82,7 @@ public class Main {
 		job_values.put("anchorage - whitehorse", 1133); // TODO
 		job_values.put("anchorage - winnipeg", 4424); // TODO
 		job_values.put("anchroage - yellowknife", 3012); // TODO
+		job_values.put("atlanta - anchorage", 6906); // TODO
 		
 		job_values.put("goose bay - montreal", 1771);
 		job_values.put("goose bay - ottawa", 1959);
