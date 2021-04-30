@@ -253,18 +253,14 @@ public class Main {
 		generate_jobs();
 		input = new Scanner (System.in);
 		player = new Player();
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("\n\n");
 		System.out.println("1. New game");
 		System.out.println("2. Load game");
 		int choice;
 		do {
 			choice = input.nextInt();
 		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("\n\n");
 		if (choice == 2) {
 			player.load();
 		}
@@ -473,9 +469,7 @@ public class Main {
 	}
 	static void ottawa () {
 		System.out.println("Heading sout west on Ottawa Regional Road 47");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("\n\n");
 		Ottawa.rr_42_rr_87_south_west(player);
 	}
 	static void quebec_city () { // TODO

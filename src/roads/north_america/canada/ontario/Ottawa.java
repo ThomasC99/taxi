@@ -34,6 +34,9 @@ public class Ottawa {
 		if (player.sign() >= 199) {
 			System.out.println("   Montreal - 198");
 		}
+		if (player.sign() >= 4358) {
+			System.out.println("   Vancouver - 4358");
+		}
 		System.out.println("2. Continue on Ottawa regional road 42");
 		if (player.sign() >= 444) {
 			System.out.println("   Quebec City - 444");
@@ -45,9 +48,7 @@ public class Ottawa {
 		do {
 			choice = input.nextInt();
 		} while ((choice != 1) && (choice != 2));
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("\n\n");
 		if (choice == 1) {
 			rr_40_rr_87_south_east(player);
 		} else if (choice == 2) {
