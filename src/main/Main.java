@@ -3,6 +3,7 @@ package main; // 1,835 1,764 1,724 1,092 760 487 333 220 118 95 - 45
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
@@ -20,10 +21,72 @@ public class Main {
 	static Scanner input;
 	static HashMap <String, Integer> job_values = new HashMap <String, Integer> (); // 200 
 	
-	static {
+	static void generate_jobs (){
+		// Barrow
+		// Havana
+		// Hilo
+		// Honolulu
+		// Iqaluit
+		// Nome
+		// Nuuk
+		job_values.put("anchorage - atlanta", 6906); // TODO
+		job_values.put("anchorage - bismark", 4465); // TODO
+		job_values.put("anchorage - boston", 7190); // TODO
+		job_values.put("anchorage - calgary", 3380); // TODO
+		job_values.put("anchorage - cancun", 9304); // TODO
+		job_values.put("anchorage - charleton", 7215); // TODO
+		job_values.put("anchorage - chicago", 5750); // TODO
+		job_values.put("anchorage - chihuahua", 6514); // TODO
+		job_values.put("anchorage - cincinnati", 6224); // TODO
+		job_values.put("anchorage - dallas", 6262); // TODO
+		job_values.put("anchorage - denver", 5122); // TODO
+		job_values.put("anchorage - detroit", 6181); // TODO
+		job_values.put("anchorage - edmonton", 3124); // TODO
+		job_values.put("anchorage - fairbanks", 578); // TODO
+		job_values.put("anchorage - goose bay", 8256); // TODO
+		job_values.put("anchorage - guatemala", 9139); // TODO
+		job_values.put("anchorage - houston", 6645); // TODO
+		job_values.put("anchorage - inuvik", 2331); // TODO
+		job_values.put("anchorage - juneau", 1365); // TODO
+		job_values.put("anchorage - kansas city", 5637); // TODO
+		job_values.put("anchorage - ketchikan", 2696); // TODO
+		job_values.put("anchorage - las vegas", 5430); // TODO
+		job_values.put("anchorage - los angeles", 5463); // TODO
+		job_values.put("anchorage - mexico city", 7880); // TODO
+		job_values.put("anchorage - miami", 7972); // TODO
+		job_values.put("anchorage - minneapolis", 7972); // TODO
+		job_values.put("anchorage - monterrey", 7036); // TODO
+		job_values.put("anchorage - montreal", 6700); // TODO
+		job_values.put("anchorage - new orleans", 6994); // TODO
+		job_values.put("anchorage - new york", 7018); // TODO
+		job_values.put("anchorage - oaxaca", 8303); // TODO
+		job_values.put("anchorage - orlando", 7610); // TODO
+		job_values.put("anchorage - ottawa", 6509); // TODO
+		job_values.put("anchorage - panama city", 11002); // TODO
+		job_values.put("anchorage - philadelphia", 6968); // TODO
+		job_values.put("anchorage - phoenix", 5819); // TODO
+		job_values.put("anchorage - portland", 3926); // TODO
+		job_values.put("anchorage - quebec city", 6936); // TODO
+		job_values.put("anchorage - salt lake city", 4756); // TODO
+		job_values.put("anchorage - san diego", 5656); // TODO
+		job_values.put("anchorage - san francisco", 4936); // TODO
+		job_values.put("anchorage - san jose", 10277); // TODO
+		job_values.put("anchorage - saskatoon", 3638); // TODO
+		job_values.put("anchorage - seattle", 3637); // TODO
+		job_values.put("anchorage - spokane", 3802); // TODO
+		job_values.put("anchorage - st louis", 5991); // TODO
+		job_values.put("anchorage - thunder bay", 5133); // TODO
+		job_values.put("anchorage - toronto", 6416); // TODO
+		job_values.put("anchorage - vancouver", 3526); // TODO
+		job_values.put("anchorage - washington d.c.", 6867); // TODO
+		job_values.put("anchorage - whitehorse", 1133); // TODO
+		job_values.put("anchorage - winnipeg", 4424); // TODO
+		job_values.put("anchroage - yellowknife", 3012); // TODO
+		
 		job_values.put("goose bay - montreal", 1771);
 		job_values.put("goose bay - ottawa", 1959);
 		job_values.put("goose bay - quebec city", 1514);
+		job_values.put("goose bay - toronto", 2319); // TODO
 		job_values.put("montreal - goose bay", 1770);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
@@ -33,8 +96,14 @@ public class Main {
 		job_values.put("quebec city - goose bay", 1515);
 		job_values.put("quebec city - montreal", 263);
 		job_values.put("quebec city - ottawa", 444);
-		// montreal - goose bay
-		// ottawa - goose bay
+		// goose bay - toronto
+		// montreal - toronto
+		// ottawa - toronto
+		// quebec city - toronto
+		// toronto - goose bay
+		// toronto - montreal
+		// toronto - ottawa
+		// toronto - quebec city
 	}
 	
 	// Helper methods
@@ -43,9 +112,7 @@ public class Main {
 		System.out.println("+ " + job_values.get(player.job()));
 		player.money(job_values.get(player.job()) + player.money());
 		player.job("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("\n\n");
 	}
 	static void free_roam () {
 		if (player.location().equals("calgary")) {
@@ -83,130 +150,38 @@ public class Main {
 	}
 	static void job_menu () { // TODO
 		Set <String> jobs = job_values.keySet();
-		if (player.location().equals("calgary")) {
-			ArrayList <String> calgary_jobs = new ArrayList <String> ();
-			for (int i = 0; i < jobs.toArray().length; i++) {
-				if (((String)jobs.toArray()[i]).contains("calgary - ")) {
-					calgary_jobs.add((String)jobs.toArray()[i]);
-				}
+		ArrayList <String> jobs_for_location = new ArrayList <String>();
+		for (int i = 0; i < jobs.toArray().length; i++) {
+			if (((String)jobs.toArray()[i]).contains(player.location() + " - ")) {
+				jobs_for_location.add((String)jobs.toArray()[i]);
 			}
-			Random rand = new Random();
-			ArrayList <String> available_jobs = new ArrayList <String> ();
-			while (available_jobs.size() < 5) {
-				int index = rand.nextInt(calgary_jobs.size());
-				available_jobs.add(calgary_jobs.get(index));
-				calgary_jobs.remove(index);
-			}
-		} else if (player.location().equals("edmonton")) {
-		} else if (player.location().equals("goose bay")) {
-			System.out.println("1. Goose Bay - Montreal (1,771)");
-			System.out.println("2. Goose Bay - Ottawa (1,959)");
-			System.out.println("3. Goose Bay - Quebec City (1,514)");
-			System.out.println("4. Back");
-			int choice;
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				player.job("goose bay - montreal");
-				goose_bay();
-			} else if (choice == 2) {
-				player.job("goose bay - ottawa");
-				goose_bay();
-			} else if (choice == 3) {
-				player.job("goose bay - quebec city");
-				goose_bay();
-			} else if (choice == 4) {
-				main_menu();
-			}
-		} else if (player.location().equals("inuvik")) {
-		} else if (player.location().equals("montreal")) {
-			System.out.println("1. Montreal - Goose Bay (1,770)");
-			System.out.println("2. Montreal - Ottawa (198)");
-			System.out.println("3. Montreal - Quebec City (255)");
-			System.out.println("4. Back");
-			int choice;
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				player.job("montreal - goose bay");
-				montreal();
-			} else if (choice == 2) {
-				player.job("montreal - ottawa");
-				montreal();
-			} else if (choice == 3) {
-				player.job("montreal - quebec city");
-				montreal();
-			} else if (choice == 4) {
-				main_menu();
-			}
-		} else if (player.location().equals("ottawa")) {
-			System.out.println("1. Ottawa - Goose Bay (1.960)");
-			System.out.println("2. Ottawa - Montreal (198)");
-			System.out.println("3. Ottawa - Quebec City (444)");
-			System.out.println("4. Back");
-			int choice;
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				player.job("ottawa - goose bay");
-				ottawa();
-			} else if (choice == 2) {
-				player.job("ottawa - montreal");
-				ottawa();
-			} else if (choice == 3) {
-				player.job("ottawa - quebec city");
-				ottawa();
-			} else if (choice == 4) {
-				main_menu();
-			}
-		} else if (player.location().equals("quebec city")) {
-			System.out.println("1. Quebec City - Goose Bay (1,515)");
-			System.out.println("2. Quebec City - Monteal (263)");
-			System.out.println("3. Quebec City - Ottawa (444)");
-			System.out.println("4. Back");
-			int choice;
-			do {
-				choice = input.nextInt();
-			} while ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4));
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			if (choice == 1) {
-				player.job("quebec city - goose bay");
-				quebec_city();
-			} else if (choice == 2) {
-				player.job("quebec city - montreal");
-				quebec_city();
-			} else if (choice == 3) {
-				player.job("quebec city - ottawa");
-				quebec_city();
-			} else if (choice == 4) {
-				main_menu();
-			}
-		} else if (player.location().equals("saskatoon")) {
-		} else if (player.location().equals("thunder bay")) {
-		} else if (player.location().equals("toronto")) {
-		} else if (player.location().equals("vancouver")) {
-		} else if (player.location().equals("whitehorse")) {
-		} else if (player.location().equals("winnipeg")) {
-		} else if (player.location().equals("yellowknife")) {
+		}
+		Random rand = new Random();
+		ArrayList<String> available_jobs = new ArrayList<String>();
+		while (available_jobs.size() < 5) {
+			int index = rand.nextInt(jobs_for_location.size());
+			available_jobs.add(jobs_for_location.get(index));
+			jobs_for_location.remove(index);
+		}
+		for (int i = 0; i < 5; i++) {
+			System.out.println((i + 1) + ". " + available_jobs.get(i) + " (" + job_values.get(available_jobs.get(i)) + ")");
+		}
+		System.out.println("6. Back");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while (!Arrays.asList(1, 2, 3, 4, 5, 6).contains(choice));
+		System.out.println("\n\n");
+		if (choice < 6) {
+			free_roam();
+		} else if (choice == 6) {
+			main_menu();
 		}
 	}
 	public static void main (String [] args) throws Exception {
 		// File testing = new File ("testing.txt");
 		// input = new Scanner (testing);
+		generate_jobs();
 		input = new Scanner (System.in);
 		player = new Player();
 		System.out.println("");

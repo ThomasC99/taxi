@@ -174,6 +174,7 @@ public class A10 {
 		System.out.println("");
 		System.out.println("");
 		if (choice == 1) {
+			east_22(player);
 		} else if (choice == 2) {
 			System.out.println("1. Take exit for A-30 / Boulevard de quartier / Chemin de praries");
 			if (player.sign() >= 249) {
@@ -232,6 +233,18 @@ public class A10 {
 				}
 			} else if (choice == 2) {
 			}
+		}
+	}
+	public static void east_22 (Player player) { // TODO
+		System.out.println("1. Continue on A-10 east");
+		System.out.println("2. Take exit 22 for A-35");
+		int choice;
+		do {
+			choice = input.nextInt();
+		} while ((choice != 1) && (choice != 2));
+		System.out.println("\n\n");
+		if (choice == 1) {
+		} else if (choice == 2) {
 		}
 	}
 }
