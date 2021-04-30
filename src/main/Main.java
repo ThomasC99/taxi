@@ -1,4 +1,4 @@
-package main; // 1,835 1,764 1,724 1,092 760 487 333 220 118 95 - 45
+package main;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
-
 import roads.north_america.canada.ontario.Ottawa;
 import roads.north_america.canada.quebec.Montreal;
 import roads.north_america.canada.quebec.primary_highways.QC136;
@@ -21,92 +20,160 @@ public class Main {
 	static Scanner input;
 	static HashMap <String, Integer> job_values = new HashMap <String, Integer> (); // 200 
 	
-	static void generate_jobs (){
-		// Barrow
-		// Havana
-		// Hilo
-		// Honolulu
+	static void generate_jobs () throws Exception {
 		// Iqaluit
-		// Nome
-		// Nuuk
-		job_values.put("anchorage - atlanta", 6906); // TODO
-		job_values.put("anchorage - bismark", 4465); // TODO
-		job_values.put("anchorage - boston", 7190); // TODO
-		job_values.put("anchorage - calgary", 3380); // TODO
-		job_values.put("anchorage - cancun", 9304); // TODO
-		job_values.put("anchorage - charleton", 7215); // TODO
-		job_values.put("anchorage - chicago", 5750); // TODO
-		job_values.put("anchorage - chihuahua", 6514); // TODO
-		job_values.put("anchorage - cincinnati", 6224); // TODO
-		job_values.put("anchorage - dallas", 6262); // TODO
-		job_values.put("anchorage - denver", 5122); // TODO
-		job_values.put("anchorage - detroit", 6181); // TODO
-		job_values.put("anchorage - edmonton", 3124); // TODO
-		job_values.put("anchorage - fairbanks", 578); // TODO
-		job_values.put("anchorage - goose bay", 8256); // TODO
-		job_values.put("anchorage - guatemala", 9139); // TODO
-		job_values.put("anchorage - houston", 6645); // TODO
-		job_values.put("anchorage - inuvik", 2331); // TODO
-		job_values.put("anchorage - juneau", 1365); // TODO
-		job_values.put("anchorage - kansas city", 5637); // TODO
-		job_values.put("anchorage - ketchikan", 2696); // TODO
-		job_values.put("anchorage - las vegas", 5430); // TODO
-		job_values.put("anchorage - los angeles", 5463); // TODO
-		job_values.put("anchorage - mexico city", 7880); // TODO
-		job_values.put("anchorage - miami", 7972); // TODO
-		job_values.put("anchorage - minneapolis", 7972); // TODO
-		job_values.put("anchorage - monterrey", 7036); // TODO
-		job_values.put("anchorage - montreal", 6700); // TODO
-		job_values.put("anchorage - new orleans", 6994); // TODO
-		job_values.put("anchorage - new york", 7018); // TODO
-		job_values.put("anchorage - oaxaca", 8303); // TODO
-		job_values.put("anchorage - orlando", 7610); // TODO
-		job_values.put("anchorage - ottawa", 6509); // TODO
-		job_values.put("anchorage - panama city", 11002); // TODO
-		job_values.put("anchorage - philadelphia", 6968); // TODO
-		job_values.put("anchorage - phoenix", 5819); // TODO
-		job_values.put("anchorage - portland", 3926); // TODO
-		job_values.put("anchorage - quebec city", 6936); // TODO
-		job_values.put("anchorage - salt lake city", 4756); // TODO
-		job_values.put("anchorage - san diego", 5656); // TODO
-		job_values.put("anchorage - san francisco", 4936); // TODO
-		job_values.put("anchorage - san jose", 10277); // TODO
-		job_values.put("anchorage - saskatoon", 3638); // TODO
-		job_values.put("anchorage - seattle", 3637); // TODO
-		job_values.put("anchorage - spokane", 3802); // TODO
-		job_values.put("anchorage - st louis", 5991); // TODO
-		job_values.put("anchorage - thunder bay", 5133); // TODO
-		job_values.put("anchorage - toronto", 6416); // TODO
-		job_values.put("anchorage - vancouver", 3526); // TODO
-		job_values.put("anchorage - washington d.c.", 6867); // TODO
-		job_values.put("anchorage - whitehorse", 1133); // TODO
-		job_values.put("anchorage - winnipeg", 4424); // TODO
-		job_values.put("anchroage - yellowknife", 3012); // TODO
-		job_values.put("atlanta - anchorage", 6906); // TODO
-		
+		job_values.put("calgary - edmonton", 299); // TODO
+		job_values.put("calgary - goose bay", 5161); // TODO
+		job_values.put("calgary - inuvik", 3473); // TODO
+		job_values.put("calgary - montreal", 3534); // TODO
+		job_values.put("calgary - ottawa", 3338); // TODO
+		job_values.put("calgary - quebec city", 3783); // TODO
+		job_values.put("calgary - thunder bay", 2021); // TODO
+		job_values.put("calgary - toronto", 3238); // TODO
+		job_values.put("calgary - vancouver", 1076); // TODO
+		job_values.put("calgary - whitehorse", 2248); // TODO
+		job_values.put("calgary - winnipeg", 1327); // TODO
+		job_values.put("calgary - yellowknife", 1748); // TODO
+		job_values.put("edmonton - calgary", 300); // TODO
+		job_values.put("edmonton - goose bay", 5139); // TODO
+		job_values.put("edmonton - inuvik", 3215); // TODO
+		job_values.put("edmonton - montreal", 3583); // TODO
+		job_values.put("edmonton - ottawa", 3392); // TODO
+		job_values.put("edmonton - quebec city", 3819); // TODO
+		job_values.put("edmonton - thunder bay", 2015); // TODO
+		job_values.put("edmonton - toronto", 3229); // TODO
+		job_values.put("edmonton - vancouver", 1159); // TODO
+		job_values.put("edmonton - whitehorse", 1990); // TODO
+		job_values.put("edmonton - winnipeg", 1305);
+		job_values.put("edmonton - yellowknife", 1451); // TODO
+		job_values.put("goose bay - calgary", 5163); // TODO
+		job_values.put("goose bay - edmonton", 5128); // TODO
+		job_values.put("goose bay - inuvik", 8335); // TODO
 		job_values.put("goose bay - montreal", 1771);
 		job_values.put("goose bay - ottawa", 1959);
 		job_values.put("goose bay - quebec city", 1514);
+		job_values.put("goose bay - thunder bay", 3148);
 		job_values.put("goose bay - toronto", 2319); // TODO
+		job_values.put("goose bay - vancouver", 6325);
+		job_values.put("goose bay - whitehorse", 7111);
+		job_values.put("goose bay - winnipeg", 3825);
+		job_values.put("goose bay - yellowknife", 6550);
+		job_values.put("inuvik - calgary", 3474);
+		job_values.put("inuvk - edmonton", 3218);
+		job_values.put("inuvik - goose bay", 8350);
+		job_values.put("inuvik - montreal", 6794);
+		job_values.put("inuvik - ottawa", 6664);
+		job_values.put("inuvik - quebec city", 7029);
+		job_values.put("inuvik - thunder bay", 5226);
+		job_values.put("inuvik - toronto", 6510);
+		job_values.put("inuvik - vancouver", 3619);
+		job_values.put("inuvik - whitehorse", 1227);
+		job_values.put("inuvik - winnipeg", 4515);
+		job_values.put("inuvik - yelloknife", 3105);
+		job_values.put("montreal - calgary", 3524);
+		job_values.put("montreal - edmonton", 3572);
 		job_values.put("montreal - goose bay", 1770);
+		job_values.put("montreal - inuvik", 6780);
 		job_values.put("montreal - ottawa", 198);
 		job_values.put("montreal - quebec city", 263);
+		job_values.put("montreal - thunder bay", 1592);
+		job_values.put("montreal - toronto", 542);
+		job_values.put("montreal - vancouver", 4554);
+		job_values.put("montreal - whitehorse", 5555);
+		job_values.put("montreal - winnipeg", 2269);
+		job_values.put("montreal - yellowknife", 4994);
+		job_values.put("ottawa - calgary", 3328);
+		job_values.put("ottawa - edmonton", 3443);
 		job_values.put("ottawa - goose bay", 1960);
+		job_values.put("ottawa - inuvik", 6650);
 		job_values.put("ottawa - montreal", 198);
 		job_values.put("ottawa - quebec city", 444);
+		job_values.put("ottawa - thunder bay", 1463);
+		job_values.put("ottawa - toronto", 411);
+		job_values.put("ottawa - vancouver", 4359);
+		job_values.put("ottawa - whitehorse", 5425);
+		job_values.put("ottawa - winnipeg", 2140);
+		job_values.put("ottawa - yellowknife", 4865);
+		job_values.put("quebec city - calgary", 3844);
+		job_values.put("quebec city - edmonton", 3810);
 		job_values.put("quebec city - goose bay", 1515);
+		job_values.put("quebec city - inuvik", 7017);
 		job_values.put("quebec city - montreal", 263);
 		job_values.put("quebec city - ottawa", 444);
-		// goose bay - toronto
-		// montreal - toronto
-		// ottawa - toronto
-		// quebec city - toronto
-		// toronto - goose bay
-		// toronto - montreal
-		// toronto - ottawa
-		// toronto - quebec city
+		job_values.put("quebec city - thunder bay", 1830);
+		job_values.put("quebec city - toronto", 806);
+		job_values.put("quebec city - vancouver", 4810);
+		job_values.put("quebec city - whitehorse", 5792);
+		job_values.put("quebec city - winnipeg", 2507);
+		job_values.put("quebec city - yellowknife", 5232);
+		job_values.put("thunder bay - calgary", 2040);
+		job_values.put("thunder bay - edmonton", 2005);
+		job_values.put("thunder bay - goose bay", 3143);
+		job_values.put("thunder bay - inuvik", 5213);
+		job_values.put("thunder bay - montreal", 1587);
+		job_values.put("thunder bay - ottawa", 1458);
+		job_values.put("thunder bay - montreal", 1587);
+		job_values.put("thunder bay - toronto", 1394);
+		job_values.put("thunder bay - vancouver", 3197);
+		job_values.put("thunder bay - whitehorse", 3988);
+		job_values.put("thunder bay - winnipeg", 702);
+		job_values.put("thunder bay - yellowknife", 3428);
+		job_values.put("toronto - calgary", 3406);
+		job_values.put("toronto - edmonton", 3465);
+		job_values.put("toronto - goose bay", 2321);
+		job_values.put("toronto - inuvik", 6673);
+		job_values.put("toronto - montreal", 541);
+		job_values.put("toronto - ottawa", 411);
+		job_values.put("toronto - thunder bay", 1399);
+		job_values.put("toronto - vancouver", 4373);
+		job_values.put("toronto - whitehorse", 5448);
+		job_values.put("toronto - winnipeg", 2223);
+		job_values.put("toronto - yellowknife", 4888);
+		job_values.put("vancouver - calgary", 1074);
+		job_values.put("vancouver - edmonton", 1160);
+		job_values.put("vancouver - goose bay", 6322);
+		job_values.put("vancouver - inuvik", 3621);
+		job_values.put("vancouver - montreal", 4556);
+		job_values.put("vancouver - ottawa", 4361);
+		job_values.put("vancouver - thunder bay", 3197);
+		job_values.put("vancouver - toronto", 4207);
+		job_values.put("vancouver - whitehorse", 2396);
+		job_values.put("vancouver - winnipeg", 2397);
+		job_values.put("vancouver - yellowknife", 2276);
+		job_values.put("whitehorse - calgary", 2249);
+		job_values.put("whitehorse - edmonton", 1193);
+		job_values.put("whitehorse - goose bay", 7125);
+		job_values.put("whitehorse - inuvik", 1227);
+		job_values.put("whitehorse - montreal", 5569);
+		job_values.put("whitehorse - ottawa", 5440);
+		job_values.put("whitehorse - thunder bay", 4001);
+		job_values.put("whitehorse - toronto", 5285);
+		job_values.put("whitehorse - vancouver", 2394);
+		job_values.put("whitehorse - winnipeg", 3290);
+		job_values.put("whitehorse - yellowknie", 1880);
+		job_values.put("winnipeg - calgary", 1329);
+		job_values.put("winnipeg - edmonton", 1305);
+		job_values.put("winnipeg - goose bay", 3826);
+		job_values.put("winnipeg - inuvik", 4512);
+		job_values.put("winnipeg - montreal", 2269);
+		job_values.put("winnipeg - ottawa", 2140);
+		job_values.put("winnipeg - thunder bay", 702);
+		job_values.put("winnipeg - toronto", 2059);
+		job_values.put("winnipeg - vancouver", 2400);
+		job_values.put("winnipeg - whitehorse", 3288);
+		job_values.put("winnipeg - yellowknife", 2727);
+		job_values.put("yellowknife - calgary", 1749);
+		job_values.put("yellowknife - edmonton", 1454);
+		job_values.put("yellowknife - goose bay", 6564);
+		job_values.put("yellowknife - inuvik", 3769);
+		job_values.put("yellowknife - montreal", 5008);
+		job_values.put("yellowknife - ottawa", 4879);
+		job_values.put("yellowknife - thunder bay", 3440);
+		job_values.put("yellowknife - toronto", 4724);
+		job_values.put("yellowknife - vancouver", 2277);
+		job_values.put("yellowknife - whitehorse", 1880);
+		job_values.put("yellowknife - winnipeg", 2730);
 	}
-	
 	// Helper methods
 	public static void complete_job () { // TODO
 		System.out.println("Job complete");
@@ -174,6 +241,7 @@ public class Main {
 		} while (!Arrays.asList(1, 2, 3, 4, 5, 6).contains(choice));
 		System.out.println("\n\n");
 		if (choice < 6) {
+			player.job(available_jobs.get(choice - 1));
 			free_roam();
 		} else if (choice == 6) {
 			main_menu();
