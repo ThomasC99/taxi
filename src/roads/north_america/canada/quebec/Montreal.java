@@ -91,37 +91,34 @@ public class Montreal {
 		}
 	}
 	public static void boulevard_robert_bourassa_rue_belmont_south_east (Player player) { // TODO
-		if (player.job().contains(" - ottawa") && player.gps() >= 198) {
-			System.out.println("GPS : Continue straight on Boulevard Robert-Bourassa (198)\n");
-		}
-		System.out.println("1. Turn left on Rue Belmont (under construction)");
-		System.out.println("2. Continue straight on Boulevard Robert-Bourassa");
-		if (player.sign() >= 198) {
-			System.out.println("   Ottawa - 198");
-		}
-		System.out.println("3. Turn right on Rue Belmont");
-		if (player.sign() >= 1770) {
-			System.out.println("   Goose Bay - 1,770");
-		}
-		System.out.println("4. Make a u-turn on Boulevard Robert-Bourassa (under construction)");
-		if (player.sign() >= 262) {
-			System.out.println("   Quebec City - 262");
-		}
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while (choice != 2);
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		if (choice == 1) {
-			Main.main_menu();
-		} else if (choice == 2) {
-			boulevard_robert_bourassa_rue_de_la_gauchetiere_ouest_south_east(player);
-		} else if (choice == 3) {
-			Main.main_menu();
-		} else if (choice == 4) {
-			A20.east_102(player);
+		if (player.job().contains(" - calgary") && player.autopilot() >= 3524) {
+			// TODO
+		} else {
+			if (player.job().contains(" - clagary") && player.gps() >= 3524) {
+				System.out.println("Continue straight onn Boulevard Robert-Bourassa (3,534)\n");
+			}
+			System.out.println("1. Turn left on Rue Belmont (under construction)");
+			System.out.println("2. Continue straight on Boulevard Robert-Bourassa");
+			if (player.sign() >= 198) {
+				System.out.println("   Ottawa - 198");
+			}
+			if (player.sign() >= 3524) {
+				System.out.println("   Calgary - 3,524");
+			}
+			System.out.println("3. Turn right on Rue Belmont");
+			if (player.sign() >= 1770) {
+				System.out.println("   Goose Bay - 1,770");
+			}
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while (choice != 2);
+			System.out.println("\n\n");
+			if (choice == 1) {
+			} else if (choice == 2) {
+				boulevard_robert_bourassa_rue_de_la_gauchetiere_ouest_south_east(player);
+			} else if (choice == 3) {
+			}
 		}
 	}
 	static void boulevard_robert_bourassa_rue_de_la_gauchetiere_ouest_south_east (Player player) { // TODO
