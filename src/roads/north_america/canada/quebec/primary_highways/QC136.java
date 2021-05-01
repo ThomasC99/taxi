@@ -9,7 +9,7 @@ import roads.north_america.canada.quebec.spur_autoroutes.A440.QuebecCity;
 public class QC136 {
 	static Scanner input = new Scanner (System.in);
 	public static void qc_136_rue_saint_nicolas_rue_saint_paul (Player player) {
-		System.out.println("1. Turn left on Rue saint-paul");
+		System.out.println("1. Turn left on Rue Nicholas");
 		if (player.sign() >= 1514) {
 			System.out.println("   Goose Bay - 1,514");
 		}
@@ -19,6 +19,9 @@ public class QC136 {
 		}
 		if (player.sign() >= 443) {
 			System.out.println("   Ottawa - 443");
+		}
+		if (player.sign() >= 3844) {
+			System.out.println("   Calgary - 3,844");
 		}
 		System.out.println("3. Turn right on Rue saint nicolas (under construction)");
 		int choice;

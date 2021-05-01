@@ -6,25 +6,24 @@ import java.util.Scanner;
 public class Player {
 	private String location, job;
 	private double money;
-	private int sign, gps;
+	private int sign, gps, autopilot;
 	public Player () {
 		this.location = "ottawa";
 		this.job = "";
 		this.money = 0;
 		this.sign = 0;
 		this.gps = 0;
+		this.autopilot = 0;
 	}
 	public void save () {
 		try {
 			File file = new File ("save.txt");
 			FileWriter writer = new FileWriter(file, false);
-			writer.write(location() + "\n" + money + "\n" + sign + "\n" + gps + "\n");
+			writer.write(location() + "\n" + money + "\n" + sign + "\n" + gps + "\n" + autopilot + "\n");
 			writer.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
+			System.out.println("\n\n");
 		}
 	}
 	public void load () {
@@ -35,12 +34,11 @@ public class Player {
 			money(reader.nextDouble());
 			sign(reader.nextInt());
 			gps(reader.nextInt());
+			autopilot(reader.nextInt());
 			reader.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
+			System.out.println("\n\n");
 		}
 	}
 	public String location () {
@@ -72,5 +70,11 @@ public class Player {
 	}
 	public void gps (int gps) {
 		this.gps = gps;
+	}
+	public int autopilot () {
+		return autopilot;
+	}
+	public void autopilot (int range) {
+		this.autopilot = range;
 	}
 }

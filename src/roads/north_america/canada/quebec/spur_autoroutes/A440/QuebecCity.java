@@ -5,6 +5,7 @@ import java.util.Scanner;
 import main.Player;
 import roads.north_america.canada.ontario.Ottawa;
 import roads.north_america.canada.quebec.Montreal;
+import roads.north_america.canada.quebec.main_autoroutes.A15;
 
 public class QuebecCity {
 	static Scanner input = new Scanner (System.in);
@@ -12,6 +13,9 @@ public class QuebecCity {
 		System.out.println("1. Continue on A-440 east");
 		if (player.sign() >= 435) {
 			System.out.println("   Ottawa - 435");
+		}
+		if (player.sign() >= 3835) {
+			System.out.println("   Calgary - 3,835");
 		}
 		System.out.println("2. Take exit 12N for A-73 south");
 		if (player.sign() >= 250) {
@@ -30,16 +34,7 @@ public class QuebecCity {
 			// exit 186 for A-40 west
 			// exit 96o for A-640 west
 			// exit 20 for A-15 north
-			// exit 35 for A-50 west
-			// exit 135 for A-5 south
-			// exit for boteler street
-			// right on boteler street
-			// left on rr 93
-			// straight on rr 44
-			// right on rr 34
-			// left on rr 91
-			// right on rr 42
-			Ottawa.rr_42_rr_89_south_west(player);
+			A15.north_35(player);
 		} else if (choice == 2) {
 			// exit 131O for A-20 west
 			// exit 82 for Taschereau boulevard

@@ -17,6 +17,9 @@ public class Ottawa {
 		if (player.sign() >= 198) {
 			System.out.println("   Monteal - 198");
 		}
+		if (player.sign() >= 4358) {
+			System.out.println("   Vancouver - 4,358");
+		}
 		int choice;
 		do {
 			choice = input.nextInt();
@@ -120,7 +123,10 @@ public class Ottawa {
 		if (player.sign() >= 198) {
 			System.out.println("   Ottawa - 198");
 		}
-		System.out.println("2. Continue on Ottawa regional road 87 (under construction)");
+		System.out.println("2. Continue straight on Ottawa regional road 87");
+		if (player.sign() >= 4358) {
+			System.out.println("   Vancouver - 4,358");
+		}
 		System.out.println("3. Turn right on Ottawa regional road 48 (under construction)");
 		int choice;
 		do {
@@ -132,6 +138,19 @@ public class Ottawa {
 		if (choice == 1) {
 			rr_48_rr_89_north_east(player);
 		} else if (choice == 2) {
+			// ramp to ON-417 west
+			// straight on ON-17
+			// straight on trunk road
+			// straight on wellington street east
+			// left on cathcart street
+			// left on huron street
+			// right on sault ste marie international bridge
+			// straight on I-75 south
+			// exit 386 for M-28
+			// right on M-28
+			// straight on cherry creek road
+			// right on county road 480
+			// right on south healy avenue
 		} else if (choice == 3) {
 		}
 	}

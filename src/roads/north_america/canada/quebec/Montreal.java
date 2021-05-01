@@ -91,6 +91,9 @@ public class Montreal {
 		}
 	}
 	public static void boulevard_robert_bourassa_rue_belmont_south_east (Player player) { // TODO
+		if (player.job().contains(" - ottawa") && player.gps() >= 198) {
+			System.out.println("GPS : Continue straight on Boulevard Robert-Bourassa (198)\n");
+		}
 		System.out.println("1. Turn left on Rue Belmont (under construction)");
 		System.out.println("2. Continue straight on Boulevard Robert-Bourassa");
 		if (player.sign() >= 198) {
