@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
-
+import roads.north_america.canada.alberta.Calgary;
 import roads.north_america.canada.alberta.primary_highways.AB2;
 import roads.north_america.canada.ontario.Ottawa;
 import roads.north_america.canada.quebec.Montreal;
@@ -24,7 +24,6 @@ public class Main {
 	
 	static void generate_jobs () throws Exception { // 137
 		// Iqaluit
-		
 		job_values.put("calgary - edmonton", 299); // TODO
 		job_values.put("calgary - goose bay", 5161); // TODO
 		job_values.put("calgary - inuvik", 3473); // TODO
@@ -37,6 +36,7 @@ public class Main {
 		job_values.put("calgary - whitehorse", 2248); // TODO
 		job_values.put("calgary - winnipeg", 1327); // TODO
 		job_values.put("calgary - yellowknife", 1748); // TODO
+		
 		job_values.put("edmonton - calgary", 300); // TODO
 		job_values.put("edmonton - goose bay", 5139); // TODO
 		job_values.put("edmonton - inuvik", 3215); // TODO
@@ -328,7 +328,7 @@ public class Main {
 		System.out.println("3. Upgrade autopilot");
 		System.out.println("   Current : " + player.autopilot());
 		System.out.println("   Cost : " + (player.autopilot()));
-		System.out.println("   After upgrade : " + (player.autopilot()));
+		System.out.println("   After upgrade : " + (player.autopilot() * 100));
 		System.out.println("4. Back");
 		int choice;
 		do {
@@ -363,12 +363,8 @@ public class Main {
 	// Towns
 	static void calgary () { // TODO
 		// east on 9 avenue southwest
-		// left on 1st street southwest
-		// right on 5 avenue southwest
-		// straight on 5 avenue southeast
-		// right on memorial drive
-		// ramp to AB-2
-		AB2.north_365(player);
+		System.out.println("HEading east on 9 avenue southwest\n");
+		Calgary.two_street_southwest_nine_avenue_southwest_east(player);
 	}
 	static void edmonton () { // TODO
 		// east on 104 avenue northwest

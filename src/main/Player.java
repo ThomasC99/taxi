@@ -8,7 +8,7 @@ public class Player {
 	private double money;
 	private int sign, gps, autopilot;
 	public Player () {
-		this.location = "ottawa";
+		this.location = "calgary";
 		this.job = "";
 		this.money = 0;
 		this.sign = 0;

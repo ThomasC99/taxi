@@ -10,34 +10,43 @@ import roads.north_america.canada.yukon.highways.YT1;
 public class AB2 {
 	static Scanner input = new Scanner (System.in);
 	public static void north_258 (Player player) {
-		System.out.println("1. Continue on AB-2 north");
-		if (player.sign() >= 293) {
-			System.out.println("   Edmonton - 293");
-		}
-		if (player.sign() >= 2242) {
-			System.out.println("   Whitehorse - 2,242");
-		}
-		if (player.sign() >= 3466) {
-			System.out.println("   Inuvik - 3,466");
-		}
-		System.out.println("2. Take exit 258 for AB-1");
-		if (player.sign() >= 3527) {
-			System.out.println("   Montreal - 3,527");
-		}
-		if (player.sign() >= 5155) {
-			System.out.println("   Goose Bay - 5,155");
-		}
-		int choice;
-		do {
-			choice = input.nextInt();
-		} while ((choice != 1) && (choice != 2));
-		System.out.println("\n\n");
-		if (choice == 1) {
+		if (player.job().contains(" - edmonton") && player.autopilot() >= 293) {
 			north_365(player);
-		} else if (choice == 2) {
-			// exit for AB-1 east
-			// straight on SK-1
+		} else if (player.job().contains(" - goose bay") && player.autopilot() >= 5155) {
+			System.out.println("Taking exit for AB-1");
 			SK1.sk_1_sk_39_east(player);
+		} else if (player.job().contains(" - whitehorse") && player.autopilot() >= 2242) {
+			north_365(player);
+		} else {
+			System.out.println("1. Continue on AB-2 north");
+			if (player.sign() >= 293) {
+				System.out.println("   Edmonton - 293");
+			}
+			if (player.sign() >= 2242) {
+				System.out.println("   Whitehorse - 2,242");
+			}
+			if (player.sign() >= 3466) {
+				System.out.println("   Inuvik - 3,466");
+			}
+			System.out.println("2. Take exit 258 for AB-1");
+			if (player.sign() >= 3527) {
+				System.out.println("   Montreal - 3,527");
+			}
+			if (player.sign() >= 5155) {
+				System.out.println("   Goose Bay - 5,155");
+			}
+			int choice;
+			do {
+				choice = input.nextInt();
+			} while ((choice != 1) && (choice != 2));
+			System.out.println("\n\n");
+			if (choice == 1) {
+				north_365(player);
+			} else if (choice == 2) {
+				// exit for AB-1 east
+				// straight on SK-1
+				SK1.sk_1_sk_39_east(player);
+			}
 		}
 	}
 	public static void north_365 (Player player) {
